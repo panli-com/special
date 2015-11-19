@@ -54,7 +54,7 @@
   function backTopOF(){
     var winW = $(window).width(),
         mainOf = $(".z-thinks-head").offset(),
-        mainOfL = mainOf.left;
+        mainOfL = $(".z-thinks-head").offset().left;
         
     if(winW >= 1484){
       var oFright = mainOfL+1200+55;

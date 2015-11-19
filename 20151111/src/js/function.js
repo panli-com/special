@@ -22,6 +22,12 @@ function vidataNum(){
     return false;
   } else {
     $(".goto-paly-a").hide();
-    return true;
+    return true; 
   }
+}
+
+
+// v04
+function appV(){
+  return "0.0.4"; 
 }

@@ -55,9 +55,13 @@
   width: 400px;
   height: 400px;
   background: url(../images/loading.gif) no-repeat center center;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
   .product-big-box img {
-    max-width: 100%; }
+    max-width: 100%;
+    min-height: 300px;
+    max-height: 100%;
+    vertical-align: middle; }
 
 .product-sml-box {
   padding-top: 10px; }

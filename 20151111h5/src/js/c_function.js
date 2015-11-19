@@ -27,7 +27,7 @@ function vidataNum(){
 function UserBalance(uName,callback) {  
      $.ajax({
             type: "POST",
-            url: "http://www.panli.com/App_Services/wsSendMessage.asmx/Testsum5",
+            url: "/App_Services/wsSendMessage.asmx/Testsum5",
             dataType: "json",
             data: '{userName:"' + uName + '"}',
             contentType: "application/json;utf-8",
@@ -36,8 +36,13 @@ function UserBalance(uName,callback) {
                 //alert("500");
             },
             success: function (data) {
-                callback(data);             
+                callback(data);         
 
             }
         });    
+}
+
+// v  
+function appV(){
+  return "0.0.4";
 }

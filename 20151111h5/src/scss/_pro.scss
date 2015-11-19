@@ -9,6 +9,7 @@
 		padding-bottom: 10px;
 		font-weight: 400;
 		color: #787878;
+		
 	}
 	p{
 		padding-bottom: 10px;
@@ -23,6 +24,7 @@
 			color: $color;
 			font-size: 28px;
 			padding-left: 10px;
+			line-height: 23px;
 		}
 		
 	}
@@ -74,8 +76,9 @@
 	position: relative;
 	font-size: 13px;
 	position: relative;
-	top: 7px;
+	top: -1px;
 	line-height: 20px;
+	
 	em{
 		display:block; 
 		border-width:10px; 

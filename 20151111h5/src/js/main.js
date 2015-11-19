@@ -66,7 +66,7 @@
     
     //关闭支付弹框
     
-    $(".play-close").on("touchend",function(){
+    $(".play-close,.layer-bg").on("touchend",function(){
       $(".product-show-text").css("display","block");
       $(".layer-bg").css("display","none");
       $(".fixb0").css("display","none");
