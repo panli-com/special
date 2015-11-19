@@ -1,0 +1,17 @@
+.back-Top{
+  position: fixed;
+  right: 55px;
+  bottom: 250px;
+  height: 84px;
+  width: 84px;
+  z-index: 100;
+  display: none;
+  a{
+    height: 84px;
+    width: 84px;
+    display: block;
+    background: url(http://sf.panli.com/FrontEnd/images20090801/NewIndex/New/kefu.gif) no-repeat;
+    background-position: -1px -173px;
+    border: 1px solid #dddddd;
+  }
+}

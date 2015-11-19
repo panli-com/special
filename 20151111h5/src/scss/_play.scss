@@ -1,0 +1,40 @@
+.play-ok{
+  padding-top: 30px;
+  text-align: center;
+  .title{
+    color: #5FCA48;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .icon-ok{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url(../images/play-ok.png) no-repeat center center;
+    background-size: 25px 25px;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+  }
+  p{
+    font-size: 15px;
+  }
+  .play-ok-btn{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: inline-block;
+    padding: 6px 40px;
+    width: 140px;
+    color: #FFF;
+    background-color: $color;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 18px;
+  }
+  .ok-bg{
+    text-align: center;
+    img{
+      max-width: 60%;
+    }
+  }
+}

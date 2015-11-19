@@ -1,0 +1,593 @@
+<!doctype html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta charset="utf-8" />
+<title>双十节日快乐</title>
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="shortcut icon" href="../logo.png"/>
+<script src="http://sf.panli.com/Public/jQuery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<link href="http://sf.panli.com/FrontEnd/css20090801/NewTopFoot.css?v=3.0" type="text/css" rel="stylesheet">
+<link type="text/css" href="main.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="All_top" style="margin-bottom:2px;">
+        <div class="site_nav">
+            <div class="site_center">
+                <p class="login-info" id="Gobal_LoginInfo">您好！游客 请 <a href="http://passport.panli.com/Login.aspx?ReturnUrl=http%3a%2f%2fhome.panli.com%2fSpecial%2fmomoai20150728.html">[登录]</a> 或 <a href="http://passport.panli.com/Register/">[免费注册]</a></p>
+                <ul class="quick-menu">
+
+                    <li class="top_Shop"><a href="http://www.panli.com/mypanli/ShoppingCart.aspx" class="gouwu" id="Gobal_Shoppingcart" target="_blank" rel="nofollow">购物车<span>(0)</span><em></em></a>
+
+                <div class="mysj_box2 mysj_box3" style="display: none" id="Gobal_BiyProductCount">
+                    <div class="mysj_bk2">
+                        <a href="http://www.panli.com/mypanli/SelfPurchase/list.aspx">转运<span class="zizhugou">(0)</span></a>
+                    </div>
+                </div>
+
+
+                        </li>
+
+                        <!-- 邀请好友开始 -->
+                    <li class="mypanli_gift">
+                         <a class="li_03" href="http://www.panli.com/mypanli/" rel="nofollow">我的Panli
+                         <em class="arr"></em></a>
+                         <div class="yaioqing"><a href="http://www.panli.com/mypanli\UserInfo\InviteFriends.aspx">邀请好友</a></div>
+                    </li>
+                        <!-- 邀请好友结束 -->
+                    <li><a href="http://www.panli.com/mypanli/OrderCart.aspx" rel="nofollow">我的仓库</a></li>
+                    <li><a href="http://service.panli.com" rel="nofollow">帮助中心</a></li>
+                    <li><a href="http://www.panli.com/services-rates/" rel="nofollow">服务与价格</a></li>
+
+                    <li class="top_free"><a class="mainfei_arr" href="http://www.panli.com/Free_postage/" id="FreeSiteBtn" rel="nofollow">
+                        免邮商家</a>
+                        <div class="mysj_box2" style="display: none" id="FreeSitePanel">
+                            <div class="mysj_bk2">
+                                 <a href="http://www.panli.com/Discount/">折扣速递</a>
+                            </div>
+                      </div>
+
+                        </li>
+
+                    <li class="top_tool" id="Panli_Tools"><a class="gj_img" href="javascript:;" onclick="return false;">
+                        常用服务工具 </a>
+                             <div class="gj_xl" id="Panli_ToolsList">
+                                <ul>
+                                    <li><a href="/Tools/Estimates.aspx" target="_blank" rel="nofollow">费用估算</a></li>
+                                    <li><a href="/Help/Postage.aspx" target="_blank" rel="nofollow">运费对比</a></li>
+                                    <li><a href="/Tools/MeasureConversion.aspx" target="_blank" rel="nofollow">尺码换算</a></li>
+                                    <li><a href="http://qq.ip138.com/hl.asp" target="_blank" rel="nofollow">汇率换算</a></li>
+                                    <li><a href="/Tools/Track.aspx" target="_blank" rel="nofollow">包裹跟踪查询</a></li>
+                                    <li><a href="/Crawl/Download.aspx" target="_blank" rel="nofollow">代购助手<span>(new)</span></a></li>
+                                </ul>
+                            </div>
+
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+        <div class="panli_wrapper">
+             <div class="logo">
+             <a class="alogo_l" href="/">
+                 <img src="http://sf.panli.com/FrontEnd/images20090801/Gobal/logo.gif" alt="Panli海外华人代购网站的Logo">
+
+                </a><a class="alogo_r" href="/">
+                    <img src="http://sf.panli.com/FrontEnd/images20090801/Gobal/logo_r.gif" alt="Panli代购-全球最大海外华人代购中国商品网站">
+                </a>
+            </div>
+            <div class="TopCartoon">
+                <a href="http://www.panli.com/Mobile/Index.aspx" target="_blank">
+                    <img src="http://sf.panli.com/FrontEnd/images20090801/Gobal/dt.gif" alt="Panli手机代购"></a><em style="display: none;"></em></div>
+            <div class="fast_daigouOuter">
+                <div class="fast_daigouButton">
+                    <a href="javascript:void(0)" class="fast_daigouButton1 on">代购</a>
+                    <a href="javascript:void(0)" class="fast_daigouButton2">转运</a>
+                </div>
+                <div class="fast_daigou">
+                    <input class="fast_wz" type="text" id="CrawlUrl" value="http://">
+                    <div class="but">
+                        <a href="javascript:;" id="PanliCrawlBtn" class="diygo">我要代购</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="yuanbj">
+            <div class="channel" id="SiteIndex">
+                <ul>
+                    <li><a href="http://www.panli.com/" id="Default" class="xt">首页</a></li>
+
+                    <li><a href="http://www.panli.com/Cowry/" id="cowry">分享购</a></li>
+
+                    <li><a href="http://www.panli.com/Piece/" id="Piece">拼单购</a></li>
+
+                    <li><a href="http://tuan.panli.com" id="GroupPurchasing" rel="nofollow">团购</a></li>
+                    <li><a href="/vip/" id="vip">VIP购</a></li>
+                    <li><a href="http://bbs.panli.com/" target="_blank" rel="nofollow">论坛</a></li>
+                    <li><a href="http://www.panli.com/Information/" id="panliStory" rel="nofollow">Panli故事</a></li>
+                </ul>
+
+
+                <div class="am_topss">
+                    <div class="channel_sou">
+                        <div class="channel_zb">
+                            <div class="channel_so">
+                                <input class="channel_hui" type="text" value="搜商品、查重量、估运费" id="txt_search_key">
+                                <div class="channel_lx" style="display: none;">
+                                </div>
+                            </div>
+                            <div class="channel_xl">
+                                <a class="channel_xz" href="#">商品</a>
+                                <div class="channel_list" style="display: none;">
+                                    <a href="#">店铺</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="channel_yb">
+                            <input type="button" value="" onmouseover="this.className='channel_bys'" onmouseout="this.className=''" id="btn_search_submit">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+<!-- frame -->
+<div id="frame">
+  <div class="z-wrap">
+    <!-- head -->
+    <div class="z-head">
+      <div class="z-ban z-w"></div>
+    </div>
+    <!-- head end -->
+    <!-- floor -->
+    <div class="z-floor-wrap">
+        <div class="z-floor-top"></div>
+        <div class="z-floor-body">
+            <!-- floor main -->
+            <div class="z-floor-main z-w">
+               <!-- floor 1 -->
+               <div class="z-floor-1 z-floor-all" id="z-floor-1">
+                 <div class="z-floor-title"></div>
+                 <div class="z-floor-pro">
+                   <ul class="z-floor-u clear clearfix">
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+               <!-- floor 2 -->
+               <div class="z-floor-2 z-floor-all" id="z-floor-2">
+                 <div class="z-floor-title"></div>
+                 <div class="z-floor-pro">
+                   <ul class="z-floor-u clear clearfix">
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+               <!-- floor 3 -->
+               <div class="z-floor-3 z-floor-all" id="z-floor-3">
+                 <div class="z-floor-title"></div>
+                 <div class="z-floor-pro">
+                   <ul class="z-floor-u clear clearfix">
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+               <!-- floor 4 -->
+               <div class="z-floor-4 z-floor-all" id="z-floor-4">
+                 <div class="z-floor-title"></div>
+                 <div class="z-floor-pro">
+                   <ul class="z-floor-u clear clearfix">
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+               <!-- floor 5 -->
+               <div class="z-floor-5 z-floor-all" id="z-floor-5">
+                 <div class="z-floor-title"></div>
+                 <div class="z-floor-pro">
+                   <ul class="z-floor-u clear clearfix">
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+               <!-- floor 6 -->
+               <div class="z-floor-6 z-floor-all" id="z-floor-6">
+                 <div class="z-floor-title"></div>
+                 <div class="z-floor-pro">
+                   <ul class="z-floor-u clear clearfix">
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                     <li>
+                       <a href="" title="title" target="_blank">
+                         <div class="thumb-box"><img src="./images/products/2.jpg" alt=""></div>
+                         <h5 title="波点修身短款毛衣外套">波点修身短款毛衣外套</h5>
+                         <p><small>￥</small>1890.90</p>
+                         <span class="z-cart" title="加入购物车"></span>
+                       </a>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+            </div>
+            <!-- floor main end-->
+        </div>
+    </div>
+    <!-- floor end -->
+    <!-- rule -->
+    <div class="z-rule" id="z-floor-7">
+      <div class="z-rule-main z-w">
+        <div class="z-rule-title"></div>
+        <div class="z-rule-count">
+          <ol>
+            <li>
+              活动期间内,购买活动页面的商品不可少于4件，实付金额最低的商品既能获得免单，每位Panli会员限免一件。
+            </li>
+            <li>
+              活动期间若有退货，将不计算入活动商品件数。少于四件将不能获得免单。
+            </li>
+            <li>
+              活动结束后2个工作日内统一返款到对应的Panli账户中,请注意查收。若未收到也可联系客服咨询。
+            </li>
+          </ol>
+        </div>
+        <div class="z-rule-footer">
+          *本活动最终解释权归Panli所有
+        </div>
+      </div>
+
+    </div>
+    <!-- rule end -->
+  </div>
+  <div class="z-floor-nav">
+    <div class="floor-nav-top"></div>
+    <ul class="floor-nav-u">
+      <li id="nav-z-floor-1"><a href="#z-floor-1">服装</a></li>
+      <li id="nav-z-floor-2"><a href="#z-floor-2">鞋包</a></li>
+      <li id="nav-z-floor-3"><a href="#z-floor-3">美容</a></li>
+      <li id="nav-z-floor-4"><a href="#z-floor-4">配饰</a></li>
+      <li id="nav-z-floor-5"><a href="#z-floor-5">居家</a></li>
+      <li id="nav-z-floor-6"><a href="#z-floor-6">食品</a></li>
+      <li id="nav-z-floor-7"><a href="#z-floor-7">活动规则</a></li>
+      <li><a href="#frame">TOP</a></li>
+    </ul>
+    <div class="floor-nav-b"></div>
+  </div>
+  <!-- onlone -->
+  <style type="text/css">
+       .rightMenu { width:70px; text-align:right;position: fixed; _position:absolute;display:block; z-index:799;left:0;}
+       .rightMenu .as{background:url(http://sf.panli.com/FrontEnd/images20090801/newindex/topscr.gif) no-repeat;text-decoration:none;text-align:center;display:block; }
+       .rightMenu a.kefu{width:66px; height:79px; background-position:0px 1px;_background-position:1px 1px;}
+       .rightMenu .top{background-position:0px -283px; height:47px;width:66px;}
+       .rightMenu .top1{background:url(http://sf.panli.com/FrontEnd/images20090801/newindex/tijy.gif) no-repeat;height:44px;width:66px;}
+       .rightMenu .top1:hover{ background-position: 0px -46px;}
+       .rightMenu2{width:67px; float:right; display:inline;}
+   </style>
+
+  <div class="rightMenu" id="rightMenu" style="top: 50%; margin-top: -30px; right: 10px; left: auto;">
+    <div class="rightMenu2">
+        <a class="as kefu" href="http://www.panli.com/CustomerService" target="_blank">&nbsp;</a>
+    </div>
+  </div>
+  <script>
+  $(function(){
+     $(window).scroll(function(){
+        var wst =  $(window).scrollTop()
+         for (i=1; i<8; i++){
+           console.log($("#z-floor-"+i).height());
+           console.log(wst);
+            if($("#z-floor-"+i).offset().top<=wst+$("#z-floor-"+i).height()){
+             $('.floor-nav-u li').removeClass("on");
+             $("#nav-z-floor-"+i).addClass("on");
+          }
+      }
+    });
+
+    $('.floor-nav-u li').click(function(){
+      $('.floor-nav-u li').removeClass("on");
+      $(this).addClass("on");
+    });
+});
+  </script>
+</div>
+<!-- frame end -->
+
+
+<div class="foot">
+    <div class="help">
+        <div class="fenlei">
+            <h3>
+                新手上路</h3>
+            <ul>
+                <li><a href="http://service.panli.com/Help/List/5.html" target="_blank" rel="nofollow">新人须知</a></li>
+                <li><a href="http://www.panli.com/services-rates/" target="_blank" rel="nofollow">服务与费用</a></li>
+                <li><a href="http://service.panli.com/Help/List/9.html" target="_blank" rel="nofollow">帐户管理</a></li>
+                <li><a href="http://service.panli.com/Help/List/8.html" target="_blank" rel="nofollow">会员等级和番币</a></li>
+            </ul>
+        </div>
+        <div class="fenlei">
+            <h3>
+                购物指南</h3>
+            <ul>
+                <li><a href="http://service.panli.com/Help/Detail/13.html" target="_blank" rel="nofollow">挑选商品</a></li>
+                <li><a href="http://service.panli.com/Help/Detail/12.html" target="_blank" rel="nofollow">购物流程</a></li>
+                <li><a href="http://service.panli.com/Help/Detail/14.html" target="_blank" rel="nofollow">如何生成订单</a></li>
+                <li><a href="http://service.panli.com/Help/Detail/16.html" target="_blank" rel="nofollow">查询订单状态</a></li>
+            </ul>
+        </div>
+        <div class="fenlei">
+            <h3>
+                支付说明</h3>
+            <ul>
+                <li><a href="http://service.panli.com/Help/Detail/333.html" target="_blank" rel="nofollow">paypal支付</a></li>
+                <li><a href="http://service.panli.com/Help/Detail/23.html" target="_blank" rel="nofollow">国际信用卡</a></li>
+                <li><a href="http://service.panli.com/Help/Detail/24.html" target="_blank" rel="nofollow">国内银行卡</a></li>
+                <li><a href="http://service.panli.com/Help/List/6.html" target="_blank" rel="nofollow">其他汇款方式</a></li>
+            </ul>
+        </div>
+        <div class="fenlei">
+            <h3>
+                配送说明</h3>
+            <ul>
+                <li><a href="http://www.panli.com/Help/Postage.aspx" target="_blank" rel="nofollow">运输方式和费用对比</a></li>
+                <li><a href="http://service.panli.com/Help/Detail/38.html" target="_blank" rel="nofollow">大宗商品的运费</a></li>
+                <li><a href="http://service.panli.com/Help/Detail/39.html" target="_blank" rel="nofollow">海关及税项</a></li>
+                <li><a href="http://service.panli.com/Help/Detail/40.html" target="_blank" rel="nofollow">收货注意事项</a></li>
+            </ul>
+        </div>
+        <div class="fenlei">
+            <h3>
+                售后服务</h3>
+            <ul>
+                <li><a href="http://service.panli.com/Help/Detail/28.html" target="_blank" rel="nofollow">商品退换货原则</a></li>
+                <li><a href="http://service.panli.com/Help/Detail/29.html" target="_blank" rel="nofollow">商品退换货流程</a></li>
+                <li><a href="http://service.panli.com/Help/Detail/20.html" target="_blank" rel="nofollow">商品的保管期限</a></li>
+                <li><a href="http://service.panli.com/Help/Detail/18.html" target="_blank" rel="nofollow">如何退款</a></li>
+            </ul>
+        </div>
+
+        <div class="fenlei">
+            <h3>
+                社交平台</h3>
+            <ul>
+                <li style="color: #bbb; width: 105px;">与Panli互动，点亮海外代购生活!
+                    <div class="a_shequ">
+                        <ul>
+                            <li><a href="http://weibo.com/panlidaigou" target="_blank"></a></li>
+                            <li><a class="facebook_a" href="https://www.facebook.com/panlibuy" target="_blank"></a>
+                            </li>
+                            <li>
+                                <div class="weixin_a">
+                                    <a href="javascript:void(0);" id="weixin">
+                                        <img src="http://sf.panli.com/FrontEnd/images20090801/weixin.gif" alt="weixin"></a>
+                                    <em style="display: none;" id="weixinCode"></em>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="lx">
+            <h3>
+                <img src="http://sf.panli.com/FrontEnd/images20090801/Gobal/rexian.gif?v=1.2" alt="Panli客户服务热线">
+            </h3>
+            <ul>
+                <li>客服邮箱：<a href="mailto:service@panli.com">service@panli.com</a></li>
+
+            </ul>
+            <div class="Gobal_time">
+                <input type="hidden" value="1444296989865.52" id="Beijing_Time">
+                <label id="BeijingDate">北京时间：2015-10-08</label><p id="BeijingTime"><span>9</span><b></b><span>40</span><b></b><span>09</span></p>
+            </div>
+        </div>
+        <div class="help_anbao">
+            <ul>
+                <li class="anbao_1" style="margin-left:622px;display:inline;"><a href="http://www.ectrustprc.org.cn/certificate.id/certificateb.php?id=20007298" target="_blank" rel="nofollow" style="margin-left:0px;">中国电子商务诚信单位</a></li>
+
+
+                <li class="anbao_3" style="margin-left: 7px; display:inline;"><a href="https://www.paypal.com/verified/pal=paypal@panli.com" target="_blank" rel="nofollow">paypal</a></li>
+                <li class="anbao_4" style="margin-left: 7px;display:inline;"><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120423152518650" target="_blank" rel="nofollow">上海工商</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="am_footer_ali"><ul><li><a href="http://info.17ugo.com/" target="_blank">优购物</a><b>|</b></li><li><a href="http://www.afuchina.com/" target="_blank">比价网</a><b>|</b></li><li><a href="http://www.zbird.com/diamond/" target="_blank">裸钻定制</a><b>|</b></li><li><a href="http://www.kantao.net" target="_blank">看淘网</a><b>|</b></li><li><a href="http://www.sxxl.com/" target="_blank">服装设计</a><b>|</b></li><li><a href="http://www.yqbdt.com" target="_blank">地摊货批发网</a><b>|</b></li><li><a href="http://www.shoeshr.com" target="_blank">中国鞋业人才网</a><b>|</b></li></ul></div>
+    <div class="bottom">
+        <div class="b_logo">
+            <a href="/">
+                <img src="http://sf.panli.com/FrontEnd/images20090801/Gobal/f_logo.gif" alt="panli海外华人代购"></a>
+        </div>
+        <div class="b_box">
+            <div class="b_boxText">
+                Panli<h1>代购</h1>是全球最大的海外华人<h2>代购中国</h2>商品网站，专为海外华人提供
+                <h2><a href="http://www.panli.com/Cowry/ " target="_blank">淘宝代购</a></h2>
+                、拍拍、当当等中国购物网站商品，提供图书、特产、化妆品等多种商品代购，支持paypal、
+                支付宝等多种支付方式。Panli代购目前在美国、英国、新加坡、澳洲、加拿大等全球范围内的
+                华人代购和留学生代购市场中都有着超好的口碑。
+           </div>
+            <p>
+                <a target="_blank" href="http://hr.panli.com/" rel="nofollow">关于Panli代购</a> <span>|</span><a href="/news/about.aspx?nid=5" rel="nofollow">联系我们</a> <span>|</span><a target="_blank" href="http://hr.panli.com/job_index.aspx" rel="nofollow">加入Panli</a>
+
+                <span>|</span><a href="/news/about.aspx?nid=14">友情链接</a> <span>|</span><a href="/news/about.aspx?nid=210">网站地图</a>
+
+                <span>|</span><a href="http://www.panli.com/Discount/" target="_blank">折扣速递</a></p>
+            <p>
+                Copyright ©2015
+                Panli代购! Inc. All rights reserved. <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">沪ICP备13043455号-1</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>滚动新闻js</title>
+<style type="text/css">
+.inform {
+    border: 1px solid #E5E5E5;
+    padding: 1px;
+}
+.inform h2 {
+    background: none repeat scroll 0 0 #015198;
+    font-weight: normal;
+    line-height: 30px;
+}
+.inform h2 span {
+    color: #FFFFFF;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.inform h2 a {
+    color: #FFFFFF;
+    float: right;
+    font-size: 14px;
+    padding-right: 3px;
+}
+.inform ul {
+    height: 170px;
+    margin-top: 7px;
+    overflow: hidden;
+}
+.inform ul li {
+    line-height: 26px;
+    padding-left: 12px;
+}
+</style>
+</head>
+
+<body>
+<div class="inform">
+  <div style="height:170px; overflow:hidden">
+    <ul id="marquee" style="height:285px">
+        <li>
+          <a>
+            赞声博客...
+          </a>
+        </li>
+        <li>
+          <a>
+          赞声博客...
+          </a>
+        </li>
+        <li>
+          <a>
+          赞声博客...
+          </a>
+        </li>
+        <li>
+          <a>
+        赞声博客...
+          </a>
+        </li>
+    </ul>
+   </div>
+
+<script type="text/javascript">
+window.onload = function() {
+    setTimeout("startmarquee(34, 50, 0, 'marquee')", 1000);
+}
+function startmarquee(lh,speed,delay,id) {
+
+    var t;
+    var p = false;
+    var o = document.getElementById(id);
+    o.innerHTML += o.innerHTML + o.innerHTML + o.innerHTML;
+    o.onmouseover = function() {
+        p = true;
+    }
+    o.onmouseout = function() {
+        p = false;
+    }
+    o.scrollTop = 0;
+
+    function start() {
+        t = setInterval(scrolling,speed);
+        if(!p) o.scrollTop += 2;
+    }
+
+    function scrolling() {
+        if(o.scrollTop%lh != 0) {
+            o.scrollTop += 2;
+            if(o.scrollTop >= o.scrollHeight / 2) o.scrollTop = 0;
+        } else {
+            clearInterval(t);
+            setTimeout(start,delay);
+        }
+    }
+    setTimeout(start,delay);
+}
+
+</script>
+</div>
+</body>
+</html>

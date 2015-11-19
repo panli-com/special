@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>新闻列表单行滚动js效果，者多行滚动js效果</title>
+
+</head>
+<body>
+<style>
+div { font-size:12px; }
+</style>
+<div id="mq" style="width:100%;height:70px;overflow:hidden;border:1px solid #000000" onmouseover="iScrollAmount=0" onmouseout="iScrollAmount=1">
+李新成<br/>
+褚喜凡<br/>
+董里旭<br/>
+张丽君<br/>
+杜志芳<br/>
+李国玉<br/>
+</div>
+<script>
+var oMarquee = document.getElementById("mq"); //滚动对象
+var iLineHeight = 14; //单行高度，像素
+var iLineCount = 6; //实际行数
+var iScrollAmount = 1; //每次滚动高度，像素
+function run() {
+oMarquee.scrollTop += iScrollAmount;
+if ( oMarquee.scrollTop == iLineCount * iLineHeight )
+oMarquee.scrollTop = 0;
+if ( oMarquee.scrollTop % iLineHeight == 0 ) {
+window.setTimeout( "run()", 2000 );
+} else {
+window.setTimeout( "run()", 50 );
+}
+}
+oMarquee.innerHTML += oMarquee.innerHTML;
+window.setTimeout( "run()", 2000 );
+</script>
+</body>
+
+</html>

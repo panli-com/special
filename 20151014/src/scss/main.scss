@@ -1,0 +1,36 @@
+$colorbg:#feb5cc;
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+.clearfix{display:inline-block;}
+.clearfix {display:block;}
+
+.clear{
+  clear:both;
+
+  overflow:hidden;
+}
+
+.z-w{
+  width: 1000px;
+  margin: 0 auto;
+}
+.activity-main{
+  overflow: hidden;
+}
+#frame,.z-floor-nav{
+  font: 14px / 1.42857 "Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  h5{
+    font-weight: 400;
+  }
+  p{
+    font-weight: 400;
+  }
+}
+
+@import "head";
+@import "floor";
+@import "my";
+@import "anmi";
+@import "animate";

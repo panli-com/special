@@ -1,0 +1,140 @@
+.fixb0{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11;
+	display: none;
+}
+.layer-bg{
+	background: #000;
+	opacity: 0.5;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	display: none;
+}
+.buy-layer-wrap{
+	font-size: 14px;
+	border-top: 2px solid $color;
+	padding-top: 5px;
+	position: relative;
+	padding-bottom: 0;
+	.z-tag{		
+		line-height: 20px;
+		position: relative;
+		margin-left: 20px;
+		font-size: 12px;
+		display: inline-block;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing: border-box;		
+		top: -5px;
+		em{	
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing:border-box;
+			box-sizing: border-box;
+			border-width:10px;
+			left: -17px; 
+		}
+	}
+	strong{
+		font-weight: 500;
+		color: #333;
+	}
+	p{
+		padding: 5px 10px;
+	}
+	.p1{
+		padding-top: 10px;
+		.price{
+			color: $color;
+			font-size: 28px;
+		}
+	}
+	.p4{
+		padding: 5px 10px;
+	}
+	.textarea-wrap-pla{				
+		textarea{
+			width:96%;
+			resize: none;
+			border:1px solid #AAAAAA;				
+		}
+	}
+}
+.play-close{
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	height: 40px;
+	width: 40px;
+	background: url(../images/close.png) no-repeat center center;
+	background-size: 30px 30px;
+}
+.play-footer{
+	background: #333333;
+	padding: 5px 10px;	
+	color: #FFF;
+	span{
+		line-height: 35px;
+	}
+	.price{
+		color: $color;
+		font-size: 18px;
+	}
+	.playBtn{
+		padding: 6px 20px;
+		background: $color;
+		border: none;
+		border-radius: 15px;
+		position: relative;
+		top: 2px;
+	}
+}
+
+
+.num-text-s{
+  padding-left: 10px;
+  line-height: 28px;
+  position: relative;
+  top: 8px;
+}
+.num-jian,.num-jia{
+  display: block;
+  width: 28px;
+  height: 28px;
+  float: left;
+  background-color: #EEEEEE;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 27px 21px;
+  overflow: hidden;
+  border: 1px solid #AAAAAA;
+}
+.num-input{
+  padding: 4px 0;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  float: left;
+  border: 1px solid #AAAAAA;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing: border-box;
+  
+}
+.num-jian{
+  background-image: url(../images/jian.png);
+}
+.num-jia{
+  background-image: url(../images/jia.png);
+}

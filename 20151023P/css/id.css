@@ -1,0 +1,55 @@
+﻿body{ margin:0 auto; font-family:"Microsoft YaHei",微软雅黑;}
+.frame{ width:950px;height:auto;font-family:Verdana,Arial, Helvetica, sans-serif;margin:0 auto;text-align:center;}
+p, h1, h2, h3, h4, h5, ul,li,  dl, dt, dd, b,div,img{ list-style-type:none; margin:0px; padding:0px; border:0px; font-weight:normal;}
+ul,li{list-style-type:none;}
+img{vertical-align:top;}
+a,area{outline: none;blr:expression(this.onFocus=this.blur());}/*For IE*/
+:focus{-moz-outline-style:none;}/*For Firefox*/
+.span25{ height:25px; line-height:25px; display:block; clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+
+#frame{ width:100%; background-color:#f51051;}
+.banner1{ background:url(cssImg/Eleven_banner_01.jpg) no-repeat center; height:100px;}
+.banner2{ background:url(cssImg/Eleven_banner_02.jpg) no-repeat center; height:100px;}
+.banner3{ background:url(cssImg/Eleven_banner_03.jpg) no-repeat center; height:100px;}
+.banner4{ background:url(cssImg/Eleven_banner_04.jpg) no-repeat center; height:100px;}
+.banner5{ background:url(cssImg/Eleven_banner_05.jpg) no-repeat center; height:100px;}
+.banner6{ background:url(cssImg/Eleven_banner_06.jpg) no-repeat center; height:93px;}
+
+.content_list{width:1000px; margin:0 auto; overflow:hidden; padding:20px 0;}
+#menu_nav{ width:1000px; height:50px; background:url(cssImg/Eleven_menu.gif) no-repeat; overflow:hidden; margin:10px 0 20px 0;}
+#menu_nav li{ width:125px; height:50px; float:left; display:block;}
+#menu_nav li a{ display:block; width:125px; height:50px;}
+#menu_nav li a:hover{ background:url(cssImg/Eleven_menu.gif) no-repeat;}
+#menu_nav li.nav1 a:hover{ background-position:0 -50px;}
+#menu_nav li.nav2 a:hover{ background-position:-125px -50px;}
+#menu_nav li.nav3 a:hover{ background-position:-250px -50px;}
+#menu_nav li.nav4 a:hover{ background-position:-375px -50px;}
+#menu_nav li.nav5 a:hover{ background-position:-500px -50px;}
+#menu_nav li.nav6 a:hover{ background-position:-625px -50px;}
+#menu_nav li.nav7 a:hover{ background-position:-750px -50px;}
+#menu_nav li.nav8 a:hover{ background-position:-875px -50px;}
+#menu_nav #nz{ width:125px; height:50px; background:url(cssImg/Eleven_menu.gif) 0 -50px;}
+#menu_nav #lz{ width:125px; height:50px; background:url(cssImg/Eleven_menu.gif) -125px -50px;}
+#menu_nav #xx{ width:125px; height:50px; background:url(cssImg/Eleven_menu.gif) -250px -50px;}
+#menu_nav #xb{ width:125px; height:50px; background:url(cssImg/Eleven_menu.gif) -375px -50px;}
+#menu_nav #mz{ width:125px; height:50px; background:url(cssImg/Eleven_menu.gif) -500px -50px;}
+#menu_nav #ps{ width:125px; height:50px; background:url(cssImg/Eleven_menu.gif) -625px -50px;}
+#menu_nav #jj{ width:125px; height:50px; background:url(cssImg/Eleven_menu.gif) -750px -50px;}
+#menu_nav #sp{ width:125px; height:50px; background:url(cssImg/Eleven_menu.gif) -875px -50px;}
+.clear{ clear:both;}
+
+.Ladies_pro li{ width:240px; float:left; margin:0 13px 20px 0; display:block;}
+.Ladies_pro .pro_padding{ margin-right:0; display:block;}
+.Ladies_title{ background-color:#fff; color:#333; font-size:14px; line-height:20px; padding:10px 15px; display:block; overflow:hidden;}
+.Ladies_title a{color:#333; font-size:14px; text-decoration:none;}
+.Ladies_title a:hover{color:#333; font-size:14px;}
+.ys_yuanjia{padding:0 5px 0 25px; color:#f51051;}
+.ys_Eleven{ text-decoration:line-through; color:#666;}
+.ys_price{ background:url(cssImg/Eleven_back.gif) no-repeat; width:240px; height:34px; line-height:34px; display:block;}
+.Deposit_left{ width:120px; text-align:center; font-size:14px; color:#f51051; float:left;}
+.price_right{ width:120px; text-align:center; float:left; color:#fff; font-size:22px; }
+.ys_rule{ background-color:#fb2d68; padding:30px;}
+.rule_title{ background:url(cssImg/Eleven_Rule.gif) no-repeat center; height:28px; margin-bottom:15px;}
+.rule_text{ color:#fff; font-size:15px; line-height:26px;}

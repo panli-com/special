@@ -1,0 +1,54 @@
+.floor-wrap{
+  background-color: #1ae3d3;
+  min-height: 10rem;
+  position: relative;
+  z-index: 2;
+  margin-top: -2rem;
+  img{
+    max-width: 100%;
+  }
+}
+.floor-flag{
+  margin-bottom: 0.1rem;
+}
+
+.floor-2{
+  position: relative;
+  padding-top: 1rem;
+  .z-title{
+    position: absolute;
+    left: 50%;
+    top: 0.5rem;
+    width: 5rem;
+    height: 1rem;
+    margin-left: -2.5rem;
+    background: #1ae3d3 url(./images/new-hb-title.png) no-repeat;
+    background-size: contain;
+  }
+  .z-count{
+    border: 0.08rem solid #1cc3b6;
+    min-height: 1rem;
+    border-radius: 5px;
+    padding-top: 0.4rem;
+    padding-bottom: 0.2rem;
+  }
+  .new-hb-info-u{
+    padding-left: 0.4rem;
+  }
+  .z-list-hide{
+    overflow: hidden;
+    height: 166px;
+  }
+}
+.new-hb-info-u{
+  li{
+    line-height: 28px;
+  }
+}
+
+.floor-3{
+  padding-top: 1rem;
+}
+.wall-all{
+  text-align: center;
+}

@@ -1,0 +1,13 @@
+.z-head{
+  height: 618px;
+  background: #dd2642 url(./images/banner/banner-all-32.png) repeat-x center bottom;
+
+  // animation: animatedBackground 10s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes animatedBackground {
+  0%  { background-position: 0 bottom;}
+  50% { background-position: 30px bottom; }
+  100% { background-position: 0 bottom; }
+ }

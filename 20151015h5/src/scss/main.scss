@@ -1,0 +1,45 @@
+$colorbg:#dd2642;
+.clearfix:after{
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+ul,li,h6,p{
+  padding: 0;
+  margin: 0; 
+}
+ul,li{
+  list-style: none;
+}
+
+.m-at{
+  margin:0 auto;
+}
+.no-wrap{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.clearfix{
+  display:inline-block;
+}
+.clearfix {display:block;}
+.clear{
+  clear:both;
+  overflow:hidden;
+}
+.activity-main{
+  overflow: hidden;
+}
+.z-floor-nav{
+  font: 14px / 1.42857 "Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+@import "reset";
+@import "layout";
+@import "head";
+@import "floor";
+@import "my";
+@import "anmi";
+@import "animate";

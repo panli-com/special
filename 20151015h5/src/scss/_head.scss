@@ -1,0 +1,26 @@
+.header{
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  .light{
+    position: absolute;
+    z-index: 0;
+    height: 10rem;
+    width: 10rem;
+    background: url(./images/banner-light.png) no-repeat center center;
+    background-size: cover;
+  }
+  .banner{
+    position: relative;
+    z-index: 2;
+    img{
+      max-width: 100%;
+    }
+  }
+}
+
+@keyframes animatedBackground {
+  0%  { background-position: 0 bottom;}
+  50% { background-position: 30px bottom; }
+  100% { background-position: 0 bottom; }
+ }

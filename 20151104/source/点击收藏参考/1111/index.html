@@ -1,0 +1,181 @@
+﻿<!doctype html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta charset="utf-8" />
+<title>无标题文档</title>
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+    <script src="http://sf.panli.com/Public/jQuery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<link rel="stylesheet"  href="http://sf.panli.com/FrontEnd/css20090801/NewTopFoot.css?v=3.0" />
+</head>
+
+<body>
+   <style type="text/css">
+         .special em,.special i{ font-style:normal;}
+          .clear{ display:block; clear:both;}
+          .allwidth{width:1030px; margin:auto;position:relative;}
+         .special{ background-color:#e3005f;font-family:"Microsoft YaHei"; padding-bottom:80px;}
+         .banner1{ background:url(./image/banner1.jpg) no-repeat center; height:153px;}
+         .banner2{ background:url(./image/banner2.jpg) no-repeat center; height:160px;}
+         .banner3{ background:url(./image/banner3.jpg) no-repeat center; height:180px; position:relative;}
+         .banner4{ background:url(./image/bg.png) no-repeat center; height:268px; position:absolute; width:100%; left:0px; top:5px;}
+         .navlist{ background-color:#fad403; height:85px;}
+         
+         .nav_list a,.nav_list a span,.productTitle .name,.productTitle .huanyi,.shoucang,.proshopping,.shopTitle{ background:url(./image/icon.png) no-repeat;}
+         .nav_list a{ float:left; display:inline; height:60px; width:123px; margin:13px 10px 0; text-decoration:none; background-position:-143px  -626px;  }
+         .nav_list a:hover{ background-position:-0px -626px;  }
+         .nav_list a span{ display:block; width:100%; height:98%;}
+         .nav_list a.nav_list1 span{ background-position:18px -473px ; }
+         .nav_list a.nav_list2 span{ background-position:-95px -473px ; }
+         .nav_list a.nav_list3 span{ background-position:-213px -473px ; }
+         .nav_list a.nav_list4 span{ background-position:22px -518px ; }
+         .nav_list a.nav_list5 span{ background-position:-97px -519px ; }
+         .nav_list a.nav_list6 span{ background-position:-212px -519px ; }
+         .nav_list a.nav_list7 span{ background-position:-4px -562px ; }
+         .banner4 .zhuce{ position:absolute;width:189px; height:35px; left:519px; top:123px;}
+         .banner4 .tishi{ position:absolute;width:330px; height:108px;right:-236px; top:67px;}
+         .productlist{ margin-top:160px;}
+         .productTitle{ height:434px; width:1100px; position:relative;background:url(./image/producttop.png) no-repeat; position:absolute; left:-35px; top:-128px;}
+         .productbg{ background:url(./image/productcenter.png) repeat-y center; text-align:left; position:relative;width:100%; }
+         .productbottom{ background:url(./image/productbottom.png) no-repeat center; height:18px; width:100%;}
+         .productTitle .name{ display:block; position:absolute; width:407px; height:47px; left:53px; top:51px;}
+         .productTitle .name.xb{ background-position:0 -60px;}
+         .productTitle .name.xx{ background-position:0 -185px;}
+         .productTitle .name.sp{ background-position:0 -121px;}
+         .productTitle .name.jj{ background-position:0 -249px;}
+         .productTitle .name.my{ background-position:0 -306px;}
+         .productTitle .huanyi{display:block; position:absolute; height:38px; width:109px; background-position:-263px -368px; text-decoration:none; right:43px; top:78px;}
+         .productTitle .zixuan{position:absolute; color:#fff; font-size:18px;font-family: "Microsoft YaHei"; right:43px; top:35px; text-decoration:none;}
+
+         .navlistover{position:fixed; bottom:0px; left:0px; width:100%; z-index:10;}
+         .navlistover .nav_list a{ margin:13px 4px;}
+         .navlistover .nav_list span.nav_top{ display:inline; float:right;width:101px; height:68px; margin-top:5px; background:url(./image/top.jpg) no-repeat; cursor:pointer;}
+
+         .product_list{ }
+         .productImg{ width:241px; height:284px;}
+         .product_list li{ width:241px; margin-left:6px; float:left; display:inline; margin-bottom:10px; }
+         .productText{ margin-top:7px; height:70px; background-color:#e3005f; padding:0 7px;color:#fff;font-size:12px;}
+         .productname{ color:#fff; display:block; height:22px; line-height:22px; text-decoration:none;text-overflow:ellipsis;  overflow:hidden;}
+         .productPrice s{float:left;}
+         .productPrice span{float:right;}
+         .productPrice span em{ font-size:16px; font-weight:900;}
+         .productPrice{display:block; height:14px;}
+         .productButton{display:block; margin-top:6px;}
+         .shoucang{display:inline; float:left;  width:90px; height:24px; background-position:-5px -367px; text-decoration:none;}
+         .proshopping{display:inline;  width:90px; height:24px;  float:right; background-position:-139px -367px;text-decoration:none;}
+         .product_list{ position:relative; left:25px;}
+         .shoplist{ margin:20px auto;  width:1017px; padding-left:10px; }
+         .shopslist{background-color:#ffd701; padding-bottom:4px; }
+         .shopslist a img{float:left; margin-top:4px; }
+         .shopTitle{ height:44px; background-position:-4px -420px; background-color:#ac224e;}
+         .shopmax{ display:inline; float:left;}
+         .shopmini{ display:inline; float:left; width:730px;}
+         .shopmini a{ display:inline; float:left;}
+         .shopmini a img{margin-left:4px;}
+         .tishitext{ margin:20px auto;  width:1017px; padding-left:10px; position:relative;}
+          .tishitext a{ position:absolute; width:54px; height:24px; left:671px; top:55px; display:block;cursor:pointer;text-decoration:none;} 
+         .tishib1{ margin:37px auto; width:654px; height:62px; background:url(./image/b1.png) no-repeat;  }
+         .bottonb2{ margin:33px auto; display:block; width:232px; height:48px; background:url(./image/b2.png) no-repeat;}
+   </style>
+    <div class="special">
+           <div class="banner">
+               <div class="banner1"></div>
+               <div class="banner2"></div>
+               <div class="banner3"><div class="banner4"><div class="allwidth"><a href="http://passport.panli.com/Register/" target="_blank" class="zhuce"></a><a href="javascript:void(0);" onclick="$('html,body').animate({ scrollTop: $('.tishitext').offset().top+'px' }, 800); return false;" target="_blank" class="tishi"></a></div></div></div>
+               <div class="clear"></div>
+           </div>
+           <div class="navlist navlisttop">
+                <div class="allwidth">
+                    <div class="nav_list">
+                        <a href="javascript:;" class="nav_list1" onclick="scrollTops('fz');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list2" onclick="scrollTops('xb');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list3" onclick="scrollTops('xx');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list4" onclick="scrollTops('sp');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list5" onclick="scrollTops('jj');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list6" onclick="scrollTops('my');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list7" onclick="scrollTops('shoplist');return false;"><span>&nbsp;</span></a>
+                    </div>
+                </div>
+           </div>
+        <div class="navlist navlistover" style="display:none;">
+                <div class="allwidth">
+                    <div class="nav_list">
+                        <a href="javascript:;" class="nav_list1" onclick="scrollTops('fz');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list2" onclick="scrollTops('xb');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list3" onclick="scrollTops('xx');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list4" onclick="scrollTops('sp');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list5" onclick="scrollTops('jj');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list6" onclick="scrollTops('my');return false;"><span>&nbsp;</span></a>
+                        <a href="javascript:;" class="nav_list7" onclick="scrollTops('shoplist');return false;"><span>&nbsp;</span></a>
+                        <span class="nav_top"  onclick="$('html,body').animate({ scrollTop:'0px' }, 800);"></span>
+                    </div>
+                </div>
+           </div>
+           <div class="allwidth">
+               <script type="text/javascript" src="./image/index.js"></script>
+               <div class="shoplist">
+                   <div class="shopTitle"></div>
+                   <div class="shopslist shoplist1" >
+                       <a href="http://pb89.tmall.com/" class="shopmax" target="_blank"><img src="image/product/dp101.jpg" /></a>
+                       <div class="shopmini">
+                       <a href="http://leting.tmall.com/" target="_blank"><img src="image/product/dp102.jpg" /></a>
+                       <a href="http://pechoin.tmall.com/" target="_blank"><img src="image/product/dp103.jpg" /></a>
+                       <a href="http://handuyishe.tmall.com/" target="_blank"><img src="image/product/dp104.jpg" /></a>
+                       <a href="http://locknlock.tmall.com/" target="_blank"><img src="image/product/dp105.jpg" /></a>
+                       <a href="http://chuyu.tmall.com/" target="_blank"><img src="image/product/dp106.jpg" /></a>
+                       <a href="http://supor.tmall.com/" target="_blank"><img src="image/product/dp107.jpg" /></a>
+                       <a href="http://croquis.tmall.com/" target="_blank"><img src="image/product/dp108.jpg" /></a>
+                       <a href="javascript:;" onclick="close1();return false;" target="_blank"><img src="image/qie.jpg" width="88" height="77" /></a>
+                       <a href="http://azams.tmall.com/" target="_blank"><img src="image/product/dp109.jpg" /></a>
+                       <a href="http://artka.tmall.com/" target="_blank"><img src="image/product/dp110.jpg" /></a>
+                       <a href="http://zhouheiya.tmall.com/" target="_blank"><img src="image/product/dp111.jpg" /></a>
+                       <a href="http://angelcitiz.tmall.com/" target="_blank"><img src="image/product/dp112.jpg" /></a>
+                       <a href="http://mring.tmall.com/" target="_blank"><img src="image/product/dp113.jpg" /></a>
+                       <a href="http://inman.tmall.com/" target="_blank"><img src="image/product/dp114.jpg" /></a>
+                       <a href="http://kans.tmall.com/" target="_blank"><img src="image/product/dp115.jpg" /></a>
+                       <a href="http://tmall.com/" target="_blank"><img src="image/tmall.jpg"  width="88" height="77" /></a>
+                           </div>
+                       <div class="clear"></div>
+                   </div>
+
+                   <div class="shopslist shoplist2"  style="display:none;">
+                       <a href="http://yaojingdekoudai.tmall.com/" class="shopmax" target="_blank"><img src="image/product/dp201.jpg" /></a>
+                       <div class="shopmini">
+                       <a href="http://osa.tmall.com/" target="_blank"><img src="image/product/dp202.jpg" /></a>
+                       <a href="http://bear.tmall.com/" target="_blank"><img src="image/product/dp203.jpg" /></a>
+                       <a href="http://ripfs.tmall.com/" target="_blank"><img src="image/product/dp204.jpg" /></a>
+                       <a href="http://niuer.tmall.com/" target="_blank"><img src="image/product/dp205.jpg" /></a>
+                       <a href="http://othermix.tmall.com/" target="_blank"><img src="image/product/dp206.jpg" /></a>
+                       <a href="http://xybc.tmall.com/" target="_blank"><img src="image/product/dp207.jpg" /></a>
+                       <a href="http://huashengji.tmall.com/" target="_blank"><img src="image/product/dp208.jpg" /></a>
+                       <a href="javascript:;" onclick="close2();return false;" target="_blank"><img src="image/qie.jpg" width="88" height="77" /></a>
+                       <a href="http://muyu.tmall.com/" target="_blank"><img src="image/product/dp209.jpg" /></a>
+                       <a href="http://sulv.tmall.com/" target="_blank"><img src="image/product/dp210.jpg" /></a>
+                       <a href="http://afusjt.tmall.com/" target="_blank"><img src="image/product/dp211.jpg" /></a>
+                       <a href="http://langsha.tmall.com/" target="_blank"><img src="image/product/dp212.jpg" /></a>
+                       <a href="http://nongge.tmall.com/" target="_blank"><img src="image/product/dp213.jpg" /></a>
+                       <a href="http://erdos.tmall.com/" target="_blank"><img src="image/product/dp214.jpg" /></a>
+                       <a href="http://fuanna.tmall.com/" target="_blank"><img src="image/product/dp215.jpg" /></a>
+                       <a href="http://tmall.com/" target="_blank"><img src="image/tmall.jpg"  width="88" height="77" /></a>
+                           </div>
+                       <div class="clear"></div>
+                   </div>
+               </div>
+
+               <div class="tishitext">
+                   <img src="image/miji.jpg" usemap="#Map" />
+                   <a href="http://www.panli.com/mypanli/Favorite.aspx" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+               </div>
+
+               <div class="tishib1"></div>
+               <a href="http://www.panli.com/Special/sale_201411.html" class="bottonb2" target="_blank"></a>
+           </div>
+       
+    </div>
+
+</body>
+</html>

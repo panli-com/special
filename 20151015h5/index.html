@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="yes" name="apple-touch-fullscreen" />
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<!-- <meta content="maximum-dpr=2" name="flexible" />
+<meta content="modeName=640-12" name="grid" /> -->
+<title>双11攒钱行动</title>
+<link type="text/css" href="main.min.css" rel="stylesheet" />
+<!-- <script type="text/javascript" src="http://sf.panli.com/Public/zepto.min.js"></script> -->
+<!-- <script type="text/javascript" src="./js/zepto.min.js"></script> -->
+<script src="http://sf.panli.com/Public/jQuery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="./js/main.min.js" charset="utf-8"></script>
+</head>
+<body>
+<!-- main -->
+<div id="app" class="app">
+  <!-- head -->
+  <div class="header m-at">
+    <div class="light rotate360"></div>
+    <div class="banner pd-rem-05">
+      <img src="./images/banner-all.png" alt="">
+    </div>
+  </div>
+  <!-- head end -->
+  <!-- floor -->
+  <div class="floor-wrap pd-rem-05">
+    <div class="floor-flag wow bounceInRight">
+      <img src="./images/flag.png" alt="">
+    </div>
+    <!-- 1 -->
+    <div class="floor-1 wow bounceInLeft">
+      <img src="./images/millions.png" alt="">
+    </div>
+    <!-- 2 -->
+    <div class="floor-2 wow bounceInRight">
+      <div class="z-title"></div>
+      <div class="z-count">
+        <div class="z-list-hide" id="z-list-hide">
+            <ul class="new-hb-info-u clear" id="new-hb-u1">
+                  <li>• a***b刚刚获得了￥001元充值红包</li>
+                    <li>• a***b刚刚获得了￥002元充值红包</li>
+                      <li>• a***b刚刚获得了￥003元充值红包</li>
+                        <li>• a***b刚刚获得了￥004元充值红包</li>
+                          <li>• a***b刚刚获得了￥005元充值红包</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 2 end-->
+    <div class="floor-3">
+      <div class="wall-all wow bounceInLeft"><img src="./images/wall-1.png" alt=""></div>
+      <div class="wall-all wow lightSpeedIn" ><img src="./images/wall-2.png" alt=""></div>
+      <div class="wall-all wow bounceInLeft" ><img src="./images/wall-3.png" alt=""></div>
+      <div class="wall-all wow bounceInRight" ><img src="./images/wall-4.png" alt=""></div>
+    </div>
+  </div>
+  <!-- floor end -->
+  <!-- my hb -->
+  <div class="my-hb-wrap pd-rem-05">
+      <div class="my-hb-main">
+        <div class="my-hb-title"></div>
+        <!-- main yello-->
+        <div class="hb-yello">
+          <div class="hellp-wrap">
+            <div class="hellp-border">
+              <div class="hello-bg"></div>
+              <h6>亲爱的 <span class="red">XX XXXX</span>，</h6>
+              <p>截止当前，一共获得了<span class="red">￥888</span>元Panli双11红包。</p>
+              <p>您还未获得Panli双11红包，<a href="javascript:void(0)" id="goLiBtn" >赶紧去领~</a></p>
+
+              <!-- <a href="" class="login-btn">请先登录</a>
+              <div class="user-text">查看您的双11红包。</div> -->
+            </div>
+          </div>
+
+          <!-- hb xq -->
+          <div class="hb-xq-wrap">
+            <div class="hb-show-title"></div>
+            <div class="hb-xq-main">
+                <ul class="hb-show-u clear" id="z-list-hide">
+                  <li class="wow swing animated" data-wow-iteration="2">
+                    <div>
+                      <h6>50.16</h6>
+                      <p class="p1">来源：提交运单领红包</p>
+                      <p class="p2">限2015.11.11使用</p>
+                    </div>
+                  </li>
+                  <li class="wow swing animated" data-wow-iteration="2">
+                    <div>
+                      <h6>50.16</h6>
+                      <p class="p1">来源：提交运单领红包</p>
+                      <p class="p2">2015.11.11使用</p>
+                    </div>
+                  </li>
+                  <li class="wow swing animated" data-wow-iteration="2">
+                    <div>
+                      <h6>50.16</h6>
+                      <p class="p1">来源：提交运单领红包</p>
+                      <p class="p2">2015.11.11使用</p>
+                    </div>
+                  </li>
+                  <li class="wow swing animated" data-wow-iteration="2">
+                    <div>
+                      <h6>50.16</h6>
+                      <p class="p1">来源：提交运单领红包</p>
+                      <p class="p2">2015.11.11使用</p>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <!-- hb xq end -->
+        </div>
+        <!-- main yello end -->
+        <div class="about-hb">
+            <div class="about-title"></div>
+            <div class="about-count">
+              <ol class="hb-about-o">
+                <li>
+                  活动期间获得的Panli双11红包以代金券形式发放，将于2015年11月10日领红包活动结束后统一发放到Panli账户，可在 “<a href="" class="red">我的代金券</a>”查看。
+                </li>
+                <li>
+                  根据所获得红包的总金额，按照100元、50元、10元面额的代金券发放，红包金额个位数及角分皆进位成整10元， 如532.57，按540元发放。
+                </li>
+                <li>
+                  Panli双11红包，2015年11月11日使用，可直接抵扣代购商品金额；
+                </li>
+                <li>
+                  本活动最终解释权归Panli所有。
+                </li>
+              </ol>
+            </div>
+        </div>
+      </div>
+  </div>
+  <!-- my hb end -->
+<div>
+<!-- main end -->
+</body>
+<script charset="utf-8">
+//  ZScroll("z-list-hide",2000);
+//ZScroll($(".z-list-hide"),1,1000,3000);
+  $(".z-list-hide").ZScroll({ line: 1, speed: 1000, timer: 3000, up: "but_up", down: "but_down" });
+</script>
+</html>

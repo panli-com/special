@@ -1,0 +1,118 @@
+.my-hb-wrap{
+  min-height: 300px;
+  .red{
+    color: #f73753;
+  }
+}
+
+.my-hb-main{
+  padding-top: 1rem;
+  .my-hb-title{
+    height: 1rem;
+    background: url(./images/my-hb-title.png) no-repeat center center;
+    background-size: contain;
+    margin-bottom: 1rem;
+  }
+  .hb-yello{
+    min-height: 2rem;
+    background-color: #ffd34b;
+    padding: 0.7rem 0.6rem;
+    margin-bottom: .6rem;
+  }
+  .hellp-wrap{
+    background: #FFF;
+    padding: 0.2rem;
+  }
+  .hellp-border{
+    border: 0.08rem solid #ffecd3;
+    min-height: 1rem;
+    padding: 0.2rem;
+    position: relative;
+    .hello-bg{
+      position: absolute;
+      width: 2rem;
+      height: 1rem;
+      bottom: 2px;
+      right: 5px;
+      background: url(./images/hello-bg.png) no-repeat center center;
+      background-size: contain;
+    }
+    .login-btn{
+      display: inline-block;
+      padding: 4px 10px;
+      background: #e35466;
+      color: #FFF;
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+    h6{
+      line-height: 26px;
+      font-weight: 500;
+    }
+    p{
+      text-indent: 24px;
+    }
+  }
+}
+.hb-xq-wrap{
+  padding-top: 0.5rem;
+
+  .hb-show-title{
+    height: 0.8rem;
+    background: url(./images/my-hb-xq.png) no-repeat;
+    background-size: contain;
+    margin-bottom: 0.5rem;
+  }
+  .hb-show-u{
+    li{
+      width: 50%;
+      float: left;
+      margin-bottom: 0.5rem;
+      &>div{
+        margin: 0 auto;
+        text-align: center;
+        width: 3.4rem;
+        height: 4rem;
+        background: url(./images/hb-list-bg.png) no-repeat center top;
+        background-size: contain;
+      }
+    }
+    h6,.p1,.p2{
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // white-space: nowrap;
+    }
+    h6{
+      color: #ffff00;
+      font-size: 30px;
+      //padding:1.3rem 0 0.1rem 0;
+      padding-top: 1.13rem;
+    }
+    .p1{
+
+      color: #62000e;
+    }
+    .p2{
+      color: #FFF;
+    }
+  }
+}
+.about-hb{
+  background:#FFF;
+  padding: 0.3rem;
+  .about-title{
+    width: 5rem;
+    margin: 0 auto;
+    height: 1rem;
+    background: url(./images/about-title.png) no-repeat center center;
+    background-size: contain;
+  }
+  .hb-about-o{
+    list-style: decimal;
+    margin-left: -0.3rem;
+    li{
+        list-style: decimal;
+        line-height: 24px;
+    }
+  }
+}

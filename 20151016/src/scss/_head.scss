@@ -1,0 +1,88 @@
+.z-head{
+  height: (600px-38);
+  background: #baf9ff;
+  overflow: hidden;
+  position: relative;
+  padding-top: 38px;
+  .cloud-wrap{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    height: 600px;
+    background: url(./images/cloud.png) no-repeat center center;
+    animation: animatedBackground 10s linear infinite;
+  }
+  .z-head-top,.hill-wrap{
+    position: relative;
+    z-index: 2;
+  }
+  .z-head-top{
+    height: 150px;
+    background: url(./images/z-head-top.png) no-repeat center center;
+    //margin-top: 38px;
+  }
+  .z-bird,.z-dog,.z-cat{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .z-bird{
+    width: 44px;
+    height: 46px;
+    left: 300px;
+    background-image: url(./images/head-bird.png);
+  }
+  .z-dog{
+    width: 62px;
+    height: 55px;
+    left: 442px;
+    top: 5px;
+    background-image: url(./images/head-dog.png);
+  }
+  .z-cat{
+    width: 65px;
+    height: 53px;
+    right: 163px;
+    top: 3px;
+    background-image: url(./images/head-cat.png);
+  }
+
+
+}
+
+.hill-wrap{
+  height: 412px;
+  .z-family{
+    width: 1008px;
+    margin: 0 auto;
+    height: 402px;
+    background: url(./images/family.png) no-repeat center top;
+  }
+  .z-hill{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 255px;
+    background: url(./images/banner-hill.png) no-repeat center bottom;
+  }
+  .z-hand{
+    position: absolute;
+    width: 680px;
+    height: 66px;
+    top: 139px;
+    left: 50%;
+    margin-left: -334px;
+    background: url(./images/hand.png) no-repeat center bottom;
+  }
+  .z-tongue{
+    position: absolute;
+    display: block;
+    top: -6px;
+    left: 305px;
+    width: 41px;
+    height: 45px;
+    background: url(./images/dog-tongue.png) no-repeat center bottom;
+  }
+}

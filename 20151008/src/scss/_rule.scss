@@ -1,0 +1,29 @@
+.z-rule{
+  padding: 50px 0;
+  background: #ff79ab;
+  text-align: center;
+  .z-rule-title{
+    height: 77px;
+    background: url(./images/rule-title.jpg) no-repeat center;
+    margin-bottom: 10px;
+  }
+  .z-rule-footer{
+    color: #FFC8D9;
+    font-size: 16px;
+  }
+  .z-rule-count{
+    text-align: left;
+    padding: 10px;
+    background: #FF629D;
+    color: #FFF7F9;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    ol{
+      margin-left: 50px;
+    }
+    li{
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}

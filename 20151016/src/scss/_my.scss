@@ -1,0 +1,125 @@
+.my-hb-wrap{
+  min-height: 300px;
+  background: #e2374d;
+  padding-bottom: 100px;
+  .red{
+    color: #f73753;
+  }
+}
+
+.my-hb-main{
+  margin: 0 auto;
+  width: 912px;
+  padding: 50px 0;
+  .hb-title{
+    height: 58px;
+    background: url(./images/my-hb-title.png) no-repeat center center;
+    margin-bottom: 70px;
+  }
+  .hello-user-wrap{
+    background: #FFF;
+    padding: 10px;
+      margin-bottom: 40px;
+  }
+  .hello-user{
+    min-height: 60px;
+    border: 3px solid #ffecd3;
+    padding: 30px;
+    position: relative;
+    h6,p{
+      font-size: 18px;
+    }
+    h6{
+      padding-bottom: 5px;
+    }
+    p{
+      line-height: 30px;
+      text-indent: 30px;
+    }
+    .price{
+      font-size: 30px;
+    }
+    .bg{
+      position: absolute;
+      width: 210px;
+      height: 80px;
+      right: 40px;
+      bottom: 10px;
+      background: url(./images/my-hb-info-bg.png) no-repeat;
+    }
+    a:hover{
+      text-decoration: none;
+    }
+    .login-btn{
+      display: inline-block;
+      padding: 5px 20px;
+      text-decoration: none;
+      background: #f73753;
+      color: #FFF;
+      border-bottom: 5px solid #e22541;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      &:hover{
+        background: #d1263f;
+      }
+    }
+  }
+
+  .hb-show{
+    position: relative;
+    min-height: 40px;
+  }
+  .hb-show-title{
+    height: 32px;
+    background: url(./images/my-hb-xq.png) no-repeat;
+    margin-bottom: 20px;
+  }
+  .hb-show-u{
+    width: 1000px;
+    li{
+      position: relative;
+      width: 203px;
+      height: 225px;
+      background: url(./images/my-hb-li-bg.png) no-repeat center center;
+      text-align: center;
+      float: left;
+      margin-right: 28px;
+      margin-bottom: 20px;
+    }
+    .price{
+      color: #ffff00;
+      font-size: 55px;
+      padding-top: 80px;
+
+    }
+    .p1{
+      padding-top: 24px;
+      color:#62000e;
+      font-size: 14px;
+    }
+    .p2{
+      color:#FFF;
+      font-size: 14px;
+    }
+  }
+}
+.hb-about{
+  min-height: 50px;
+  background: #FFF;
+  padding: 30px 0;
+  .z-title{
+    height: 28px;
+    background: url(./images/about-title.png) no-repeat center center;
+  }
+  .hb-about-o{
+    padding: 20px 40px 0 70px;
+    list-style: decimal;
+    li{
+    line-height: 30px;
+    color: #555555;
+    }
+    a:hover{
+      text-decoration: none;
+    }
+  }
+}

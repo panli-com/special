@@ -1,0 +1,17 @@
+.z-head{
+  height: 703px;
+  background: #ff79ab url(./images/topbg-80.jpg) repeat-x center bottom;
+  transition:all 3s;
+  animation: animatedBackground 10s linear infinite;
+  .z-ban{
+    height: 552px;
+    background: url(./images/banner.png) no-repeat center 40px;
+
+  }
+}
+
+@keyframes animatedBackground {
+  0%  { background-position: 0 bottom;}
+  50% { background-position: 30px bottom; }
+  100% { background-position: 0 bottom; }
+ }

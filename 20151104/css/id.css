@@ -1,0 +1,69 @@
+﻿body{ margin:0 auto; font-family:"Microsoft YaHei",微软雅黑;}
+.frame{ width:950px;height:auto;font-family:Verdana,Arial, Helvetica, sans-serif;margin:0 auto;text-align:center;}
+p, h1, h2, h3, h4, h5, ul,li,  dl, dt, dd, b,div,img{ list-style-type:none; margin:0px; padding:0px; border:0px; font-weight:normal;}
+ul,li{list-style-type:none;}
+img{vertical-align:top;}
+a,area{outline: none;blr:expression(this.onFocus=this.blur());}/*For IE*/
+:focus{-moz-outline-style:none;}/*For Firefox*/
+.span25{ height:25px; line-height:25px; display:block; clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+
+#frame{ width:100%; background-color:#851bc2;}
+.Spike_banner{ background:url(cssImg/Spike_xian.gif) repeat-x; height:872px;}
+.banner1{ background:url(cssImg/Spike_banner1.jpg) no-repeat center; height:100px;}
+.banner2{ background:url(cssImg/Spike_banner2.gif) no-repeat center; height:100px;}
+.banner3{ background:url(cssImg/Spike_banner3.gif) no-repeat center; height:100px;}
+.banner4{ background:url(cssImg/Spike_banner4.gif) no-repeat center; height:100px;}
+.banner5{ background:url(cssImg/Spike_banner5.gif) no-repeat center; height:100px;}
+.banner6{ background:url(cssImg/Spike_banner6.gif) no-repeat center; height:172px;}
+.banner7{ background:url(cssImg/Spike_Countdown.png) no-repeat top; width:1000px; margin:0 auto; height:200px; display:block;}
+.banner8{ background:url(cssImg/Spike_Countdown.png) no-repeat bottom; width:1000px; margin:0 auto; height:200px; display:block;}
+.Spike_Countdown{ width:745px; height:200px; float:left; display:block;}
+.Countdown_Day{ position:relative; width:50px; height:50px; line-height:50px; top:97px; left:285px; font-size:36px;text-align:center; color:#fff; font-family:Arial, Helvetica, sans-serif; font-weight:bold; float:left;}
+.Countdown_When{ position:relative; width:50px; height:50px; line-height:50px; top:97px; left:335px; font-size:36px;text-align:center; color:#fff; font-family:Arial, Helvetica, sans-serif; font-weight:bold; float:left;}
+.Countdown_Branch{ position:relative; width:50px; height:50px; line-height:50px; top:97px; left:385px; font-size:36px;text-align:center; color:#fff; font-family:Arial, Helvetica, sans-serif; font-weight:bold; float:left;}
+.Countdown_Seconds{ position:relative; width:50px; height:50px; line-height:50px; top:97px; left:435px; font-size:36px;text-align:center; color:#fff; font-family:Arial, Helvetica, sans-serif; font-weight:bold; float:left;}
+.Spike_Registered{ float:right; position:relative; width:130px; height:170px; left:-37px; background:url(cssImg/Spike_Registered.png) no-repeat; display:block;}
+
+.content_list{width:1000px; margin:0 auto; overflow:hidden; padding:20px 0 50px 0;}
+.Spike_Ladies{ background:url(cssImg/Spike_Ladies.gif) no-repeat center; height:48px; padding:25px 0;}
+.Spike_Male{ background:url(cssImg/Spike_Male.gif) no-repeat center; height:48px; padding:25px 0;}
+.Spike_Shoes{ background:url(cssImg/Spike_Shoes.gif) no-repeat center; height:48px; padding:25px 0;}
+.Spike_Box{ background:url(cssImg/Spike_Box.gif) no-repeat center; height:48px; padding:25px 0;}
+.Spike_Beauty{ background:url(cssImg/Spike_Beauty.gif) no-repeat center; height:48px; padding:25px 0;}
+.Spike_Ornaments{ background:url(cssImg/Spike_Ornaments.gif) no-repeat center; height:48px; padding:25px 0;}
+.Spike_Hone{ background:url(cssImg/Spike_Hone.gif) no-repeat center; height:48px; padding:25px 0;}
+
+.Ladies_pro li{ width:240px; float:left; margin:0 13px 20px 0; display:block;}
+.Ladies_pro .pro_padding{ margin-right:0; display:block;}
+.Ladies_title{ background-color:#fff; font-size:14px; text-align:center; padding-top:10px;}
+.Ladies_title a{ color:#333; text-decoration:none;}
+.Ladies_Carnival{ background:url(cssImg/Spike_Double11.gif) no-repeat 12px 10px; background-color:#fff; color:#fa1e45; font-size:14px; height:50px; line-height:58px; padding:10px 15px 0 12px; display:block; overflow:hidden;}
+.Ladies_Carnival a{color:#333; font-size:14px; text-decoration:none;}
+.Ladies_Carnival a:hover{color:#333; font-size:14px;}
+.ys_yuanjia{padding:0 5px 0 0px; color:#f51051; font-size:25px; font-family:Arial, Helvetica, sans-serif;}
+.ys_Eleven{ text-decoration:line-through; color:#666;}
+.ys_price{ background:url(cssImg/Eleven_back.gif) no-repeat; width:240px; height:34px; line-height:34px; display:block;}
+.Deposit_left{ width:120px; background:url(cssImg/Spike_Collection.gif) no-repeat; height:34px; float:left;}
+.price_right{ width:120px; background:url(cssImg/Spike_Buy.gif) no-repeat; height:34px; float:left;}
+.clear{ clear:both;}
+.con_more{ color:#fff; font-size:15px;}
+.con_more a{ color:#fff; text-decoration:none;}
+.con_more a:hover{ color:#ffe323; text-align:right;}
+
+.Cheats_back{ background-color:#e6093a; padding:40px 0; overflow:hidden;}
+.Spike_Cheats{ width:1000px; margin:0 auto;}
+.Cheats_title{ background:url(cssImg/Cheats_back.gif) no-repeat center; height:136px; margin-bottom:20px;}
+.Cheats_img1{ background:url(cssImg/Spike_banner_45.gif) no-repeat; height:220px;}
+.Cheats_img2{ background:url(cssImg/Spike_banner_47.gif) no-repeat; height:250px;}
+.panli_Favorites{ position:relative; width:216px; height:30px; left:268px; top:81px; display:block;}
+
+.fuceng{ width:100px; height:370px;  z-index:500; position:fixed; bottom:30px; left:85%; _position:absolute; /* for IE6 */_top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); /* for IE6 */ overflow:visible; }
+
+.banner8{
+	display: none;
+}
+.Ladies_pro ul{
+	width: 1100px;
+}

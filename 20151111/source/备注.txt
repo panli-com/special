@@ -1,0 +1,28 @@
+文档地址：https://www.zybuluo.com/jean/note/210767
+
+
+数据库：panli库
+DiscountProduct       商品列表
+新增加字段：
+SpecialPrice（panli特价）
+ProductWeight（重量）
+Shelves（库位）
+Stock（库存）
+
+DiscountProductEvent  活动列表
+
+
+PC
+http://www.panli.com/Special/Thanksgiving2015/PC/ProductList.aspx
+http://www.panli.com/Special/Thanksgiving2015/PC/PromotionPay.aspx
+http://www.panli.com/Special/Thanksgiving2015/PC/PaySuccess.aspx
+
+H5
+http://www.panli.com/Special/Thanksgiving2015/H5/ProductList.aspx
+http://www.panli.com/Special/Thanksgiving2015/H5/ProductDetails.aspx
+http://www.panli.com/Special/Thanksgiving2015/H5/PromotionPay.aspx
+http://www.panli.com/Special/Thanksgiving2015/H5/PaySuccess.aspx
+
+
+
+

@@ -1,0 +1,108 @@
+.list-pro{
+	background-color: #ff2b5b;	
+	.banner{		
+		min-height: 6rem;
+		img{
+			max-width: 100%;
+		}
+	}
+	.list-count{
+		padding-top: 10px;
+		padding-left: 0.4rem;
+		li{
+			width: 4.8rem;
+			float: left;
+			&.no{
+				.im-btn{					
+					background-image:  url(../images/list/Steal-it.png);					
+				}
+				.thumb{
+					span{
+						width: 3rem;
+						height: 3rem;
+						background: url(../images/list/sold-out.png) no-repeat center center;	
+						background-size: contain;
+						left: 50%;
+						top: 50%;
+						margin-left: -1.5rem;
+						margin-top: -1.5rem;	
+					}
+				}
+			}
+		}
+		.im-btn{
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			width: 1rem;
+			height: 1rem;
+			display: block;		
+			background: url(../images/list/Immediately.png) no-repeat center center;		
+			background-size: contain;
+		}
+		a{
+			display: block;
+			padding: 0.4rem;
+			padding-left: 0;
+			padding-bottom: 0;
+			text-decoration: none;
+		}
+		.box-bg{
+			background-color: #FFF;
+			padding-bottom: 10px;
+			position: relative;
+		}
+		.thumb{
+			position: relative;
+			width: 4.4rem;
+			height: 4.4rem;
+			overflow: hidden;
+			background: url(../images/loading.gif) no-repeat center center;
+			img{
+				width: 4.4rem;
+				height: 4.4rem;
+				// max-width: 100%;
+				// min-height: 100%
+			}
+			span{
+				position: absolute;
+			}
+		}
+		.title{
+			font-size: 12px;			
+			overflow: hidden;			
+			font-weight: 600;
+			height: 34px;
+			margin-top: 10px;	
+			// white-space: nowrap;			
+			text-overflow: -o-ellipsis-lastline;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;					
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			padding: 0 10px;			
+			margin-bottom: 10px;
+		}
+		p{
+			padding: 0 10px;
+			font-size: 12px;
+		}
+		.p1,.p3{			
+			color: #888888;
+		}
+		.p2{
+			color: #fa1e45;
+		}
+		.lprice{
+			font-weight: bold;
+			font-size: 16px;
+		}
+	}
+	.list-footer{
+		padding: 10px 10px;
+		padding-bottom: 0;
+		text-align: right;
+		color: #64041a;
+	}
+}

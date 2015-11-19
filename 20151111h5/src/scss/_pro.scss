@@ -1,0 +1,96 @@
+@charset "UTF-8";
+.product-show-text{
+	padding: 15px;
+	border-top: 1px solid #EBEBEB;
+	border-bottom: 1px solid #EBEBEB;
+	padding-bottom: 0;
+	.title{
+		font-size: 16px;
+		padding-bottom: 10px;
+		font-weight: 400;
+		color: #787878;
+	}
+	p{
+		padding-bottom: 10px;
+	}
+	.p1{
+		color: #505050;
+		strong{
+			font-weight: 500;
+			color: #333;
+		}
+		.price{
+			color: $color;
+			font-size: 28px;
+			padding-left: 10px;
+		}
+		
+	}
+	.p2,.p3{
+		color: #595959;
+	}
+	.del-link{
+		color: #9E9E9E;
+	}
+}
+.help-info{
+	background-color: #FFEBEB;
+	font-size: 16px;
+	text-align: center;
+	color: $color;
+	padding: 8px;
+	border-bottom: 2px solid #FF6C6C;
+}
+
+.goto-buy{
+	background-color: $color;
+	text-align: center;
+	color: #FFF;	
+	font-size: 16px;	
+	display: inline-block;
+	padding: 0 30px;
+	border-radius: 25px;
+	span{
+		position: relative;
+		display: inline-block;
+		height: 35px;
+		line-height: 36px;
+	}
+}
+.shop-bag{
+	
+	width: 27px;
+	height: 35px;
+	display: inline-block;
+	background: url(../images/shoppingBag.png) no-repeat center center;
+	background-size: 14px 18px;	
+}
+
+.z-tag{	
+	background-color: $color;
+	color: #FFF;
+	padding: 0 10px;
+	border-radius: 5px;
+	position: relative;
+	font-size: 13px;
+	position: relative;
+	top: 7px;
+	line-height: 20px;
+	em{
+		display:block; 
+		border-width:10px; 
+		position:absolute;
+		top:0; 
+		left:-17px;
+		border-style:solid;
+		border-color:transparent $color transparent transparent;
+		font-size:0; line-height:0;
+	}
+}
+.pro-count-box{
+	padding: 10px;
+	padding-bottom: 0px;
+	img{
+		max-width: 100%;
+	}
+}

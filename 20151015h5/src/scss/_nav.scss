@@ -1,0 +1,78 @@
+
+.z-floor-nav{
+  position: fixed;
+  width: 135px;
+  height: 518px;
+  z-index: 500;
+  bottom: 30px;
+  right:100px;
+  _position: absolute;
+  _top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);
+  overflow: visible;
+  @media screen and (min-width: 1500px) {
+        right:130px;
+  }
+  @media screen and (min-width: 1600px) {
+        right:180px;
+  }
+  @media screen and (min-width: 1700px) {
+        right:230px;
+  }
+  @media screen and (min-width: 1800px) {
+        right:280px;
+  }
+
+
+
+
+
+  .floor-nav-top{
+    height: 48px;
+    background: url(./images/nav-top-top.png) no-repeat;
+  }
+  .floor-nav-b{
+    height: 62px;
+    margin-right: 20px;
+    background: url(./images/nav-top-b.png) no-repeat right;
+  }
+  .floor-nav-u{
+    display: block;
+    background: #ED3B5C;
+    margin-left: 6px;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    overflow: hidden;
+    a{
+      display: block;
+      color: #FFF;
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration: none;
+      padding: 5px;
+      position: relative;
+      z-index: 2px;
+      transition:all 1s;
+
+    }
+    li{
+      display: block;
+      text-align: center;
+      margin-bottom: 2px;
+      &.on{
+        a{
+          color: #f0ff47;
+        }
+      }
+      &:hover{
+        a{
+          color: #f0ff47;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 960px){
+    body{
+        background: #000;
+    }
+}

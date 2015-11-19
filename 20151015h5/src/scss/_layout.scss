@@ -1,0 +1,36 @@
+body{
+  background-color: $colorbg;
+}
+.app{
+  padding-bottom: .5rem;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mg-lf-rem-05{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.mg-lf-rem-1{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.pd-lr-rem-1{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.pd-lr-rem-05{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.pd-tb-rem-05{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.pd-rem-05{
+  padding: 0.5rem;
+}
+.red{
+  color: #fd4530;
+}

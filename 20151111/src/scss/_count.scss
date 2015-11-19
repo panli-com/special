@@ -1,0 +1,46 @@
+.z-thinks-count{
+  padding:20px 0;
+}
+.z-thinks-count-tab{
+  height: 34px;
+  border-bottom: 1px solid #e5e5e5;
+  .z-w{
+    position: relative;
+  }
+  .title{
+    position: absolute;
+    height: 52px;
+    line-height: 52px;
+    border: 1px solid #e5e5e5;
+    border-top: 3px solid #ff6e6e;
+    border-bottom: 2px solid #FFF;
+    text-align: center;
+    background-color: #FFF;
+    color: #ff6e6e;
+    font-size: 20px;
+    padding: 0 30px;
+    bottom: -35px;
+  }
+}
+.pro-count-tag{
+  position: relative;
+  border-bottom: 1px solid #EEEEEE;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  ul{    
+    overflow: hidden;
+  }
+  li{
+    display: inline;
+    float: left;
+    width: 206px;
+    height: 24px;
+    margin-right: 20px;
+    overflow: hidden;
+    text-indent: 5px;
+    line-height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;    
+    font-size: 12px;
+  }
+}
