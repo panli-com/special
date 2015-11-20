@@ -56,12 +56,26 @@
   height: 400px;
   background: url(../images/loading.gif) no-repeat center center;
   text-align: center;
-  overflow: hidden; }
+  overflow: hidden;
+  vertical-align: middle;
+  *position: relative;
+  font-size: 0; }
+  .product-big-box p {
+    *position: absolute;
+    *top: 50%;
+    width: 100%;
+    text-align: center; }
+  .product-big-box span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%; }
   .product-big-box img {
-    max-width: 100%;
-    min-height: 300px;
-    max-height: 100%;
-    vertical-align: middle; }
+    max-width: 400px;
+    max-height: 400px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 0; }
 
 .product-sml-box {
   padding-top: 10px; }

@@ -29,5 +29,5 @@ function vidataNum(){
 
 // v04
 function appV(){
-  return "0.0.4"; 
+  return "0.0.5"; 
 }

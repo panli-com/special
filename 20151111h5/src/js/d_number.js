@@ -21,7 +21,7 @@
           vidataNum();
     })
 
-    $(".num-input").on('input change',function(){
+    $(".num-input").on('input propertychange',function(){
       var _t = $(this),
           _tV = parseInt(_t.val()),
           proN = parseInt($("#pro-number").text());

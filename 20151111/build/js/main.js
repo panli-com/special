@@ -55,14 +55,16 @@ $(function() {
           vidataNum();
     })
 
-    $(".num-input").on('input change',function(){
+    $(".num-input").on('input propertychange',function(){
       var _t = $(this),
-          _tV = parseInt(_t.val()),
-          proN = parseInt($("#pro-number").text());
-      if(_tV > proN){
+          _tV = _t.val(),
+          proN = parseInt($("#pro-number").text());          
+       _t.val(_tV.replace(/\D/g,''));
+      if(parseInt(_tV) > proN){
         _t.val(proN);
       }
-      if(_tV < 1){
+      
+      if(parseInt(_tV) < 1 || parseInt(_tV)== ''){
           _t.val(1);
       }
       
@@ -124,14 +126,14 @@ function vidataNum(){
     return false;
   } else {
     $(".goto-paly-a").hide();
-    return true;
+    return true; 
   }
 }
 
 
-// v
+// v04
 function appV(){
-  return "0.0.3";
+  return "0.0.5"; 
 }
 ;(function(){
 
