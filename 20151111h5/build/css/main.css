@@ -383,6 +383,11 @@ input[type=button] {
   -webkit-appearance: none;
   outline: none; }
 
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; }
+
 body {
   background-color: #fff; }
 
@@ -929,7 +934,15 @@ button.swiper-pagination-bullet {
 
 .pro-count-box {
   padding: 10px;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  position: relative;
+  z-index: 0; }
+  .pro-count-box img {
+    max-width: 100%; }
+  .pro-count-box ul {
+    overflow: hidden; }
+  .pro-count-box div {
+    max-width: 100%; }
   .pro-count-box img {
     max-width: 100%; }
 

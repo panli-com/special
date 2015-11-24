@@ -94,6 +94,9 @@
     .product-sml-box ul li.on {
       border-color: #ff6e6e; }
 
+.v004 {
+  display: block; }
+
 .z-thinks-pro {
   position: relative;
   padding-top: 48px;
@@ -204,6 +207,8 @@
 
 .z-thinks-count {
   padding: 20px 0; }
+  .z-thinks-count ul {
+    overflow: hidden; }
 
 .z-thinks-count-tab {
   height: 34px;

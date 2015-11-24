@@ -68,13 +68,14 @@
     
     $(".play-close,.layer-bg").on("touchend",function(){
       $(".product-show-text").css("display","block");
+      $(".pro-count-box").css("display","block");
       $(".layer-bg").css("display","none");
       $(".fixb0").css("display","none");
     })
     
     // 弹出支付
     $(".goto-buy").on("touchend",function(){
-     
+      $(".pro-count-box").css("display","none");
       $(".product-show-text").css("display","none");
       $(".layer-bg").css("display","block");
       $(".fixb0").css("display","block");

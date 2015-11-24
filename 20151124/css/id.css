@@ -1,0 +1,72 @@
+﻿body{ margin:0 auto; font-family:"Microsoft YaHei",微软雅黑;}
+.frame{ width:950px;height:auto;font-family:Verdana,Arial, Helvetica, sans-serif;margin:0 auto;text-align:center;}
+p, h1, h2, h3, h4, h5, ul,li,  dl, dt, dd, b,div,img{ list-style-type:none; margin:0px; padding:0px; border:0px; font-weight:normal;}
+ul,li{list-style-type:none;}
+img{vertical-align:top;}
+a,area{outline: none;blr:expression(this.onFocus=this.blur());}/*For IE*/
+:focus{-moz-outline-style:none;}/*For Firefox*/
+.span25{ height:25px; line-height:25px; display:block; clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+
+#frame{ width:100%; background-color:#fdce56;}
+.Berserk_banner{height:700px; background-color:#ff2b5b;}
+.banner1{ background:url(cssImg/Berserk_goods_03.jpg) no-repeat center; height:110px;}
+.banner2{ background:url(cssImg/Berserk_goods_05.jpg) no-repeat center; height:140px;}
+.banner3{ background:url(cssImg/Berserk_goods_06.jpg) no-repeat center; height:110px;}
+.banner4{ background:url(cssImg/Berserk_goods_07.jpg) no-repeat center; height:110px;}
+.banner5{ background:url(cssImg/Berserk_goods_08.jpg) no-repeat center; height:110px;}
+.banner6{ background:url(cssImg/Berserk_goods_09.jpg) no-repeat center; height:120px;}
+.banner_width{ width:1000px; height:140px; margin:0 auto;}
+.lj_registration{ position:relative; width:120px; height:120px; top:16px; left:842px; display:block;}
+
+.thumb{	
+	display: block;
+	width: 240px;
+	height: 240px;
+	text-align: center;
+	overflow: hidden;
+	background: url(cssImg/loading.gif) no-repeat center center;
+	
+}
+.thumb img{
+	width: 240px;
+	height: 240px;
+	line-height: 240px;
+	vertical-align: middle;
+	
+}
+.content_list{width:1000px; margin:0 auto; overflow:hidden; padding:40px 0 30px 0;}
+.Berserk_pro li{position: relative; width:240px; float:left; margin:0 13px 20px 0; background-color:#fff; display:block;}
+.Berserk_pro .pro_padding{ margin-right:0; display:block;}
+.Berserk_title{ background-color:#fff; font-size:14px; text-align:center; padding-top:10px;
+	overflow: hidden;  
+    line-height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.Berserk_pro ul{
+	width: 1100px;
+}
+.Berserk_title a{ color:#333; text-decoration:none;}
+.original_left{  line-height:20px; padding:10px 0 10px 15px; width: 164px; }
+.buying_right{ position: absolute;left: 150px;bottom: 3px;	 padding:12px 15px 10px 0;}
+.yuanjia{ font-size:14px; color:#555;text-decoration:line-through; 
+	overflow: hidden;
+	white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+.Preferential{ color:#fa1e45; font-size:14px;
+	overflow: hidden;
+	white-space: nowrap;
+    text-overflow: ellipsis;  
+}
+.Preferential span{ font-size:24px; font-family:Arial, Helvetica, sans-serif;}
+.Surplus{ font-size:14px; color:#555;}
+.clear{ clear:both;}
+.Sold_out{ position:absolute; width:180px; height:180px; background:url(cssImg/Berserk_goods_12.png) no-repeat; margin:35px 0 0 30px; display:block;}
+
+.More_indulgence{ background:url(cssImg/More_indulgence.gif) no-repeat center; height:64px; display:block; padding:20px;}
+.CBerserk_opyright{ text-align:right; color:#000; font-size:14px;}
+
+

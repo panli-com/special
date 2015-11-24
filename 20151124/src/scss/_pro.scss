@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+.z-thinks-pro{
+  position: relative;
+  padding-top: 48px;
+  font-family: "Microsoft YaHei", Helvetica, arial, nimbussansl;
+}
+.product-img-wrap{
+  width: 400px;
+  min-height: 560px;
+}
+.product-info-wrap{
+  width: 720px;
+  min-height: 560px;
+  font-size: 16px;
+  color: #3c3c3c;
+  .title{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    padding-left: 12px;
+    letter-spacing: 3px;
+   }
+   
+  .pro-tb{
+    width: 100%;
+    td{
+      &.td1{
+        
+        min-width: 96px;
+      }
+      padding-bottom: 25px;
+      padding-left: 12px;
+      &.pb20{
+        padding-bottom: 20px;
+      }
+      &.pb24{
+        padding-bottom: 24px;
+      }
+      &.pb16{
+        padding-bottom: 16px;
+      }
+      &.pb26{
+        padding-bottom: 26px;
+      }
+      &.pb23{
+        padding-bottom: 23px;
+      }
+      &.v-middle{
+        vertical-align: middle;
+      }
+      &.v-top{
+        vertical-align: top;
+      }
+      &.paddingB0{
+        padding-bottom: 0;
+      }
+    }
+    .tr2{
+      td{
+        background-color: #f6f6f6;
+        &.pb20{
+          padding-bottom: 20px;
+        }
+        &.pt20{
+          padding-top: 20px;
+        }
+      }
+
+    }
+  }
+  .help-a{
+    font-size: 16px;
+    color: #339aff;
+    margin-left: 20px;
+  }
+  .remarks{
+    padding:10px;
+    width: 95%;
+    resize: none;
+  }
+  .password{
+    width: 200px;
+  }
+  .submit-btn{
+    display: inline-block;
+    height: 43px;
+    padding: 0 30px;
+    font-size: 20px;
+    color: #FFF;
+    background-color: #ff6e6e;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    &:hover{
+      background-color: #ff5959;
+    }
+  }
+}
+.goto-paly-a{
+  display: none;
+}
+.num-sp-box{
+  line-height: 28px;
+}
+.num-text-s{
+  padding-left: 10px;
+  line-height: 28px;
+}
+.num-jian,.num-jia{
+  display: block;
+  _display: inline;
+  width: 28px;
+  height: 28px;
+  float: left;
+  background-color: #ff9c9c;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+.num-input{
+  height: 24px;
+  line-height: 24px;
+  width: 40px;
+  text-align: center;
+  float: left;
+  border: 2px solid #ff9c9c;
+}
+.num-jian{
+  background-image: url(../images/jian.png);
+}
+.num-jia{
+  background-image: url(../images/jia.png);
+}

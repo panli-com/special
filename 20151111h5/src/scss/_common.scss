@@ -67,3 +67,8 @@ input[type=button]{
 	-webkit-appearance:none;
 	outline:none
 }
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}

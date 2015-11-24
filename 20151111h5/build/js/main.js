@@ -4340,7 +4340,7 @@ function UserBalance(uName,callback) {
 
 // v  
 function appV(){
-  return "0.0.4";
+  return "0.0.5";
 }
 function textareaAuto() {
   function adjustHeight(textareaElement, minHeight) {
@@ -4388,14 +4388,16 @@ function textareaAuto() {
           vidataNum();
     })
 
-    $(".num-input").on('input change',function(){
+    $(".num-input").on('input propertychange',function(){
       var _t = $(this),
-          _tV = parseInt(_t.val()),
-          proN = parseInt($("#pro-number").text());
-      if(_tV > proN){
+          _tV = _t.val(),
+          proN = parseInt($("#pro-number").text());          
+       _t.val(_tV.replace(/\D/g,''));
+      if(parseInt(_tV) > proN){
         _t.val(proN);
       }
-      if(_tV < 1){
+      
+      if(parseInt(_tV) < 1 || parseInt(_tV)== ''){
           _t.val(1);
       }
       
@@ -4673,13 +4675,14 @@ return Layzr;
     
     $(".play-close,.layer-bg").on("touchend",function(){
       $(".product-show-text").css("display","block");
+      $(".pro-count-box").css("display","block");
       $(".layer-bg").css("display","none");
       $(".fixb0").css("display","none");
     })
     
     // 弹出支付
     $(".goto-buy").on("touchend",function(){
-     
+      $(".pro-count-box").css("display","none");
       $(".product-show-text").css("display","none");
       $(".layer-bg").css("display","block");
       $(".fixb0").css("display","block");
