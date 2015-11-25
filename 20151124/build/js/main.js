@@ -123,11 +123,11 @@ function GetRandomNum(Min,Max){
         return;
       };
       PL.load();      
-      var radn = GetRandomNum(0,3);
+      var radn = GetRandomNum(0,3); 
      
       setTimeout(function(){        
         foRedPacketLayer(radn,_name,_t);
-      },2000);
+      },radn * 2000);
       
     })
     
@@ -142,6 +142,15 @@ function GetRandomNum(Min,Max){
     
     $("#red-packet-wrap").on("click",".red-packet-btn-2",function(){
       PL.alert("每个人只能领两张券哦",{icon: 5});
+    })
+    
+    $("#del_Cookie").on("click",function(){
+      del_Cookie("doubleTwelve");
+      PL.alert("清除成功，可重新测试抢购",{icon: 6});
+      setTimeout(function(){
+        window.location.href=window.location.href;
+      },500)
+      
     })
     
   });
