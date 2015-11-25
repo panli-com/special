@@ -27,7 +27,7 @@ function GetRandomNum(Min,Max){
 			},
 			statusCode: {
 				404: function() {
-				alert("没有找到相关文件~~");
+				alert("请求错误~~");
 				}
 			}
     	});
