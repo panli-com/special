@@ -1,0 +1,29 @@
+{
+	"success": true,
+	"data":[
+		{
+			"img":"images/red-packet-1.png",
+			"rid":1,
+			"name":"满100减5",
+			"number":99999
+		},
+		{
+			"img":"images/red-packet-2.png",
+			"rid":2,
+			"name":"满300减20",
+			"number":300
+		},
+		{
+			"img":"images/red-packet-3.png",
+			"rid":3,
+			"name":"满500减50",
+			"number":200
+		},
+		{
+			"img":"images/red-packet-4.png",
+			"rid":3,
+			"name":"满1000减100",
+			"number":50
+		}
+	]
+}

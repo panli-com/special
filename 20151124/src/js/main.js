@@ -21,15 +21,7 @@
   
     $('.parallax').parallax();
     
-  //   var obj = {
-  //         success: true,
-  //         data:[
-  //                 {title:'item1',message:11},
-  //                 {title:'item1',message:22}
-  //         ]
-  // }
-  // var tmpl = $('#j-tmpl').html();
-  // var doTtmpl = doT.template(tmpl);
+
 
       
     

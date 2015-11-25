@@ -29,81 +29,8 @@
   </div> 
   <div class="row container">
     <h4 class="header">活动区</h4>
-    <div class="row" id="red-packet-wrap">
-      <div class="col l3 s12">
-        <div class="card">   
-          <div class="card-image">
-            <img src="images/red-packet-2.png">
-          </div>
-          <div class="card-content">
-                
-            <a class="btn waves-effect waves-light pink accent-3">
-              抢红包          
-            </a>
-            <h6><a class="btn disabled">还剩 <span>3600</span></a></h6>      
-          </div>         
-         </div>         
-      </div>
-      <div class="col l3 s12">
-        <div class="card">   
-          <div class="card-image">
-            <img src="images/red-packet-2.png">
-          </div>
-          <div class="card-content">
-                
-            <a class="btn waves-effect waves-light pink accent-3">
-              抢红包          
-            </a>
-            <h6><a class="btn disabled">还剩 <span>3600</span></a></h6>      
-          </div>         
-         </div>         
-      </div>
-      <div class="col l3 s12">
-        <div class="card">   
-          <div class="card-image">
-            <img src="images/red-packet-2.png">
-          </div>
-          <div class="card-content">
-                
-            <a class="btn waves-effect waves-light pink accent-3">
-              抢红包          
-            </a>
-            <h6><a class="btn disabled">还剩 <span>3600</span></a></h6>      
-          </div>         
-         </div>         
-      </div>
-      <div class="col l3 s12">
-        <div class="card">   
-          <div class="card-image">
-            <img src="images/red-packet-2.png">
-          </div>
-          <div class="card-content">                
-            <a class="btn waves-effect waves-light pink accent-3">
-              抢红包          
-            </a>
-            <h6><a class="btn disabled">还剩 <span>3600</span></a></h6>      
-          </div>         
-         </div>         
-      </div>
-      <div class="col l3 s12">
-        <div class="card">   
-          <div class="card-image">
-            <img src="images/red-packet-2.png">
-          </div>
-          <div class="card-content">                
-            <a class="btn waves-effect waves-light pink accent-3">
-              抢红包          
-            </a>
-            <h6><a class="btn disabled">还剩 <span>3600</span></a></h6>      
-          </div>         
-         </div>         
-      </div>
-      
-      
-      
-     
-    </div>
-    
+    <div class="row" id="red-packet-wrap">    
+    </div>    
   </div>
   
   
@@ -112,21 +39,22 @@
   </div>
 </div>
 <script id="r-tmpl" type="text/template">
-    {{ for (var i = 0, l = it.data.length; i < l; i++) { }}
-     <div class="col l3 s12">
-        <div class="card">   
-          <div class="card-image">
-            <img src="{{=it.data[i].img}}">
-          </div>
-          <div class="card-content">                
-            <a class="btn waves-effect waves-light pink accent-3">
-              抢红包          
-            </a>
-            <h6><a class="btn disabled">还剩 <span>{{=it.data[i].price}}</span></a></h6>      
-          </div>         
-         </div>         
-      </div>
-      {{ } }}
+{{ for (var i = 0, l = it.data.length; i < l; i++) { }}
+<div class="col l3 s12">
+  <div class="card">   
+    <div class="card-image">
+      <img src="{{=it.data[i].img}}">
+    </div>
+    <div class="card-content">                
+      <a class="btn waves-effect waves-light pink accent-3">
+        抢红包          
+      </a>      
+      <h6><a class="btn disabled"><span>{{=it.data[i].name}}</span></a></h6>
+      <h6><a class="btn disabled">还剩 <span>{{=it.data[i].number}}</span></a></h6>      
+    </div>     
+    </div>         
+</div>
+{{ } }}
 </script>
 <script id="j-tmpl" type="text/template">
 {{ if(it.success){ }}
