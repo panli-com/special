@@ -7,17 +7,16 @@ b.replace(/(^|\r|\n)\t* +| +\t*(\r|\n|$)/g," ").replace(/\r|\n|\t|\/\*[\s\S]*?\*
 e+"="+a+";if(arr"+e+"){var "+c+","+g+"=-1,l"+e+"=arr"+e+".length-1;while("+g+"<l"+e+"){"+c+"=arr"+e+"["+g+"+=1];out+='"}).replace(a.evaluate||h,function(a,b){return"';"+k(b)+"out+='"})+"';return out;").replace(/\n/g,"\\n").replace(/\t/g,"\\t").replace(/\r/g,"\\r").replace(/(\s|;|\}|^|\{)out\+='';/g,"$1").replace(/\+''/g,"");c&&(a.selfcontained||!m||m._encodeHTML||(m._encodeHTML=f.encodeHTMLSource(a.doNotSkipEncoded)),b="var encodeHTML = typeof _encodeHTML !== 'undefined' ? _encodeHTML : ("+f.encodeHTMLSource.toString()+
 "("+(a.doNotSkipEncoded||"")+"));"+b);try{return new Function(a.varname,b)}catch(q){throw"undefined"!==typeof console&&console.log("Could not create a template function: "+b),q;}};f.compile=function(b,a){return f.template(b,null,a)}})();
 
-;(function(){
-
-
-
-	
-})();
-
 // v01
 function appV(){
   return "0.0.1"; 
 }
+//一个随机数
+function GetRandomNum(Min,Max){   
+  var Range = Max - Min;   
+  var Rand = Math.random();   
+  return(Min + Math.round(Rand * Range));   
+}   
 ;(function(){
 	function getJson(callback){		
 		 $.ajax({
@@ -50,6 +49,45 @@ function appV(){
 	
 })();
 ;(function(){
+	var RedPacketGo = {
+		"v":"0.0.1",
+		"a":"zan",
+		"init":function(obj){			
+			
+		var setTimeOut = setInterval(function(){
+				RedPacketGo.timeOut(obj)
+			},500);
+		},
+		"timeStop":function(obj){
+			//var stop = 0;
+		},
+		"timeOut":function(obj) {
+			var stop = 0;		
+			$(obj).each(function(){
+				var _t = $(this),
+					_tO = _t.text(),
+					_ps = _t.parents(".card"),
+					_btn = _ps.find(".red-packet-btn"),
+					radn = GetRandomNum(0,10),
+					_tN = parseInt(_tO) - radn;
+					if(_tN < 0){
+						_tN = 0;
+						_btn.addClass("disabled red-packet-btn-no");
+						_btn.removeClass("red-packet-btn");
+						_btn.text("已抢完");
+						return;
+					}
+					_t.text(_tN);
+				
+			});
+		}
+	};
+	
+	window.RedPacketGo = RedPacketGo;
+	
+})();
+
+;(function(){
 
   $(function(){
     
@@ -72,13 +110,37 @@ function appV(){
   
     $('.parallax').parallax();
     
+    RedPacketGo.init(".last-number");
 
-
+    $("#red-packet-wrap").on("click",".red-packet-btn",function(){
+      var _t = $(this);
+          _p = _t.parents(".card");
+          _name = _p.find(".packet-name").text();
+          _id = _p.find(".packet-name").attr("data-id");
+          
+      PL.load();      
+      var radn = GetRandomNum(0,3);
+      console.log(radn);
+      setTimeout(function(){        
+        foRedPacketLayer(radn,_name);
+      },2000);
       
+    })
+    
+    $("#red-packet-wrap").on("click",".red-packet-btn-no",function(){
+      PL.alert("已经抢完了 ，敬请期待下一轮吧!");
+    })
     
   });
   
-
+  function foRedPacketLayer(num,name){
+    PL.closeAll();
+    if(num == 1){
+      PL.alert("恭喜 ，获得"+ name +"的红包!");
+    }else{
+      PL.alert("没有抢到!");
+    }
+  }
   
 
   

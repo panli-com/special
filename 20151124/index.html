@@ -46,11 +46,11 @@
       <img src="{{=it.data[i].img}}">
     </div>
     <div class="card-content">                
-      <a class="btn waves-effect waves-light pink accent-3">
+      <a class="btn waves-effect waves-light pink accent-3 red-packet-btn">
         抢红包          
       </a>      
-      <h6><a class="btn disabled"><span>{{=it.data[i].name}}</span></a></h6>
-      <h6><a class="btn disabled">还剩 <span>{{=it.data[i].number}}</span></a></h6>      
+      <h6><a class="btn disabled"><span class="packet-name" data-id="{{=it.data[i].rid}}">{{=it.data[i].name}}</span></a></h6>
+      <h6><a class="btn disabled">还剩 <span class="last-number">{{=it.data[i].number}}</span></a></h6>      
     </div>     
     </div>         
 </div>
