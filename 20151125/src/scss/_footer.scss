@@ -1,0 +1,26 @@
+.floor-nav-wrap{
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	z-index: 500;
+}
+.floor-nav{
+	position: relative;
+	width: 140px;
+	height: 432px;
+	background: url(../images/floor-nav.png) no-repeat center top;
+	.floor-nav-u{
+		position: relative;
+		padding-top: 119px;
+		li{
+			height: 34px;
+			
+			border-bottom: 1px solid deepskyblue;
+			opacity: 0.5;
+			a{
+				display: block;
+				height: 34px;
+			}
+		}
+	}
+}
