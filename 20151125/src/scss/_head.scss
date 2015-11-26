@@ -1,0 +1,98 @@
+$bannerH:730px;
+.banner-wrap{
+	overflow: hidden;
+	height: $bannerH;
+	background:#c5121d url(../images/banner.jpg) no-repeat center top;
+	.hua-h{
+		height: $bannerH;
+		background: url(../images/hua-h.png) no-repeat center bottom;
+	}
+	.banner-btn-wrap{
+		height: $bannerH;		
+		position: relative;
+		.registered{
+			position: absolute;
+			top: 46px;
+			right: 154px;
+			display: block;
+			width: 138px;
+			height: 138px;
+			background: url(../images/registered.png) no-repeat center center;
+		}
+		.snatch-title{
+			position: absolute;
+			width: 343px;
+			height: 85px;
+			top: 445px;
+			left: 332px;
+			background: url(../images/snatch-title.png) no-repeat center center;
+		}
+	}
+}
+
+.activity-wrap{
+	min-height: 360px;
+	background: url(../images/dian.png);
+}
+.activity-main{
+	position: relative;
+	padding-top: 30px;
+}
+.activity-u{
+	width: 620px;
+	li{	
+		float: left;
+		width: 292px;
+		height: 130px;
+		margin-bottom: 20px;
+		margin-right: 5px;
+		a{
+			display: block;
+			position: relative;
+			span{
+				position: absolute;
+			}
+			&.on{
+				cursor: not-allowed;
+				span{
+					display: block;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					background: url(../images/finish.png) no-repeat center top;
+				}
+			}
+		}
+	}
+}
+
+.activity-content{
+	position: absolute;
+	width: 374px;
+	right: 0;
+	top: 30px;
+	ol{
+		list-style: decimal;
+		padding-left: 30px;
+		padding-top: 16px;
+		padding-bottom: 10px;
+		color: #555;
+		li{
+			list-style: decimal;
+			color: #555;
+			font-size: 14px;
+			line-height: 21px;
+			span {color:#555;}
+		}
+	}
+	.title{
+		height: 24px;
+		background: url(../images/activity-title.png) no-repeat center top;
+	}
+	.invite-btn{
+		display: block;
+		height: 75px;
+		background: url(../images/invite-btn.png) no-repeat center top;
+	}
+}

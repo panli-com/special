@@ -8,32 +8,41 @@
   
   $(function(){
      
-    $(".red-packet-btn").on("touchend",function(){
-      var _t = $(this);
-      Log(_t);
-       Pan.open({
-            type: 2,
-            content: '加载..'
-        });
-    })
+    // $(".red-packet-btn").on("touchend",function(){
+    //   var _t = $(this);     
+    //     PL.open({
+    //       type: 2,
+    //       content: '正在加载中',
+    //       shadeClose: false
+    //     });
+       
+    // })
     
-    $(".red-packet-btn-no").on("touchend",function(){
-      Log("S");
-       Pan.open({           
-            content: '啊喔, 这张券已经被大家抢光了呢'
-        });
-    });    
+    // $(".red-packet-btn-no").on("touchend",function(){     
+    //    PL.open({            
+    //         content: '啊喔, 这张券已经被大家抢光了呢'
+    //     });
+    //       Log(_t);
+    // });    
     
-    $(".red-packet-btn-yes").on("touchend",function(){   
-      Pan.open("这张券已经抢过了哦");
-    });
+    // $(".red-packet-btn-yes").on("touchend",function(){   
+     
+    //    PL.open({            
+    //         content: '这张券已经抢过了哦'
+    //     });
+    //     Log(_t);
+    // });
     
-    $(".red-packet-btn-2").on("touchend",function(){
-     Pan.open("每个人只能领两张券哦");
-    });
+    // $(".red-packet-btn-2").on("touchend",function(){   
+    //  PL.open({            
+    //         content: '每个人只能领两张券哦'
+    //     });
+    //    Log(_t);
+    // });
     
     
     
   });
-
+    
+ 
 })();

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="yes" name="apple-touch-fullscreen" />
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="keywords" content="Panli代购,代购,海外代购,华人代购,代购中国,淘宝代购,留学生代购">
+<meta name="description" content="决战双12，一年剁一回！不止50%OFF，1212购物券抢先领！Panli网－全球最大的专业代购网络，为海外华人代购国内各种商品，方便您的购物需求">
+<!-- <meta content="maximum-dpr=2" name="flexible" />
+<meta content="modeName=640-12" name="grid" /> -->
+<title>决战双12 一年剁一回 不止50%OFF 1212购物券抢先领 - Panli代购</title>
+<link type="text/css" rel="Stylesheet" href="http://sf.panli.com/FrontEnd/css20090801/base.css?v=0.2" />
+<script src="http://sf.panli.com/Public/jQuery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="http://sf.panli.com/FrontEnd/js20090801/Gobal/Gobal.js" type="text/javascript"></script>
+<link type="text/css" href="./build/css/main.min.css" rel="stylesheet" />
+<script src="./build/js/main.min.js?v=0.0.1" charset="utf-8"></script>
+</head>
+<body>
+<header class="header">
+         <div class="shortcut" style="z-index:400;">
+             <div class="w top_nav">
+                 <ul class="fl login"><li><a href="http://passport.panli.com/Register/">免费注册</a></li><li><a href="http://passport.panli.com/Login.aspx?ReturnUrl=http%3a%2f%2fwww.panli.com%2f">登录</a></li><li class="pl30"><a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx3b24496f74bf93d0&amp;redirect_uri=http%3a%2f%2fpassport.panli.com%2fOauth%2fWeChatCallback.aspx&amp;response_type=code&amp;scope=snsapi_login&amp;state=59eecba924d45ea73d3c72f2d5b5607d#wechat_redirect;"><i class="icon_m icon_wx"></i>微信登录</a></li><li class="pl30"><a href="https://www.facebook.com/dialog/oauth/?client_id=563546080352185&amp;redirect_uri=http%3a%2f%2fpassport.panli.com%2fLogin.aspx&amp;scope=email&amp;display=page&amp;expires=0)"><i class="icon_m icon_fb"></i>Facebook登录</a></li></ul>
+                 <ul class="fr">
+                     <li class="fore"><a href="http://www.panli.com/mypanli/ShoppingCart.aspx" target="_blank" rel="nofollow"><i class="icon_m icon_shop"></i>购物车<em class="top_red ShoppingNum"></em></a></li>
+                     <li class="fore"><a href="http://www.panli.com/mypanli/" rel="nofollow"><i class="icon_m icon_my"></i>我的Panli</a></li>
+                     <li class="fore"><a href="http://www.panli.com/mypanli/OrderCart.aspx" id="shoppingCart" rel="nofollow"><i class="icon_m icon_u"></i><span><em>我的仓库</em><em class="none gerenc">&nbsp;&nbsp;&nbsp;&nbsp;</em></span><em class="top_red OrderNum"></em></a></li>
+                     <li class="fore fore_p fore_gwx" data-hover="fore_b">
+                         <a href="javascript:;">关注微信<em class="icon_m icon_j"></em></a>
+                         <em class="code_line"></em>
+                         <div class="code_hover"></div>
+                     </li>
+                     <li class="fore fore_p fore_gwx2" data-hover="fore_h">
+                         <a href="http://service.panli.com/" target="_blank">帮助中心<em class="icon_m icon_j"></em></a>
+                         <div class="help_l">
+                             <a href="http://www.panli.com/Tools/Estimates.aspx" target="_blank">费用估算</a>
+                             <a href="http://www.panli.com/Help/Postage.aspx" target="_blank">运费对比</a>
+                             <a href="http://www.panli.com/Tools/Track.aspx" target="_blank">包裹跟踪</a>
+                             <a href="http://qq.ip138.com/hl.asp" target="_blank">汇率换算</a>
+                             <a href="http://www.panli.com/Tools/MeasureConversion.aspx" target="_blank">尺码换算</a>
+                             <a href="http://www.panli.com/Crawl/Download.aspx" target="_blank">代购助手</a>
+                         </div>
+                     </li>
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+         
+         <div class="w">
+             
+             
+                
+                <div class="fl logo">
+                     <a href="http://www.panli.com"><img src="http://sf.panli.com/FrontEnd/images20090801/NewIndex/new/logo.gif" alt="panli logo"></a>
+                 </div>
+               
+              
+
+
+
+              
+
+
+             <div class="fl search">
+                 <input type="text" class="fl search_text" autofocus="true" placeholder="已经找好要代购的宝贝了吗？快把宝贝的网址粘贴过来～">
+                 <span class="fl button" id="headSearch">我要代购</span>
+                 <p>代购支持商家:<a href="http://www.taobao.com" target="_blank" rel="nofollow">淘宝</a><a href="http://www.tmall.com" target="_blank" rel="nofollow">天猫</a><a href="http://www.yhd.com" target="_blank" rel="nofollow">1号店</a><a href="http://www.vip.com" target="_blank" rel="nofollow">唯品会</a><a href="http://www.amazon.cn" target="_blank" rel="nofollow">亚马逊中国</a><a href="http://www.jd.com" target="_blank" rel="nofollow">京东</a><a href="http://www.dangdang.com" target="_blank" rel="nofollow">当当</a>&nbsp;&nbsp;等中国购物网站</p>
+             </div>
+             <div class="cb"></div>
+         </div>
+            <div class="shortcut" id="nav_list">
+             <div class="w">
+                 <ul class="nav clearfix">
+                     <li class="on" data-on="index"><a href="http://www.panli.com" class="nav_l">首页</a></li>
+                     <li data-on="daigou"><a href="http://www.panli.com/daigou" class="nav_l">代购</a></li>
+                     <li data-on="drop" class="nav_icon">
+                         <a href="javascript:;" class="nav_l">特色购物<em class="icon_m icon_j"></em></a>
+                         <div class="drop">
+                             <div class="drop_item"><i class="icon_m icon_pdg"></i><a href="http://www.panli.com/Piece">拼单购</a></div>
+                             <div class="drop_item"><i class="icon_m icon_tg"></i><a href="http://tuan.panli.com">团购</a></div>
+                             <div class="drop_item"><i class="icon_m icon_vip"></i><a href="http://www.panli.com/vip">VIP 购</a></div>
+                             <div class="drop_item"><i class="icon_m icon_fxg"></i><a href="http://www.panli.com/Cowry">分享购</a></div>
+                         </div>
+                     </li>
+                     <li data-on="transport"><a href="http://www.panli.com/transport" class="nav_l" target="_blank" id="one_text"><em class="one_text">转运</em><em class="one_text none">转运</em></a></li>
+                     <li data-on="bbs"><a href="http://bbs.panli.com" class="nav_l" target="_blank" rel="nofollow">社区</a></li>
+                     <li data-on="mobile"><a href="http://www.panli.com/Mobile/Index.aspx" class="nav_l" target="_blank">手机版</a></li>
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+</header>
+
+<!-- main -->
+<div class="special-app">
+    <!--banner-->
+    <div class="banner-wrap">
+        <div class="hua-h">
+            <div class="banner-btn-wrap z-w m-auto">
+                <a href="" target="_blank" class="registered" title="立即注册" ></a>
+                <div class="snatch-title"></div>
+            </div>
+        </div>
+    </div>
+    <!-- banner end -->
+    <!--activity-->
+    <div class="activity-wrap">
+        <div class="activity-main z-w m-auto">
+            <ul class="activity-u clearfix">
+                <li>
+                    <a href="javascript:void(0);" class="on">
+                        <img src="./build/images/5.png" alt="">
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="on">
+                        <img src="./build/images/20.png" alt="">
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="./build/images/40.png" alt="">
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="./build/images/100.png" alt="">
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+            <div class="activity-content">
+                <div class="title"></div>
+                <ol>
+                    <li><span>代金券领取时间 ：12月7日—12月12日（北京时间）使用时间 ：2015年12月12日00:00:00-23:59:59（北京时间）</span></li>
+                    <li><span>可任意抵扣商品费用，每一个订单可使用一张代金券。</span></li>
+                    <li><span>活动期间，每个用户可领取2张不同面值的代金券。</span></li>
+                    <li><span>成功领取的代金券，可在“我的Panli-我的代金券”查看明细。</span></li>
+                </ol>
+                <a href="" target="_black" class="invite-btn" title="邀请好友" ></a>
+            </div>
+        </div>
+    </div>
+    <!--activity end -->
+    <!--product -->
+    <div class="product-wrap">
+        
+    </div>
+    <!--product end -->
+</div>
+<!-- main end -->
+
+
+<div class="shortcut footer">
+        <div class="w">
+            <div class="service_l">
+                <dl class="fl">
+                    <dt>新手上路</dt>
+                    <dd><a href="http://service.panli.com/Help/List/5.html" target="_blank" rel="nofollow">新人须知</a></dd>
+                    <dd><a href="http://www.panli.com/services-rates/" target="_blank" rel="nofollow">服务与费用</a></dd>
+                    <dd><a href="http://service.panli.com/Help/List/9.html" target="_blank" rel="nofollow">账户管理</a></dd>
+                    <dd><a href="http://service.panli.com/Help/List/8.html" target="_blank" rel="nofollow">会员等级和番币</a></dd>
+                </dl>
+
+                <dl class="fl">
+                    <dt>购物指南</dt>
+                    <dd><a href="http://service.panli.com/Help/Detail/13.html" target="_blank" rel="nofollow">挑选商品</a></dd>
+                    <dd><a href="http://service.panli.com/Help/Detail/12.html" target="_blank" rel="nofollow">购物流程</a></dd>
+                    <dd><a href="http://service.panli.com/Help/Detail/14.html" target="_blank" rel="nofollow">如何生成订单</a></dd>
+                    <dd><a href="http://service.panli.com/Help/Detail/16.html" target="_blank" rel="nofollow">查询订单状态</a></dd>
+                </dl>
+
+                <dl class="fl">
+                    <dt>支付说明</dt>
+                    <dd><a href="http://service.panli.com/Help/Detail/333.html" target="_blank" rel="nofollow">paypal 支付</a></dd>
+                    <dd><a href="http://service.panli.com/Help/Detail/23.html" target="_blank" rel="nofollow">国际信用卡</a></dd>
+                    <dd><a href="http://service.panli.com/Help/Detail/24.html" target="_blank" rel="nofollow">国内银行卡</a></dd>
+                    <dd><a href="http://service.panli.com/Help/List/6.html" target="_blank" rel="nofollow">其他汇款方式</a></dd>
+                </dl>
+
+                <dl class="fl">
+                    <dt>配送说明</dt>
+                    <dd><a href="http://www.panli.com/Help/Postage.aspx" target="_blank" rel="nofollow">运输方式和费用对比</a></dd>
+                    <dd><a href="http://service.panli.com/Help/Detail/38.html" target="_blank" rel="nofollow">大宗商品的运费</a></dd>
+                    <dd><a href="http://service.panli.com/Help/Detail/39.html" target="_blank" rel="nofollow">海关及税项</a></dd>
+                    <dd><a href="http://service.panli.com/Help/Detail/40.html" target="_blank" rel="nofollow">收货注意事项</a></dd>
+                </dl>
+
+                <dl class="fl">
+                    <dt>售后服务</dt>
+                    <dd><a href="http://service.panli.com/Help/Detail/28.html" target="_blank" rel="nofollow">商品退换货原则</a></dd>
+                    <dd><a href="http://service.panli.com/Help/Detail/29.html" target="_blank" rel="nofollow">商品退换货流程</a></dd>
+                    <dd><a href="http://service.panli.com/Help/Detail/20.html" target="_blank" rel="nofollow">商品的保管期限</a></dd>
+                    <dd><a href="http://service.panli.com/Help/Detail/18.html" target="_blank" rel="nofollow">如何退款</a></dd>
+                </dl>
+
+                <dl class="fl">
+                    <dt>常用工具</dt>
+                    <dd><a href="http://www.panli.com/Tools/Estimates.aspx" target="_blank" rel="nofollow">费用估算</a></dd>
+                    <dd><a href="http://www.panli.com/Tools/Track.aspx" target="_blank" rel="nofollow">包裹跟踪</a></dd>
+                    <dd><a href="http://qq.ip138.com/hl.asp" target="_blank" rel="nofollow">汇率换算</a></dd>
+                    <dd><a href="http://www.panli.com/Tools/MeasureConversion.aspx" target="_blank" rel="nofollow">尺码换算</a></dd>
+                </dl>
+
+                
+
+                <div class="fr two_code">
+                    <span>手机Panli</span>
+                    <img src="http://sf.panli.com/FrontEnd/images20090801/NewIndex/New/code_panli.gif">
+                </div>
+                <div class="fr two_code code_margin">
+                    <span>关注微信</span>
+                    <img src="http://sf.panli.com/FrontEnd/images20090801/NewIndex/New/code_wx.gif">
+                </div>
+                <div class="cb"></div>
+            </div>
+
+            <div class="footer_nav">
+                <a target="_blank" href="http://hr.panli.com/" rel="nofollow">关于我们</a>
+                <a href="/news/about.aspx?nid=5" rel="nofollow">联系我们</a>
+                <a target="_blank" href="http://hr.panli.com/job_index.aspx" rel="nofollow">加入 Panli</a>
+                <a href="/news/about.aspx?nid=14" rel="nofollow">友情链接</a>
+                <a href="/news/about.aspx?nid=210" rel="nofollow">网站地图</a>
+                <a href="http://www.panli.com/Information" rel="nofollow">Panli 故事</a>
+                <a href="http://www.panli.com/Mobile/Index.aspx" rel="nofollow">手机 Panli</a>
+                <div class="cb"></div>
+            </div>
+            <div class="copyright">
+                Copyright ©2015 Panli代购! Inc. All rights reserved. <a href="http://www.miibeian.gov.cn" target="_blank" style="color: #999;">沪ICP备13043455号-1</a>
+            </div>
+            <div class="authentication">
+                <a href="http://www.ectrustprc.org.cn/certificate.id/certificateb.php?id=20007298" class="authentication_a1" target="_blank"></a>
+                <a href="https://www.paypal.com/verified/pal=paypal@panli.com" class="authentication_a2" target="_blank"></a>
+                <a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120423152518650" class="authentication_a3" target="_blank"></a>
+            </div>
+            <div class="links">友情链接：
+            <a href="https://www.taobao.com/" target="_blank">淘宝</a><a href="http://ww" target="_blank">测试</a>
+            </div>
+            <p class="ft_panli_about">Panli代购是全球最大的海外华人代购中国商品网站，专为海外华人提供<a href="http://www.panli.com/daigou/" target="_blank">淘宝代购</a> 、拍拍、当当等中国购物网站商品，提供图书、特产、化妆品等多种商品代购，支持 paypal 、 支付宝等多种支付方式。Panli 代购目前在美国、英国、新加坡、澳洲、加拿大等全球范围内的 华人代购和留学生代购市场中都有着超好的口碑。</p>
+        </div>
+    </div>
+
+</body>
+<script charset="utf-8">
+
+</script>
+</html>

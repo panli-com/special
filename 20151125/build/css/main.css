@@ -1,0 +1,163 @@
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  display: block; }
+
+.clear {
+  clear: both;
+  overflow: hidden; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.del-link {
+  text-decoration: line-through; }
+
+.text-center {
+  text-align: center; }
+
+*:focus {
+  outline: none; }
+
+.textarea-wrap-pla {
+  position: relative; }
+  .textarea-wrap-pla .text-placeholder {
+    position: absolute;
+    z-index: 0;
+    left: 5px;
+    top: 10px;
+    color: #999; }
+  .textarea-wrap-pla textarea {
+    z-index: 10; }
+
+input[type=button] {
+  -webkit-appearance: none;
+  outline: none; }
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; }
+
+.z-w {
+  width: 1000px; }
+
+.m-auto {
+  margin: 0 auto; }
+
+.red {
+  color: #ff2828; }
+
+.font20 {
+  font-size: 20px; }
+
+.font30 {
+  font-size: 30px; }
+
+.del-link {
+  text-decoration: line-through; }
+
+*:focus {
+  outline: none; }
+
+.textarea-wrap-pla {
+  position: relative; }
+  .textarea-wrap-pla .text-placeholder {
+    position: absolute;
+    z-index: 0;
+    left: 5px;
+    top: 10px;
+    color: #999; }
+  .textarea-wrap-pla textarea {
+    z-index: 10; }
+
+.banner-wrap {
+  overflow: hidden;
+  height: 730px;
+  background: #c5121d url(../images/banner.jpg) no-repeat center top; }
+  .banner-wrap .hua-h {
+    height: 730px;
+    background: url(../images/hua-h.png) no-repeat center bottom; }
+  .banner-wrap .banner-btn-wrap {
+    height: 730px;
+    position: relative; }
+    .banner-wrap .banner-btn-wrap .registered {
+      position: absolute;
+      top: 46px;
+      right: 154px;
+      display: block;
+      width: 138px;
+      height: 138px;
+      background: url(../images/registered.png) no-repeat center center; }
+    .banner-wrap .banner-btn-wrap .snatch-title {
+      position: absolute;
+      width: 343px;
+      height: 85px;
+      top: 445px;
+      left: 332px;
+      background: url(../images/snatch-title.png) no-repeat center center; }
+
+.activity-wrap {
+  min-height: 360px;
+  background: url(../images/dian.png); }
+
+.activity-main {
+  position: relative;
+  padding-top: 30px; }
+
+.activity-u {
+  width: 620px; }
+  .activity-u li {
+    float: left;
+    width: 292px;
+    height: 130px;
+    margin-bottom: 20px;
+    margin-right: 5px; }
+    .activity-u li a {
+      display: block;
+      position: relative; }
+      .activity-u li a span {
+        position: absolute; }
+      .activity-u li a.on {
+        cursor: not-allowed; }
+        .activity-u li a.on span {
+          display: block;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          background: url(../images/finish.png) no-repeat center top; }
+
+.activity-content {
+  position: absolute;
+  width: 374px;
+  right: 0;
+  top: 30px; }
+  .activity-content ol {
+    list-style: decimal;
+    padding-left: 30px;
+    padding-top: 16px;
+    padding-bottom: 10px;
+    color: #555; }
+    .activity-content ol li {
+      list-style: decimal;
+      color: #555;
+      font-size: 14px;
+      line-height: 21px; }
+      .activity-content ol li span {
+        color: #555; }
+  .activity-content .title {
+    height: 24px;
+    background: url(../images/activity-title.png) no-repeat center top; }
+  .activity-content .invite-btn {
+    display: block;
+    height: 75px;
+    background: url(../images/invite-btn.png) no-repeat center top; }
