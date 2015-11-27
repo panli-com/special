@@ -2,7 +2,7 @@
 	position: fixed;
 	right: 30px;
 	bottom: 30px;
-	z-index: 500;
+	z-index: 200;
 }
 .floor-nav{
 	position: relative;
@@ -13,9 +13,8 @@
 		position: relative;
 		padding-top: 119px;
 		li{
-			height: 34px;
-			
-			border-bottom: 1px solid deepskyblue;
+			height: 35px;			
+			//border-bottom: 1px solid deepskyblue;
 			opacity: 0.5;
 			a{
 				display: block;
