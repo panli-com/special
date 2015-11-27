@@ -8,6 +8,20 @@
   
   $(function(){
      
+     
+      $("#red-packet-wrap").on("click",".red-packet-btn-no",function(){       
+        ReturnLayer(4);
+      });    
+    
+      $("#red-packet-wrap").on("click",".red-packet-btn-yes",function(){       
+        ReturnLayer(3);
+      });
+    
+      $("#red-packet-wrap").on("click",".red-packet-btn-2",function(){       
+        ReturnLayer(2);
+      });
+     
+     
     // $(".red-packet-btn").on("touchend",function(){
     //   var _t = $(this);     
     //     PL.open({

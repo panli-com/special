@@ -42,11 +42,12 @@ function randomWord(randomFlag, min, max){
 //抢代金券领取接口
 function getDouble12(obj,callback) {
     var radNub = randomWord(false, 18);
+    console.log(obj);
      $.ajax({
             type: "POST",
             url: "/App_Services/wsSpecial.asmx/getDouble12?time="+radNub,
             dataType: "json",
-            data: '' + obj + '',
+            data: '{userName:"' + obj.userName + '",UserID:"' + obj.UserID + '",cotype:"' + obj.cotype + '"}',
             contentType: "application/json;utf-8",
             timeout: 10000,
             error: function () {
@@ -58,7 +59,7 @@ function getDouble12(obj,callback) {
         });    
 }
 //获取抢代金券剩余数量
-function Coupon_NumberState(callback) {
+function CouponNumberState(callback) {
     var radNub = randomWord(false, 18);
      $.ajax({
             type: "POST",
@@ -74,6 +75,21 @@ function Coupon_NumberState(callback) {
                 callback(data);
             }
         });    
+}
+
+
+var moCoReact = [{"CouponType":50,"state":-1},{"CouponType":200,"state":-1},{"CouponType":300,"state":0},{"CouponType":0,"state":0}];
+
+//代金券数量响应
+function CouponReact(obj){    
+    for(var i = 0;i< obj.length;i++){
+       var  _type = obj[i].CouponType,
+            _state = obj[i].state;        
+       if(_state != 0){
+            $("#coupon-type-"+_type).removeClass("red-packet-btn").addClass("on red-packet-btn-no");
+       }      
+    }   
+    
 }
 
 
@@ -112,7 +128,20 @@ function appV(){
       });
       $("#back-top").on("click",function(){              
                  $('body,html').animate({ scrollTop: 0 }, 300);
-      })
+      });   
+      
+      
+      $("#red-packet-wrap").on("click",".red-packet-btn-no",function(){       
+        ReturnLayer(4);
+      });    
+    
+      $("#red-packet-wrap").on("click",".red-packet-btn-yes",function(){       
+        ReturnLayer(3);
+      });
+    
+      $("#red-packet-wrap").on("click",".red-packet-btn-2",function(){       
+        ReturnLayer(2);
+      });
     
   });
     

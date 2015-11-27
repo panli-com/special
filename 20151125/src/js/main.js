@@ -16,7 +16,20 @@
       });
       $("#back-top").on("click",function(){              
                  $('body,html').animate({ scrollTop: 0 }, 300);
-      })
+      });   
+      
+      
+      $("#red-packet-wrap").on("click",".red-packet-btn-no",function(){       
+        ReturnLayer(4);
+      });    
+    
+      $("#red-packet-wrap").on("click",".red-packet-btn-yes",function(){       
+        ReturnLayer(3);
+      });
+    
+      $("#red-packet-wrap").on("click",".red-packet-btn-2",function(){       
+        ReturnLayer(2);
+      });
     
   });
     
