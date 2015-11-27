@@ -126,9 +126,24 @@ a {
       position: relative; }
       .activity-u li a span {
         position: absolute; }
+      .activity-u li a.red-packet-btn .button_link {
+        position: absolute;
+        top: 10px;
+        left: 21px;
+        width: 246px;
+        height: 106px;
+        border: 2px solid transparent; }
+      .activity-u li a.packet-btn-1 .line {
+        background-color: #FEB300; }
+      .activity-u li a.packet-btn-2 .line {
+        background-color: #00D569; }
+      .activity-u li a.packet-btn-3 .line {
+        background-color: #D047E1; }
+      .activity-u li a.packet-btn-4 .line {
+        background-color: #349AFE; }
       .activity-u li a.on {
         cursor: not-allowed; }
-        .activity-u li a.on span {
+        .activity-u li a.on .finish {
           display: block;
           left: 0;
           top: 0;
@@ -163,6 +178,51 @@ a {
     display: block;
     height: 75px;
     background: url(../images/invite-btn.png) no-repeat center top; }
+
+.button_link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #FFF;
+  transition: 0.4s; }
+  .button_link .line {
+    display: inline-block;
+    background-color: #00D569;
+    position: absolute;
+    transition: 0.5s ease; }
+  .button_link .line_top {
+    height: 2px;
+    width: 0;
+    left: -50%;
+    top: -2px; }
+  .button_link .line_right {
+    height: 0;
+    width: 2px;
+    top: -50%;
+    right: -2px; }
+  .button_link .line_left {
+    height: 2px;
+    width: 0;
+    right: -50%;
+    bottom: -2px; }
+  .button_link .line_bottom {
+    width: 2px;
+    height: 0;
+    bottom: -50%;
+    left: -2px; }
+  .button_link:hover .line_right {
+    height: 100%;
+    top: -2px; }
+  .button_link:hover .line_top {
+    width: 100%;
+    left: -2px; }
+  .button_link:hover .line_bottom {
+    height: 100%;
+    bottom: -2px; }
+  .button_link:hover .line_left {
+    width: 100%;
+    right: -2px; }
 
 .product-wrap {
   background: #fe282e;
@@ -247,7 +307,8 @@ a {
       line-height: 20px;
       text-overflow: -o-ellipsis-lastline;
       overflow: hidden;
-      text-overflow: ellipsis; }
+      text-overflow: ellipsis;
+      position: relative; }
     .products-u li .p1 {
       color: #999999;
       font-size: 12px;
@@ -256,11 +317,34 @@ a {
     .products-u li a {
       text-decoration: none; }
     .products-u li .icon-do12 {
+      position: relative;
+      top: -2px;
       display: inline-block;
       width: 52px;
       height: 17px;
       vertical-align: middle;
       background: url(../images/icon-do12.png) no-repeat center center; }
+    .products-u li .icon-do12-2 {
+      position: relative;
+      top: -2px;
+      display: inline-block;
+      width: 52px;
+      height: 18px;
+      vertical-align: middle;
+      font-size: 11px;
+      line-height: 19px;
+      text-align: center;
+      color: #FFF;
+      background: #f9272e; }
+      .products-u li .icon-do12-2 .triangle {
+        position: absolute;
+        left: 51px;
+        top: 3px;
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid #f9272e; }
     .products-u li .p2 {
       color: #f9272e;
       font-size: 18px;
@@ -270,17 +354,55 @@ a {
         line-height: 20px; }
     .products-u li .btn1, .products-u li .btn2 {
       display: inline-block;
-      width: 102px;
+      width: 105px;
       height: 30px;
       line-height: 30px;
       text-align: center; }
     .products-u li .btn1 {
+      position: relative;
       border: 1px solid #f9272e;
       background: #ffeff0;
       color: #f9272e;
-      margin-right: 6px; }
-      .products-u li .btn1:hover {
-        background: #FFF; }
+      margin-right: 6px;
+      margin-left: -4px;
+      transition: 0.4s; }
+      .products-u li .btn1 .line {
+        display: inline-block;
+        background-color: #FFF;
+        position: absolute;
+        transition: 0.5s ease; }
+      .products-u li .btn1 .line_top {
+        height: 2px;
+        width: 0;
+        left: -50%;
+        top: -2px; }
+      .products-u li .btn1 .line_right {
+        height: 0;
+        width: 2px;
+        top: -50%;
+        right: -2px; }
+      .products-u li .btn1 .line_left {
+        height: 2px;
+        width: 0;
+        right: -50%;
+        bottom: -2px; }
+      .products-u li .btn1 .line_bottom {
+        width: 2px;
+        height: 0;
+        bottom: -50%;
+        left: -2px; }
+      .products-u li .btn1:hover .line_right {
+        height: 100%;
+        top: -2px; }
+      .products-u li .btn1:hover .line_top {
+        width: 100%;
+        left: -2px; }
+      .products-u li .btn1:hover .line_bottom {
+        height: 100%;
+        bottom: -2px; }
+      .products-u li .btn1:hover .line_left {
+        width: 100%;
+        right: -2px; }
     .products-u li .jian {
       display: inline-block;
       position: relative;
@@ -310,7 +432,17 @@ a {
     border-radius: 15px; }
 
 .miji-wrap {
-  padding-bottom: 70px; }
+  padding-bottom: 70px;
+  height: 657px;
+  position: relative; }
+  .miji-wrap .m-favorites {
+    position: absolute;
+    display: block;
+    width: 230px;
+    height: 30px;
+    z-index: 2;
+    left: 293px;
+    top: 272px; }
 
 .floor-nav-wrap {
   position: fixed;
