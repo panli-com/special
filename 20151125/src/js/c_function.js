@@ -51,7 +51,9 @@ function getDouble12(obj,callback) {
             contentType: "application/json;utf-8",
             timeout: 10000,
             error: function () {
-                //alert("500");
+                PL.closeAll();
+                PL.msg("请求错误")
+               
             },
             success: function (data) {
                 callback(data);
@@ -69,7 +71,8 @@ function CouponNumberState(callback) {
             contentType: "application/json;utf-8",
             timeout: 10000,
             error: function () {
-                //alert("500");
+                PL.msg("请求错误");
+               
             },
             success: function (data) {
                 callback(data);
@@ -103,7 +106,14 @@ function ReturnLayer(num){
     "这张券已经抢过了哦",
     "啊喔, 这张券已经被大家抢光了呢"
   ];  
-  PL.alert(text[num-1],{icon: icon});
+  
+  var btn = [
+    "确定",
+    "我知道了",
+    "好吧",
+    "好吧"
+  ];   
+  PL.alert(text[num-1],btn[num-1],{icon: icon});
 }
 
 // v  

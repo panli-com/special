@@ -51,7 +51,11 @@ function getDouble12(obj,callback) {
             contentType: "application/json;utf-8",
             timeout: 10000,
             error: function () {
-                //alert("500");
+                PL.closeAll();
+                PL.open({
+                    content: '请求错误，请再试',
+                    time: 2
+                });
             },
             success: function (data) {
                 callback(data);
@@ -69,7 +73,10 @@ function CouponNumberState(callback) {
             contentType: "application/json;utf-8",
             timeout: 10000,
             error: function () {
-                //alert("500");
+                PL.open({
+                    content: '请求错误，请再试',
+                    time: 2
+                });
             },
             success: function (data) {
                 callback(data);
@@ -105,6 +112,7 @@ function ReturnLayer(num){
   ];
   PL.open({
     title: '提示',
+    closeBtn: false,
     content: text[num-1]
   }); 
 }

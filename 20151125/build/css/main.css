@@ -259,6 +259,7 @@ a {
       display: inline-block;
       width: 52px;
       height: 17px;
+      vertical-align: middle;
       background: url(../images/icon-do12.png) no-repeat center center; }
     .products-u li .p2 {
       color: #f9272e;
@@ -286,6 +287,7 @@ a {
       top: -1px;
       width: 4px;
       height: 6px;
+      vertical-align: middle;
       background: url(../images/jian.png) no-repeat center center; }
     .products-u li .btn2 {
       border: 1px solid #f9272e;

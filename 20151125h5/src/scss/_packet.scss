@@ -14,12 +14,16 @@
 				span{
 					position: absolute;							
 				}
+				img{
+					margin-bottom: 0;
+					padding: 0;
+				}
 				&.on{
 					span{
 						left: 0;
 						top: 0.2rem;
 						right: 0.2rem;
-						bottom: 0;			
+						bottom: 0.09rem;			
 						background: url(../images/finish.png) no-repeat center center;
 						background-size: 100% 100%;
 					}

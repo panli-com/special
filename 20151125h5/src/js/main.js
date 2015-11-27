@@ -21,7 +21,13 @@
         ReturnLayer(2);
       });
      
-     
+      $(".go-to-btn").on("touchstart touchmove",function(){
+        $(this).addClass("on");
+      });
+      
+      $(".go-to-btn").on("touchend touchcancel",function(){
+        $(this).removeClass("on");
+      });
     // $(".red-packet-btn").on("touchend",function(){
     //   var _t = $(this);     
     //     PL.open({

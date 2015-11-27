@@ -412,8 +412,8 @@ function get_Cookie(name)
 function del_Cookie(name)
 {
     var exp = new Date();
-    exp.setTime(exp.getTime() - 1);
-    var cval=getCookie(name);
+    exp.setTime(exp.getTime() - 1); 
+    var cval=get_Cookie(name);
     if(cval!=null)
         document.cookie= name + "="+cval+";expires="+exp.toGMTString();
 };
@@ -565,7 +565,11 @@ function getDouble12(obj,callback) {
             contentType: "application/json;utf-8",
             timeout: 10000,
             error: function () {
-                //alert("500");
+                PL.closeAll();
+                PL.open({
+                    content: '请求错误，请再试',
+                    time: 2
+                });
             },
             success: function (data) {
                 callback(data);
@@ -583,7 +587,10 @@ function CouponNumberState(callback) {
             contentType: "application/json;utf-8",
             timeout: 10000,
             error: function () {
-                //alert("500");
+                PL.open({
+                    content: '请求错误，请再试',
+                    time: 2
+                });
             },
             success: function (data) {
                 callback(data);
@@ -619,6 +626,7 @@ function ReturnLayer(num){
   ];
   PL.open({
     title: '提示',
+    closeBtn: false,
     content: text[num-1]
   }); 
 }
@@ -650,7 +658,13 @@ function appV(){
         ReturnLayer(2);
       });
      
-     
+      $(".go-to-btn").on("touchstart touchmove",function(){
+        $(this).addClass("on");
+      });
+      
+      $(".go-to-btn").on("touchend touchcancel",function(){
+        $(this).removeClass("on");
+      });
     // $(".red-packet-btn").on("touchend",function(){
     //   var _t = $(this);     
     //     PL.open({
