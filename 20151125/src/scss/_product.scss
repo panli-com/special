@@ -97,6 +97,11 @@
 				max-height: 100%;
 			}			
 		}
+		.title-a{
+			&:hover{
+				text-decoration: underline;
+			}
+		}
 		.p-footer{
 			padding: 10px;
 		}

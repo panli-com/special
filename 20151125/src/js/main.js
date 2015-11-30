@@ -30,8 +30,18 @@
       $("#red-packet-wrap").on("click",".red-packet-btn-2",function(){       
         ReturnLayer(2);
       });
+      
+      floorNnav();
     
   });
     
+ 
+ $(window).resize(function(){
+    floorNnav();
+  })
+
+
+
+ 
  
 })();

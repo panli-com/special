@@ -9,9 +9,12 @@
 	width: 140px;
 	height: 432px;
 	background: url(../images/floor-nav.png) no-repeat center top;
+	.floor-nav-tager{
+		display: block;
+		height: 119px;		
+	}
 	.floor-nav-u{
-		position: relative;
-		padding-top: 119px;
+		position: relative;		
 		li{
 			height: 35px;			
 			//border-bottom: 1px solid deepskyblue;

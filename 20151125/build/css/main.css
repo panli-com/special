@@ -297,6 +297,8 @@ a {
         -o-transition: 1s;
         max-width: 100%;
         max-height: 100%; }
+    .products-u li .title-a:hover {
+      text-decoration: underline; }
     .products-u li .p-footer {
       padding: 10px; }
     .products-u li .name {
@@ -528,9 +530,11 @@ a {
   width: 140px;
   height: 432px;
   background: url(../images/floor-nav.png) no-repeat center top; }
+  .floor-nav .floor-nav-tager {
+    display: block;
+    height: 119px; }
   .floor-nav .floor-nav-u {
-    position: relative;
-    padding-top: 119px; }
+    position: relative; }
     .floor-nav .floor-nav-u li {
       height: 35px;
       opacity: 0.5; }

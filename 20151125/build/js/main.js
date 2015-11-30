@@ -127,6 +127,18 @@ function isOfNull(stc) {
     }
     return stc;
 }
+
+function floorNnav(){
+var winW = $(window).width(),       
+    mainOfL = $(".product-main").offset().left;
+    
+    if(winW >= 1484){
+        var oFright = mainOfL+1000+55;
+        $('.floor-nav-wrap').css("left",oFright)
+    }else {
+        $('.floor-nav-wrap').css({"left":'',right:"55px"});
+    }
+}
 ;(function(){
   
   
@@ -159,8 +171,18 @@ function isOfNull(stc) {
       $("#red-packet-wrap").on("click",".red-packet-btn-2",function(){       
         ReturnLayer(2);
       });
+      
+      floorNnav();
     
   });
     
+ 
+ $(window).resize(function(){
+    floorNnav();
+  })
+
+
+
+ 
  
 })();
