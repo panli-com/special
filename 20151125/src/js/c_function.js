@@ -38,16 +38,39 @@ function randomWord(randomFlag, min, max){
     }
     return str;
 }
+// 宝贝收藏接口
+function addFavorite(obj,callback){
+    var radNub = randomWord(false, 18);
+    console.log(obj);   
+    $.ajax({
+            type: "POST",
+            url: "/App_Services/wsFavorite.asmx/AddFavorite",
+            dataType: "json",
+            contentType: "application/json;utf-8",
+            //data: "{name:'" + obj.name + "',href:'" + obj.href + "',picture:'" + obj.picture  + "',price:'" + obj.picture + "',shopName:'" + obj.shopName + "',shopHref:'" + obj.shopHref + "',remark:'',tags:'" + obj.tags + "',siteName:'" + obj.siteName  + "'}",
+            data:JSON.stringify(obj),
+            timeout: 10000,
+            error: function() { 
+                PL.closeAll();
+                PL.msg("请求错误");
+             },
+            success: function(res) {
+              callback(res);
+            }
+        });
+
+}
 
 //抢代金券领取接口
 function getDouble12(obj,callback) {
     var radNub = randomWord(false, 18);
-    console.log(obj);
+   
      $.ajax({
             type: "POST",
             url: "/App_Services/wsSpecial.asmx/getDouble12?time="+radNub,
             dataType: "json",
-            data: '{userName:"' + obj.userName + '",UserID:"' + obj.UserID + '",cotype:"' + obj.cotype + '"}',
+            //data: '{userName:"' + obj.userName + '",UserID:"' + obj.UserID + '",cotype:"' + obj.cotype + '"}',
+            data:JSON.stringify(obj),
             contentType: "application/json;utf-8",
             timeout: 10000,
             error: function () {
@@ -139,3 +162,6 @@ var winW = $(window).width(),
         $('.floor-nav-wrap').css({"left":'',right:"55px"});
     }
 }
+
+
+
