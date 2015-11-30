@@ -278,13 +278,76 @@
 			vertical-align: middle;
 			background: url(../images/jian.png) no-repeat center center;
 		}
-		.btn2{			
+		.btn2{
+			position: relative;		
 			border:1px solid #f9272e;
 			background: #f9272e;
 			color: #fff;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+			z-index: 1;
+			
+			// -webkit-transform-style: preserve-3d;
+			// -moz-transform-style: preserve-3d;
+			// transform-style: preserve-3d;
+			&:before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+				width: 100%;
+				height: 0;
+				top: 50%;
+				left: 50%;
+				background: #fff;
+				opacity: 0;
+				-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+				-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+				-ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+				transform: translateX(-50%) translateY(-50%) rotate(45deg);
+			}
+			&:after {
+				// content: '';
+				// position: absolute;
+				// z-index: -1;
+				// -webkit-transition: all 0.3s;
+				// -moz-transition: all 0.3s;
+				// transition: all 0.3s;
+				
+				// width: 20%;
+				// height: 100%;
+				// left: 100%;
+				// top: 0;
+				// background: #FF4A50;
+				// -webkit-transform-origin: 0% 0%;
+				// -webkit-transform: rotateY(90deg);
+				// -moz-transform-origin: 0% 0%;
+				// -moz-transform: rotateY(90deg);
+				// -ms-transform-origin: 0% 0%;
+				// -ms-transform: rotateY(90deg);
+				// transform-origin: 0% 0%;
+				// transform: rotateY(90deg);
+				
+			}
+			// &:hover {
+			// 		-webkit-transform: rotateY(-15deg);
+			// 		-moz-transform: rotateY(-15deg);
+			// 		-ms-transform: rotateY(-15deg);
+			// 		transform: rotateY(-15deg);
+			// 	}
 			&:hover{
 				background: #FF4A50;
 			}
+			
+			// &:hover:before {
+			// 	height: 130%;
+			// 	opacity: 1;
+			// }
+
+			
 		}
 	}
 }
@@ -321,5 +384,113 @@
 
 
 
+/* General button style (reset) */
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	z-index: 1;
+}
+
+.btn:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
 
 
+
+/* Button 1 */
+.btn-1 {
+	border: 3px solid #fff;
+	color: #FFF;
+}
+
+/* Button 1e */
+.btn-1e {
+	overflow: hidden;
+	position: relative;
+}
+.btn-1e:hover,
+.btn-1e:active {
+	color: #0e83cd;
+}
+.btn-1e:before {
+	
+	width: 100%;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+
+
+.btn-1e:hover:before {
+	height: 260%;
+	opacity: 1;
+}
+
+.btn-1e:active:before {
+	height: 400%;
+	opacity: 1;
+}
+
+// .btn-8 {
+// 	display: block;
+// 	background: #5cbcf6;
+// 	-webkit-transform-style: preserve-3d;
+// 	-moz-transform-style: preserve-3d;
+// 	transform-style: preserve-3d;
+// }
+
+// .btn-8:active {
+// 	background: #55b7f3;
+// }
+
+
+// /* Button 8d */
+// .btn-8d:after {
+// 	width: 20%;
+// 	height: 100%;
+// 	left: 100%;
+// 	top: 0;
+// 	background: #49a7df;
+// 	-webkit-transform-origin: 0% 0%;
+// 	-webkit-transform: rotateY(90deg);
+// 	-moz-transform-origin: 0% 0%;
+// 	-moz-transform: rotateY(90deg);
+// 	-ms-transform-origin: 0% 0%;
+// 	-ms-transform: rotateY(90deg);
+// 	transform-origin: 0% 0%;
+// 	transform: rotateY(90deg);
+// }
+
+// .btn-8d:hover {
+// 	-webkit-transform: rotateY(-15deg);
+// 	-moz-transform: rotateY(-15deg);
+// 	-ms-transform: rotateY(-15deg);
+// 	transform: rotateY(-15deg);
+// }

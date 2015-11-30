@@ -12,7 +12,7 @@
                 var _t = $(this),
                     _tf = _t.attr("floor");
                 var _afloTop = $("#floor-"+_tf).offset().top;
-                 $('body,html').animate({ scrollTop: _afloTop }, 300);
+                 $('body,html').animate({ scrollTop: _afloTop-130 }, 300);
       });
       $("#back-top").on("click",function(){              
                  $('body,html').animate({ scrollTop: 0 }, 300);

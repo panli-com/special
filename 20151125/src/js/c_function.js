@@ -118,5 +118,12 @@ function ReturnLayer(num){
 
 // v  
 function appV(){
-  return "0.0.1";
+  return "0.0.2";
+}
+// 是否为空
+function isOfNull(stc) {  
+    if (!stc && typeof(stc)!="undefined" && stc!=0){
+       return false;
+    }
+    return stc;
 }

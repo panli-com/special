@@ -412,9 +412,25 @@ a {
       vertical-align: middle;
       background: url(../images/jian.png) no-repeat center center; }
     .products-u li .btn2 {
+      position: relative;
       border: 1px solid #f9272e;
       background: #f9272e;
-      color: #fff; }
+      color: #fff;
+      transition: all 0.3s;
+      z-index: 1; }
+      .products-u li .btn2:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        transition: all 0.3s;
+        width: 100%;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        background: #fff;
+        opacity: 0;
+        -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        transform: translateX(-50%) translateY(-50%) rotate(45deg); }
       .products-u li .btn2:hover {
         background: #FF4A50; }
 
@@ -443,6 +459,63 @@ a {
     z-index: 2;
     left: 293px;
     top: 272px; }
+
+/* General button style (reset) */
+.btn {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+  z-index: 1; }
+
+.btn:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s; }
+
+/* Button 1 */
+.btn-1 {
+  border: 3px solid #fff;
+  color: #FFF; }
+
+/* Button 1e */
+.btn-1e {
+  overflow: hidden;
+  position: relative; }
+
+.btn-1e:hover,
+.btn-1e:active {
+  color: #0e83cd; }
+
+.btn-1e:before {
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg); }
+
+.btn-1e:hover:before {
+  height: 260%;
+  opacity: 1; }
+
+.btn-1e:active:before {
+  height: 400%;
+  opacity: 1; }
 
 .floor-nav-wrap {
   position: fixed;
