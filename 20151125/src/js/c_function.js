@@ -44,7 +44,7 @@ function addFavorite(obj,callback){
     console.log(obj);   
     $.ajax({
             type: "POST",
-            url: "/App_Services/wsFavorite.asmx/AddFavorite",
+            url: "/App_Services/wsFavorite.asmx/AddFavorite?time="+radNub,
             dataType: "json",
             contentType: "application/json;utf-8",
             //data: "{name:'" + obj.name + "',href:'" + obj.href + "',picture:'" + obj.picture  + "',price:'" + obj.picture + "',shopName:'" + obj.shopName + "',shopHref:'" + obj.shopHref + "',remark:'',tags:'" + obj.tags + "',siteName:'" + obj.siteName  + "'}",
@@ -118,8 +118,32 @@ function CouponReact(obj){
     
 }
 
+//验证数字
+function isNumber(num){
+    // var reg = new RegExp("^[0-9]*$");
+    // 
+    // if(!reg.test(num)){  
+    // }
+    // if(!/^[0-9]*$/.test(num)){   
+    // }
+    
+    var reg=/^\d+(\.\d+)?$/;
+   
+    if(reg.test(num)==false){
+        return false;
+    }
+    
+    return num;
+    
+}
+
 
 function ReturnLayer(num){
+   if(!isNumber(num)){
+       PL.msg("返回错误");
+       return;
+   } 
+    
   var icon = 5;
   var num = Number(num);
   num == 1 ? icon = 6 : "";
@@ -141,7 +165,7 @@ function ReturnLayer(num){
 
 // v  
 function appV(){
-  return "0.0.2";
+  return "0.0.3";
 }
 // 是否为空
 function isOfNull(stc) {  
