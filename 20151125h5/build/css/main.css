@@ -477,10 +477,12 @@ a {
   padding: 5px 0;
   padding-right: 5px; }
   .activity-rules ol {
-    color: #FFF; }
+    color: #FFF;
+    margin-left: -10px; }
     .activity-rules ol li {
+      font-size: 11px;
       color: #FFF;
-      line-height: 22px; }
+      line-height: 19px; }
 
 .footer-cp {
   color: #ff9191;

@@ -1,0 +1,22 @@
+$bg:#ffc600;
+.z-head{
+	height: 400px;
+	background-color: $bg;
+	position: relative;
+	overflow: hidden;
+	.head-bg{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 0;
+		height: 278px;
+		background: #feffc0;
+	}
+	.banner-wrap{
+		position: relative;
+		z-index: 1;
+		top: -16px;
+		text-align: center;
+	}
+}

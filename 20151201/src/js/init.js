@@ -50,7 +50,7 @@ function copy_clip(copy) {
 		netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
 		var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
 		if (!clip) return;
-		var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
+		var trans = Components.classes ['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
 		if (!trans) return;
 		trans.addDataFlavor('text/unicode');
 		var str = new Object();
