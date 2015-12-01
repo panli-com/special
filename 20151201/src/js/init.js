@@ -63,7 +63,7 @@ function copy_clip(copy) {
 		if (!clip) return false;
 		clip.setData(trans, null, clipid.kGlobalClipboard);
 	}
-	alert("代码已复制，你可以您黏贴了哦。");
+	
 	return false;
 }
 	
