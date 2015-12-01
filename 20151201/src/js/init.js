@@ -27,7 +27,7 @@
     
     
   }); // end of document ready
-})(jQuery); // end of jQuery name space
+})(jQuery); // end of jQuery name space 2
 
 
 function SetToBold () {
@@ -62,7 +62,7 @@ function copy_clip(copy) {
 		var clipid = Components.interfaces.nsIClipboard;
 		if (!clip) return false;
 		clip.setData(trans, null, clipid.kGlobalClipboard);
-	}
+	} 
 	
 	return false;
 }

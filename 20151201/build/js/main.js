@@ -7253,7 +7253,7 @@ Picker.extend( 'pickadate', DatePicker )
     
     
   }); // end of document ready
-})(jQuery); // end of jQuery name space
+})(jQuery); // end of jQuery name space 2
 
 
 function SetToBold () {
@@ -7288,8 +7288,8 @@ function copy_clip(copy) {
 		var clipid = Components.interfaces.nsIClipboard;
 		if (!clip) return false;
 		clip.setData(trans, null, clipid.kGlobalClipboard);
-	}
-	alert("代码已复制，你可以您黏贴了哦。");
+	} 
+	
 	return false;
 }
 	
