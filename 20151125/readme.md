@@ -42,6 +42,11 @@ var moCoReact = [{"CouponType":50,"state":-1},{"CouponType":200,"state":-1},{"Co
 当用户在点击的时候不在请求服务器，
 客户端直接响应 `4` = 啊喔, 这张券已经被大家抢光了呢;
 
+> 值得注意的是 > 请在 html 页面 对应输出 api 接口返回的 代金卷类型 （CouponType）;
+
+对应找到页面 的值 为 `#coupon-type- + 类型`
+
+
 
 ### 举例说明 用户自主点击行为
 
