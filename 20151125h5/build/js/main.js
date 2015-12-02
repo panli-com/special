@@ -607,7 +607,7 @@ function CouponReact(obj){
        var  _type = obj[i].CouponType,
             _state = obj[i].state;        
        if(_state != 0){
-            $("#coupon-type-"+_type).removeClass("red-packet-btn").addClass("on red-packet-btn-no").attr("no-click", 4);
+            $("#coupon-type-"+_type).removeClass("red-packet-btn").addClass("on").attr("no-click", 4);
        }      
     }   
     
@@ -633,7 +633,7 @@ function ReturnLayer(num){
 
 // v  
 function appV(){
-  return "0.0.3";
+  return "0.0.4";
 }
 ;(function(){
   
@@ -646,17 +646,17 @@ function appV(){
   $(function(){
      
      
-      $("#red-packet-wrap").on("click",".red-packet-btn-no",function(){       
-        ReturnLayer(4);
-      });    
+      // $("#red-packet-wrap").on("click",".red-packet-btn-no",function(){       
+      //   ReturnLayer(4);
+      // });    
     
-      $("#red-packet-wrap").on("click",".red-packet-btn-yes",function(){       
-        ReturnLayer(3);
-      });
+      // $("#red-packet-wrap").on("click",".red-packet-btn-yes",function(){       
+      //   ReturnLayer(3);
+      // });
     
-      $("#red-packet-wrap").on("click",".red-packet-btn-2",function(){       
-        ReturnLayer(2);
-      });
+      // $("#red-packet-wrap").on("click",".red-packet-btn-2",function(){       
+      //   ReturnLayer(2);
+      // });
      
       $(".go-to-btn").on("touchstart touchmove",function(){
         $(this).addClass("on");

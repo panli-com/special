@@ -1,5 +1,6 @@
 $bannerH:654px;
 .banner-wrap{
+	position: relative;
 	overflow: hidden;
 	height: $bannerH;
 	background:#ff5744 url(../images/head-bg.png);	
@@ -9,5 +10,47 @@ $bannerH:654px;
 		top: -26px;
 		background: url(../images/banner.png) no-repeat center top;
 	}
-	
+	.banner-lace{
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 18px;
+		background: url(../images/yello-top.png);
+	}
+	.banner-time-wrap{
+		position: relative;
+		height: $bannerH;
+		//background: rgba(236, 243, 236, 0.66);
+	}
+	.banner-time-main{
+		position: absolute;
+		left:50%;
+		bottom: 28px;
+		margin-left: -148px;
+		width: 296px;
+		height: 96px;
+		background: url(../images/time-bg.png) no-repeat center top;
+		.time-hour,.time-minute,.time-second{
+			position: absolute;
+			width: 54px;
+			height: 59px;
+			line-height: 59px;
+			top: 33px;
+			font-size: 40px;
+			//background: palevioletred;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			color: #292929;
+		}
+		.time-hour{
+			left: 0px;
+		}
+		.time-minute{
+			left: 104px;
+		}
+		.time-second{
+			left: 206px;
+		}
+	}
 }

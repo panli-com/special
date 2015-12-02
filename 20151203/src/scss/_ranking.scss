@@ -14,15 +14,70 @@
 }
 .ranking-main{
 	height: 654px;
-	.main-left{
+	.main-left,.main-right{
 		height: 654px;
+		position: relative;
+	}
+	.main-left{		
 		width: 416px;
 		background: #fd4530 url(../images/left-p.png) no-repeat 18px 38px;;
 	}
-	.main-right{
-		height: 654px;
+	.main-right{		
 		width: (1000px-416);
 		background: #6a6bcc url(../images/right-p.png) no-repeat 33px 38px;
+		.goto-product{
+			position: absolute;
+			top: 90px;
+			left: 36px;
+			display: block;
+			width: 180px;
+			height: 30px;		
+		}
+		.user-info{
+			position: absolute;
+			top: 181px;
+			left: 61px;
+			p{
+				line-height: 30px;
+				&.p2{
+					text-indent: 30px;
+				}
+			}
+		}
+	}
+	.ranking-user{
+		position: absolute;
+		left: 48px;
+		top: 180px;
+		width: 312px;
+		
+		li{
+			height: 40px;
+			line-height: 40px;
+			border-top: 1px dotted #dcdcdc;
+			color:#555555;
+			&.li1{
+				border-top: none;
+				background: url(../images/ranking-1.png) no-repeat 5px 5px;
+				color: #fd4530;
+				font-size: 24px;
+			}
+			.s1,.s2{
+				display: inline-block;
+				white-space: nowrap;				
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			.s1{				
+				width: 124px;
+				text-indent: 44px;				
+			}
+			.s2{
+				display: inline-block;
+				width: 180px;
+				text-align: center;				
+			}
+		}
 	}
 }
 .ranking-text{

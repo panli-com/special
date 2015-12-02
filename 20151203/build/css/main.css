@@ -54,7 +54,7 @@ a {
   margin: 0 auto; }
 
 .red {
-  color: #ff2828; }
+  color: #fd4530; }
 
 .font20 {
   font-size: 20px; }
@@ -80,6 +80,7 @@ a {
     z-index: 10; }
 
 .banner-wrap {
+  position: relative;
   overflow: hidden;
   height: 654px;
   background: #ff5744 url(../images/head-bg.png); }
@@ -88,6 +89,40 @@ a {
     height: 654px;
     top: -26px;
     background: url(../images/banner.png) no-repeat center top; }
+  .banner-wrap .banner-lace {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 18px;
+    background: url(../images/yello-top.png); }
+  .banner-wrap .banner-time-wrap {
+    position: relative;
+    height: 654px; }
+  .banner-wrap .banner-time-main {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    margin-left: -148px;
+    width: 296px;
+    height: 96px;
+    background: url(../images/time-bg.png) no-repeat center top; }
+    .banner-wrap .banner-time-main .time-hour, .banner-wrap .banner-time-main .time-minute, .banner-wrap .banner-time-main .time-second {
+      position: absolute;
+      width: 54px;
+      height: 59px;
+      line-height: 59px;
+      top: 33px;
+      font-size: 40px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #292929; }
+    .banner-wrap .banner-time-main .time-hour {
+      left: 0px; }
+    .banner-wrap .banner-time-main .time-minute {
+      left: 104px; }
+    .banner-wrap .banner-time-main .time-second {
+      left: 206px; }
 
 .activity-wrap {
   height: 530px;
@@ -105,6 +140,35 @@ a {
     display: inline-block; }
   .activity-main .btn2 {
     margin-left: 5px; }
+  .activity-main .scroll-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 250px;
+    overflow: hidden;
+    padding-top: 30px; }
+  .activity-main .scroll-main {
+    position: relative;
+    padding-left: 20px;
+    height: 170px;
+    overflow: hidden; }
+    .activity-main .scroll-main .name {
+      color: #fd4530; }
+    .activity-main .scroll-main .pro-name {
+      text-decoration: none;
+      color: #555555; }
+      .activity-main .scroll-main .pro-name:hover {
+        text-decoration: underline; }
+    .activity-main .scroll-main li {
+      margin-left: 50px;
+      width: 430px;
+      line-height: 24px;
+      margin-bottom: 10px;
+      float: left;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: 15px; }
 
 .ranking-bg {
   background: #f5f5f5; }
@@ -122,14 +186,57 @@ a {
 
 .ranking-main {
   height: 654px; }
-  .ranking-main .main-left {
+  .ranking-main .main-left, .ranking-main .main-right {
     height: 654px;
+    position: relative; }
+  .ranking-main .main-left {
     width: 416px;
     background: #fd4530 url(../images/left-p.png) no-repeat 18px 38px; }
   .ranking-main .main-right {
-    height: 654px;
     width: 584px;
     background: #6a6bcc url(../images/right-p.png) no-repeat 33px 38px; }
+    .ranking-main .main-right .goto-product {
+      position: absolute;
+      top: 90px;
+      left: 36px;
+      display: block;
+      width: 180px;
+      height: 30px; }
+    .ranking-main .main-right .user-info {
+      position: absolute;
+      top: 181px;
+      left: 61px; }
+      .ranking-main .main-right .user-info p {
+        line-height: 30px; }
+        .ranking-main .main-right .user-info p.p2 {
+          text-indent: 30px; }
+  .ranking-main .ranking-user {
+    position: absolute;
+    left: 48px;
+    top: 180px;
+    width: 312px; }
+    .ranking-main .ranking-user li {
+      height: 40px;
+      line-height: 40px;
+      border-top: 1px dotted #dcdcdc;
+      color: #555555; }
+      .ranking-main .ranking-user li.li1 {
+        border-top: none;
+        background: url(../images/ranking-1.png) no-repeat 5px 5px;
+        color: #fd4530;
+        font-size: 24px; }
+      .ranking-main .ranking-user li .s1, .ranking-main .ranking-user li .s2 {
+        display: inline-block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+      .ranking-main .ranking-user li .s1 {
+        width: 124px;
+        text-indent: 44px; }
+      .ranking-main .ranking-user li .s2 {
+        display: inline-block;
+        width: 180px;
+        text-align: center; }
 
 .ranking-text {
   color: #555555;

@@ -141,15 +141,13 @@ a {
         background-color: #D047E1; }
       .activity-u li a.packet-btn-4 .line {
         background-color: #349AFE; }
-      .activity-u li a.on {
-        cursor: not-allowed; }
-        .activity-u li a.on .finish {
-          display: block;
-          left: 0;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          background: url(../images/finish.png) no-repeat center top; }
+      .activity-u li a.on .finish {
+        display: block;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: url(../images/finish.png) no-repeat center top; }
 
 .activity-content {
   position: absolute;

@@ -18,4 +18,43 @@ $activityH:530px;
 	.btn2{
 		margin-left: 5px;
 	}
+	
+	.scroll-wrap{
+		
+		//background: #fde020;
+		//opacity: 0.5;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 250px;
+		overflow: hidden;
+		padding-top: 30px;
+	}
+	.scroll-main{
+		position: relative;
+		padding-left: 20px;
+		height: 170px;
+		overflow: hidden;
+		.name{
+			color: #fd4530;
+		}
+		.pro-name{
+			text-decoration: none;
+			color: #555555;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		li{
+			margin-left: 50px;
+			width: 430px;
+			line-height: 24px;
+			margin-bottom: 10px;
+			float: left;
+			white-space: nowrap;				
+			text-overflow: ellipsis;
+			overflow: hidden;
+			font-size: 15px;
+		}
+	}
 }

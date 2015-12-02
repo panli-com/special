@@ -93,7 +93,7 @@ function CouponReact(obj){
        var  _type = obj[i].CouponType,
             _state = obj[i].state;        
        if(_state != 0){
-            $("#coupon-type-"+_type).removeClass("red-packet-btn").addClass("on red-packet-btn-no").attr("no-click", 4);
+            $("#coupon-type-"+_type).removeClass("red-packet-btn").addClass("on").attr("no-click", 4);
        }      
     }   
     
@@ -119,5 +119,5 @@ function ReturnLayer(num){
 
 // v  
 function appV(){
-  return "0.0.3";
+  return "0.0.4";
 }
