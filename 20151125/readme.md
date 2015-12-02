@@ -26,7 +26,26 @@
 
 当第二次点击的时候不在会去请求服务器了，在客户端直接做上次服务返回的数据做相对应的 提示
 
-### 举例说明
+### 第一次加载页面请求的 api 接口 获取抢代金券剩余数量 客户端自主请求
+
+>/App_Services/wsSpecial.asmx/Coupon_NumberState
+
+模拟接口数据
+
+```
+var moCoReact = [{"CouponType":50,"state":-1},{"CouponType":200,"state":-1},{"CouponType":300,"state":0},{"CouponType":0,"state":0}];
+```
+
+获取服务器返回值后，页面将会更新代金卷的 显示界面，当 接口数据的 `state` 的值为 `-1` 的话，
+前端将会找到页面对应的 代金卷 类型（CouponType） 给 `state` 值为 `-1` 盖上以领完的标记，
+
+当用户在点击的时候不在请求服务器，
+客户端直接响应 `4` = 啊喔, 这张券已经被大家抢光了呢;
+
+
+### 举例说明 用户自主点击行为
+
+>http://www.panli.com/App_Services/wsSpecial.asmx/getDouble12?userName=ksy123123&UserID=B61654B9-6E87-4A40-93D3-F6ACFC324927&cotype=%E6%BB%A1100%E5%87%8F5
 
 ```
 var text = [
