@@ -50,7 +50,7 @@ var moCoReact = [{"CouponType":50,"state":-1},{"CouponType":200,"state":-1},{"Co
 
 ### 举例说明 用户自主点击行为
 
->http://www.panli.com/App_Services/wsSpecial.asmx/getDouble12?userName=ksy123123&UserID=B61654B9-6E87-4A40-93D3-F6ACFC324927&cotype=%E6%BB%A1100%E5%87%8F5
+>/App_Services/wsSpecial.asmx/getDouble12?userName=ksy123123&UserID=B61654B9-6E87-4A40-93D3-F6ACFC324927&cotype=%E6%BB%A1100%E5%87%8F5
 
 ```
 var text = [
