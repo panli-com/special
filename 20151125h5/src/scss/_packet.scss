@@ -11,19 +11,24 @@
 				position: relative;
 				display: block;
 				padding: 0.2rem 0.2rem 0 0;
+				.thumb{
+					position: relative;
+				}
 				span{
 					position: absolute;							
 				}
 				img{
 					margin-bottom: 0;
 					padding: 0;
+					display: block;
 				}
 				&.on{
 					span{
 						left: 0;
-						top: 0.2rem;
-						right: 0.2rem;
-						bottom: 0.09rem;			
+						top: 0;
+						right: 0;
+						bottom: 0;
+						max-width: 280px;		
 						background: url(../images/finish.png) no-repeat center center;
 						background-size: 100% 100%;
 					}

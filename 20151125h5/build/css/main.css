@@ -437,16 +437,20 @@ a {
       position: relative;
       display: block;
       padding: 0.2rem 0.2rem 0 0; }
+      .packet-wrap ul li a .thumb {
+        position: relative; }
       .packet-wrap ul li a span {
         position: absolute; }
       .packet-wrap ul li a img {
         margin-bottom: 0;
-        padding: 0; }
+        padding: 0;
+        display: block; }
       .packet-wrap ul li a.on span {
         left: 0;
-        top: 0.2rem;
-        right: 0.2rem;
-        bottom: 0.09rem;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 280px;
         background: url(../images/finish.png) no-repeat center center;
         background-size: 100% 100%; }
 
@@ -466,16 +470,18 @@ a {
       background-color: #ffe400; }
 
 .rules-title {
-  height: 17px;
+  height: 16px;
   background: url(../images/title.png) no-repeat center center;
-  background-size: 61px; }
+  background-size: 61px 17px; }
 
 .activity-rules {
   background: url(../images/bg.png) no-repeat center center;
   background-size: 100% 100%;
   color: #FFF;
   padding: 5px 0;
-  padding-right: 5px; }
+  padding-right: 1px;
+  position: relative;
+  top: -1px; }
   .activity-rules ol {
     color: #FFF;
     margin-left: -10px; }

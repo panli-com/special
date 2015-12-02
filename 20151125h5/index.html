@@ -14,8 +14,8 @@
 <!-- <meta content="maximum-dpr=2" name="flexible" />
 <meta content="modeName=640-12" name="grid" /> -->
 <title>先领券，再血拼</title>
-<link type="text/css" href="./build/css/main.min.css" rel="stylesheet" />
-<script src="./build/js/main.min.js?v=0.0.1" charset="utf-8"></script>
+<link type="text/css" href="./build/css/main.min.css?v=0.0.2" rel="stylesheet" />
+<script src="./build/js/main.min.js?v=0.0.2" charset="utf-8"></script>
 </head>
 <body>
 <!-- main -->
@@ -27,26 +27,34 @@
 		<ul class="packet-u clearfix" id="red-packet-wrap" >
 			<li>
 				<a class="on red-packet-btn-no" href="javascript:void(0);" id="coupon-type-0" cotype="满100减5">
-					<img src="./build/images/5.png" alt="">
-					<span></span>
+					<div class="thumb">
+						<img src="./build/images/5.png" alt="">
+						<span></span>
+					</div>				
 				</a>
 			</li>
 			<li>
-				<a class="red-packet-btn" href="javascript:void(0);" id="coupon-type-300" cotype="满300减20">
-					<img src="./build/images/20.png" alt="" >
-					<span></span>
+				<a class="red-packet-btn" href="javascript:void(0);" id="coupon-type-300" cotype="满300减20">					
+					<div class="thumb">
+						<img src="./build/images/20.png" alt="">
+						<span></span>
+					</div>	
 				</a>
 			</li>
 			<li>
 				<a class="red-packet-btn" href="javascript:void(0);" id="coupon-type-200" cotype="满500减50">
-					<img src="./build/images/40.png" alt="">
-					<span></span>
+					<div class="thumb">
+						<img src="./build/images/40.png" alt="">
+						<span></span>
+					</div>	
 				</a>
 			</li>
 			<li>
-				<a class="red-packet-btn" href="javascript:void(0);" id="coupon-type-50" cotype="满1000减100">
-					<img src="./build/images/100.png" alt="">
-					<span></span>
+				<a class="red-packet-btn on" href="javascript:void(0);" id="coupon-type-50" cotype="满1000减100">
+					<div class="thumb">
+						<img src="./build/images/100.png" alt="">
+						<span></span>
+					</div>	
 				</a>
 			</li>
 		</ul>
@@ -61,7 +69,7 @@
 		<div class="activity-rules">			
 			<ol class="ru">
 				<li>
-					<span>代金券领取时间：12月7日—12月12日（北京时间）使用时间：2015年12月12日00:00:00-23:59:59（北京时间）</span>
+					<span>代金券领取时间: 12月7日—12月12日(北京时间)<br/>使用时间: 2015年12月12日00:00:00-23:59:59(北京时间)</span>
 				</li>
 				<li>
 					<span>可任意抵扣商品费用，每一个订单可使用一张代金券。</span>
@@ -82,6 +90,44 @@
 <!-- main end -->
 </body>
 <script charset="utf-8">
+ //领取代金券
+        $(".red-packet-btn").on("click", function () {
 
+            var _t = $(this),
+                noClick = _t.attr("no-click");
+            //抢代金券领取接口
+            //getDouble12(obj,callback)
+            
+
+            console.log(noClick);
+
+            if (noClick) {
+                ReturnLayer(noClick);
+                return;
+            }
+
+            PL.open({
+                type: 2,
+                content: '',
+                shadeClose: false
+            });
+			
+			
+			setTimeout(function(){
+				var dNum  = 1;
+				
+				 PL.closeAll();
+				 
+				 ReturnLayer(dNum);
+				 
+				 _t.attr("no-click", dNum);		 
+				 
+				 
+			},1000)
+			
+			
+            
+
+        })
 </script>
 </html>

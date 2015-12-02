@@ -1,15 +1,16 @@
 .rules-title{
-	height: 17px;
+	height: 16px;
 	background: url(../images/title.png) no-repeat center center;
-	background-size: 61px;
+	background-size: 61px 17px;
 }
 .activity-rules{
 	background: url(../images/bg.png) no-repeat center center;
 	background-size: 100% 100%;
 	color: #FFF;
 	padding: 5px 0;
-	padding-right: 5px;
-	
+	padding-right: 1px;
+	position: relative;
+	top: -1px;
 	ol{
 		color: #FFF;
 		margin-left: -10px;

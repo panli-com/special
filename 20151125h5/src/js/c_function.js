@@ -5,7 +5,7 @@ function UserBalance(uName,callback) {
             dataType: "json",
             data: '{userName:"' + uName + '"}',
             contentType: "application/json;utf-8",
-            timeout: 10000,
+            timeout: 20000,
             error: function () {
                 //alert("500");
             },
@@ -49,7 +49,7 @@ function getDouble12(obj,callback) {
             dataType: "json",
             data: '{userName:"' + obj.userName + '",UserID:"' + obj.UserID + '",cotype:"' + obj.cotype + '"}',
             contentType: "application/json;utf-8",
-            timeout: 10000,
+            timeout: 20000,
             error: function () {
                 PL.closeAll();
                 PL.open({
@@ -71,7 +71,7 @@ function CouponNumberState(callback) {
             dataType: "json",
             data: '',
             contentType: "application/json;utf-8",
-            timeout: 10000,
+            timeout: 20000,
             error: function () {
                 PL.open({
                     content: '请求错误，请再试',
@@ -93,7 +93,7 @@ function CouponReact(obj){
        var  _type = obj[i].CouponType,
             _state = obj[i].state;        
        if(_state != 0){
-            $("#coupon-type-"+_type).removeClass("red-packet-btn").addClass("on red-packet-btn-no");
+            $("#coupon-type-"+_type).removeClass("red-packet-btn").addClass("on red-packet-btn-no").attr("no-click", 4);
        }      
     }   
     
@@ -110,14 +110,14 @@ function ReturnLayer(num){
     "这张券已经抢过了哦",
     "啊喔, 这张券已经被大家抢光了呢"
   ];
+ 
   PL.open({
-    title: '提示',
-    closeBtn: false,
-    content: text[num-1]
-  }); 
+    content: text[num-1],
+    time: 5
+});
 }
 
 // v  
 function appV(){
-  return "0.0.1";
+  return "0.0.3";
 }
