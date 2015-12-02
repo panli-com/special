@@ -1,0 +1,21 @@
+$activityH:530px;
+.activity-wrap{
+	height: $activityH;
+	background: #fde020 url(../images/dian.png);
+}
+.activity-main{
+	position: relative;
+	height: $activityH;
+	background: url(../images/scroll-info.png) no-repeat center bottom;
+	.btn-wrap{
+		height: 100px;
+		text-align: right;
+		padding-top: 32px;
+	}
+	.btn1,.btn2{
+		display: inline-block;		
+	}
+	.btn2{
+		margin-left: 5px;
+	}
+}

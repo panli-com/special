@@ -1,0 +1,13 @@
+$bannerH:654px;
+.banner-wrap{
+	overflow: hidden;
+	height: $bannerH;
+	background:#ff5744 url(../images/head-bg.png);	
+	.banner-img{
+		position: relative;
+		height: $bannerH;
+		top: -26px;
+		background: url(../images/banner.png) no-repeat center top;
+	}
+	
+}
