@@ -1,13 +1,13 @@
 (function($){
 $.fn.extend({
-        PLScroll:function(opt,callback){
+        ZScroll:function(opt,callback){
                 //参数初始化
                 if(!opt) var opt={};
                 var _btnUp = $("#"+ opt.up);//Shawphy:向上按钮
                 var _btnDown = $("#"+ opt.down);//Shawphy:向下按钮
                 var timerID;
                 var _this=this.eq(0).find("ul:first");
-                var     lineH=_this.find("li:first").height(), //获取行高
+                var     lineH= 17, //获取行高
                         line=opt.line?parseInt(opt.line,10):parseInt(this.height()/lineH,10), //每次滚动的行数，默认为一屏，即父容器高度
                         speed=opt.speed?parseInt(opt.speed,10):500; //卷动速度，数值越大，速度越慢（毫秒）
                         timer=opt.timer //?parseInt(opt.timer,10):3000; //滚动的时间间隔（毫秒）
@@ -22,18 +22,18 @@ $.fn.extend({
                                 for(i=1;i<=line;i++){
                                         _this.find("li:first").appendTo(_this);
                                 }
-                                _this.animate({marginTop:0});
+                                _this.css({marginTop:0});
                                 _btnUp.bind("click",scrollUp); //Shawphy:绑定向上按钮的点击事件
                         });
 
                 }
-                //Shawphy:向下翻页函数 
+                //Shawphy:向下翻页函数
                 var scrollDown=function(){
                         _btnDown.unbind("click",scrollDown);
                         for(i=1;i<=line;i++){
                                 _this.find("li:last").show().prependTo(_this);
                         }
-                        _this.animate({marginTop:upHeight});
+                        _this.css({marginTop:upHeight});
                         _this.animate({
                                 marginTop:0
                         },speed,function(){
@@ -96,44 +96,49 @@ function randomWord(randomFlag, min, max){
     }
     return str;
 }
-// 宝贝收藏接口
-function addFavorite(obj,callback){
-    var radNub = randomWord(false, 18);
-    console.log(obj);   
-    $.ajax({
-            type: "POST",
-            url: "/App_Services/wsFavorite.asmx/AddFavorite?time="+radNub,
-            dataType: "json",
-            contentType: "application/json;utf-8",
-            //data: "{name:'" + obj.name + "',href:'" + obj.href + "',picture:'" + obj.picture  + "',price:'" + obj.picture + "',shopName:'" + obj.shopName + "',shopHref:'" + obj.shopHref + "',remark:'',tags:'" + obj.tags + "',siteName:'" + obj.siteName  + "'}",
-            data:JSON.stringify(obj),
-            timeout: 10000,
-            error: function() { 
-                PL.closeAll();
-                PL.msg("请求错误");
-             },
-            success: function(res) {
-              callback(res);
-            }
-        });
 
+
+//验证数字
+function isNumber(num){
+    
+    var reg=/^\d+(\.\d+)?$/;
+   
+    if(reg.test(num)==false){
+        return false;
+    }
+    
+    return num;
+    
 }
 
-//抢代金券领取接口
-function getDouble12(obj,callback) {
+
+
+// v  
+function appV(){
+  return "0.0.6";
+}
+// 是否为空
+function isOfNull(stc) {  
+    if (!stc && typeof(stc)!="undefined" && stc!=0){
+       return false;
+    }
+    return stc;
+}
+
+
+
+//获取服务端数据 
+function getSeverData(url,obj,callback) {
     var radNub = randomWord(false, 18);
-   
      $.ajax({
             type: "POST",
-            url: "/App_Services/wsSpecial.asmx/getDouble12?time="+radNub,
+            url: url+"?time="+radNub,
             dataType: "json",
-            //data: '{userName:"' + obj.userName + '",UserID:"' + obj.UserID + '",cotype:"' + obj.cotype + '"}',
-            data:JSON.stringify(obj),
+            data: obj,
             contentType: "application/json;utf-8",
             timeout: 10000,
             error: function () {
-                PL.closeAll();
-                PL.msg("请求错误")
+                PL.msg("请求错误");
                
             },
             success: function (data) {
@@ -141,8 +146,10 @@ function getDouble12(obj,callback) {
             }
         });    
 }
-//获取抢代金券剩余数量
-function CouponNumberState(callback) {
+
+
+//获取最新滚动信息
+function newDataInfo(callback) {
     var radNub = randomWord(false, 18);
      $.ajax({
             type: "POST",
@@ -161,88 +168,65 @@ function CouponNumberState(callback) {
         });    
 }
 
+//滚动消息
+function getScrollData(call) {
+    /* json 数据的 请求 url 地址 */
+    var dataJsonUrl = "./data/data.json";
 
-var moCoReact = [{"CouponType":50,"state":-1},{"CouponType":200,"state":-1},{"CouponType":300,"state":0},{"CouponType":0,"state":0}];
+    /* 获取json 数据 */
+    $.getJSON(dataJsonUrl, function (data) {
+        call(data);       
+    });
+}
 
-//代金券数量响应
-function CouponReact(obj){    
-    for(var i = 0;i< obj.length;i++){
-       var  _type = obj[i].CouponType,
-            _state = obj[i].state;        
-       if(_state != 0){
-            $("#coupon-type-"+_type).removeClass("red-packet-btn").addClass("on red-packet-btn-no").attr("no-click", 4);
-       }      
-    }   
+function htmlScroll(data,call){   
     
+    var _html = '';     
+    for(var i= 0;i<data.length;i++){
+        var name = data[i].Name,
+            proName = data[i].ProductName,
+            url = data[i].Url;
+         _html +=  '<li><span class="name">'+ name +': </span>'+
+                       '<a href="'+ url +'" target="_blank" class="pro-name">'+
+                        '' + proName + '</a></li>';
+                      
+                    
+        
+    }    
+    $("#scroll-main-u1").html(_html);
+    call();
+    return _html;
 }
 
-//验证数字
-function isNumber(num){
-    // var reg = new RegExp("^[0-9]*$");
-    // 
-    // if(!reg.test(num)){  
-    // }
-    // if(!/^[0-9]*$/.test(num)){   
-    // }
-    
-    var reg=/^\d+(\.\d+)?$/;
-   
-    if(reg.test(num)==false){
-        return false;
-    }
-    
-    return num;
-    
+//滚动动画
+function scrollAnmi(e) {
+    $(e).ZScroll({ line: 2, speed: 1000, timer: 3000, up: "but_up", down: "but_down" });
 }
 
-
-function ReturnLayer(num){
-   if(!isNumber(num)){
-       PL.msg("返回错误");
-       return;
-   } 
-    
-  var icon = 5;
-  var num = Number(num);
-  num == 1 ? icon = 6 : "";
-  var text = [
-    "恭喜您成功抢到代金券",
-    "每个人只能领两张券哦",
-    "这张券已经抢过了哦",
-    "啊喔, 这张券已经被大家抢光了呢"
-  ];  
-  
-  var btn = [
-    "确定",
-    "我知道了",
-    "好吧",
-    "好吧"
-  ];   
-  PL.alert(text[num-1],btn[num-1],{icon: icon});
-}
-
-// v  
-function appV(){
-  return "0.0.1";
-}
-// 是否为空
-function isOfNull(stc) {  
-    if (!stc && typeof(stc)!="undefined" && stc!=0){
-       return false;
-    }
-    return stc;
-}
-
-function ZScrollStar() {
-    $("div.scroll-main").PLScroll({ line: 2, speed: 1000, timer: 3000, up: "but_up", down: "but_down" });
-}
-
-
-
-
+function enTimeF(endTime,nowTime){
+		var TimeJson = PLCountdown(endTime,nowTime),
+			d = TimeJson.d,
+			h = TimeJson.h,
+			m = TimeJson.m,
+			s = TimeJson.s;
+			
+			if( parseInt(d) == 0){
+				
+				$('.banner7').hide();
+				$('.banner8').fadeIn("slow");
+			}
+		$(".time-day").text(d);
+		$(".time-hour").text(h);
+		$(".time-minute").text(m);
+		$(".time-second").text(s);
+		
+		setTimeout(function(){
+			enTimeF(endTime-1000,nowTime)
+		},1000)
+	}
 
 //快速登陆面板
-window.Panli.LoginPanel = {
+window.Panli.LoginPanel = { 
     d: {}, //dialog对象
     t: {}, //标题栏，包含关闭按钮 
     f: {}, //iframe对象
@@ -278,7 +262,7 @@ window.Panli.LoginPanel = {
     toggle: function () { $(":visible", window.Panli.LoginPanel.d).length > 0 ? window.Panli.LoginPanel.close() : window.Panli.LoginPanel.open(); }
 }
 
-//快速登陆方法
+//快速登陆方法 
 window.Panli.Login = function (tempURL) {
     window.Panli.LoginPanel.url = document.location.href;
     try {
@@ -298,40 +282,50 @@ window.Panli.Login = function (tempURL) {
   
   $(function(){ 
 
-      $(".floor-nav-a").on("click",function(){
-                var _t = $(this),
-                    _tf = _t.attr("floor");
-                var _afloTop = $("#floor-"+_tf).offset().top;
-                 $('body,html').animate({ scrollTop: _afloTop-130 }, 300);
-      });
-      $("#back-top").on("click",function(){              
-                 $('body,html').animate({ scrollTop: 0 }, 300);
-      });   
       
       
-      $("#red-packet-wrap").on("click",".red-packet-btn-no",function(){       
-        ReturnLayer(4);
-      });    
-    
-      $("#red-packet-wrap").on("click",".red-packet-btn-yes",function(){       
-        ReturnLayer(3);
-      });
-    
-      $("#red-packet-wrap").on("click",".red-packet-btn-2",function(){       
-        ReturnLayer(2);
-      });
+     
       
-      //floorNnav();
+      
+     //$("#z-list-hide").ZScroll({ line: 1, speed: 1000, timer: 3000, up: "but_up", down: "but_down" });
+      
+      //$(".scroll-main").textSlider({line:1,speed:500,timer:3000});
     
   });
     
  
- $(window).resize(function(){
-    //floorNnav();
-  })
+
 
 
 
  
  
 })();
+
+
+
+// $(function () {
+//     var scrtime;
+
+//     var $ul = $(".scroll-main ul");
+//     var liFirstHeight = $ul.find("li:first").height();//第一个li的高度
+//     $ul.css({ top: "-" + liFirstHeight - 20 + "px" });//利用css的top属性将第一个li隐藏在列表上方	 因li的上下padding:10px所以要-20
+
+//     $(".scroll-main").hover(function () {
+//         $ul.pause();//暂停动画
+//         clearInterval(scrtime);
+//     }, function () {
+//         $ul.resume();//恢复播放动画	
+//         scrtime = setInterval(function scrolllist() {
+//             //动画形式展现第一个li
+//             $ul.animate({ top: 0 + "px" }, 1500, function () {
+//                 //动画完成时
+//                 $ul.find("li:last").prependTo($ul);//将ul的最后一个剪切li插入为ul的第一个li
+//                 liFirstHeight = $ul.find("li:first").height();//刚插入的li的高度
+//                 $ul.css({ top: "-" + liFirstHeight - 20 + "px" });//利用css的top属性将刚插入的li隐藏在列表上方  因li的上下padding:10px所以要-20					
+//             });
+//         }, 3300);
+
+//     }).trigger("mouseleave");//通过trigger("mouseleave")函数来触发hover事件的第2个函数
+
+// });

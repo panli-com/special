@@ -22,18 +22,18 @@ $.fn.extend({
                                 for(i=1;i<=line;i++){
                                         _this.find("li:first").appendTo(_this);
                                 }
-                                _this.animate({marginTop:0});
+                                _this.css({marginTop:0});
                                 _btnUp.bind("click",scrollUp); //Shawphy:绑定向上按钮的点击事件
                         });
 
                 }
-                //Shawphy:向下翻页函数 
+                //Shawphy:向下翻页函数
                 var scrollDown=function(){
                         _btnDown.unbind("click",scrollDown);
                         for(i=1;i<=line;i++){
                                 _this.find("li:last").show().prependTo(_this);
                         }
-                        _this.animate({marginTop:upHeight});
+                        _this.css({marginTop:upHeight});
                         _this.animate({
                                 marginTop:0
                         },speed,function(){

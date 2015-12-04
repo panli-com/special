@@ -1,0 +1,29 @@
+.rules-title{
+	height: 16px;
+	//background: url(../images/title.png) no-repeat center center;
+	background-size: 61px 17px;
+}
+.activity-rules{
+	// background: url(../images/bg.png) no-repeat center center;
+	background-size: 100% 100%;
+	color: #FFF;
+	padding: 5px 0;
+	padding-right: 1px;
+	position: relative;
+	top: -1px;
+	ol{
+		color: #FFF;
+		margin-left: -10px;
+		li{
+			font-size: 11px;
+			color:#FFF;
+			line-height: 19px;
+		}
+	}
+}
+
+.footer-cp{
+	color: #ff9191;
+	font-size: 12px;
+	padding: 10px 0;
+}

@@ -1,6 +1,6 @@
 
 //快速登陆面板
-window.Panli.LoginPanel = {
+window.Panli.LoginPanel = { 
     d: {}, //dialog对象
     t: {}, //标题栏，包含关闭按钮 
     f: {}, //iframe对象
@@ -36,7 +36,7 @@ window.Panli.LoginPanel = {
     toggle: function () { $(":visible", window.Panli.LoginPanel.d).length > 0 ? window.Panli.LoginPanel.close() : window.Panli.LoginPanel.open(); }
 }
 
-//快速登陆方法
+//快速登陆方法 
 window.Panli.Login = function (tempURL) {
     window.Panli.LoginPanel.url = document.location.href;
     try {

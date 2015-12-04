@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>��jsʵ�����ּ���Դ������¹����е�������΢������-</title>
+<title>纯js实现文字间断性从上向下滚动有点像新浪微博评论-</title>
 
 <style type="text/css">
 #ul1{background:white;margin:0px;padding:0px;width:500px;height:300px;border:1px solid black;overflow:hidden;}
@@ -10,7 +10,7 @@ li{border-bottom:1px dashed #CCC;padding:15px 10px 3px 10px;margin:0px;list-styl
 </style>
 
 <script type="text/javascript">
-var arr=['xw�ز������Ѵ�Һú�ѧϰJava��͵����','ϴ��Ҳ�ܳ���', '���䰡', 'һ������ɹ ����Ӱ���ء�������ͷʹʹ��һ�������ϲ�������У�����������������', '�ҿ����㣬������Ϊ��ʲô���ã�������Ϊ���ܸ���һ�����Ķ�������δ����������Ϊ�����ҵ��Ϲ���������Ϊ�Ҿ������ǿ϶���һ���ӻ������ú�����ȥ��������Ϊ����һ�θ������̫�󣬶�����Ϊ���Ұ��㣬�Ҿ��ÿ����㣬�ͻ��Ķ���', '�ҳ������Ǹ�û�й�����û�ж������ˣ�ȱ��̫���������ȹ���������졣Ҳ��������ܰ��Լ�������ʰ�ɾ����ճ���������Ҫ��λ�á����Լ�δ�������ʣ�µĿռ䣬ȫ�����룬��ͥ�����ѡ�'];
+var arr=['提醒大家好好学习Java别偷懒！','洗脸也能抽筋？？', '好冷啊', '一口气睇晒 《碟影重重》三部，头痛痛。一如既往地喜欢特务男，哈哈，有脑有身手', '我靠近你，不是因为你什么都好，不是因为你能给我一个安心而不错的未来，不是因为你是我的老公，不是因为我觉得我们肯定这一辈子会这样好好走下去，不是因为再找一段感情代价太大，而是因为，我爱你，我觉得看到你，就会心动。', '我承认我是个没有鼓励就没有动力的人，缺乏太多毅力。等过了这个冬天。也许我真的能把自己的心收拾干净。空出心里最重要的位置。给自己未来的新娘。剩下的空间，全是梦想，家庭和朋友。'];
 var t=setInterval(function(){
  var sTxt=arr.shift();
  createDom(sTxt);
@@ -104,7 +104,7 @@ function createDom(sTxt)
   oUl.appendChild(oLi)
  }
  
- //��ʼ�˶�
+ //开始运动
  iHeight=oLi.offsetHeight;
  oLi.style.height="0px";
  oLi.style.overflow='hidden';

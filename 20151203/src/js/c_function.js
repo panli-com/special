@@ -38,44 +38,49 @@ function randomWord(randomFlag, min, max){
     }
     return str;
 }
-// 宝贝收藏接口
-function addFavorite(obj,callback){
-    var radNub = randomWord(false, 18);
-    console.log(obj);   
-    $.ajax({
-            type: "POST",
-            url: "/App_Services/wsFavorite.asmx/AddFavorite?time="+radNub,
-            dataType: "json",
-            contentType: "application/json;utf-8",
-            //data: "{name:'" + obj.name + "',href:'" + obj.href + "',picture:'" + obj.picture  + "',price:'" + obj.picture + "',shopName:'" + obj.shopName + "',shopHref:'" + obj.shopHref + "',remark:'',tags:'" + obj.tags + "',siteName:'" + obj.siteName  + "'}",
-            data:JSON.stringify(obj),
-            timeout: 10000,
-            error: function() { 
-                PL.closeAll();
-                PL.msg("请求错误");
-             },
-            success: function(res) {
-              callback(res);
-            }
-        });
 
+
+//验证数字
+function isNumber(num){
+    
+    var reg=/^\d+(\.\d+)?$/;
+   
+    if(reg.test(num)==false){
+        return false;
+    }
+    
+    return num;
+    
 }
 
-//抢代金券领取接口
-function getDouble12(obj,callback) {
+
+
+// v  
+function appV(){
+  return "0.0.6";
+}
+// 是否为空
+function isOfNull(stc) {  
+    if (!stc && typeof(stc)!="undefined" && stc!=0){
+       return false;
+    }
+    return stc;
+}
+
+
+
+//获取服务端数据 
+function getSeverData(url,obj,callback) {
     var radNub = randomWord(false, 18);
-   
      $.ajax({
             type: "POST",
-            url: "/App_Services/wsSpecial.asmx/getDouble12?time="+radNub,
+            url: url+"?time="+radNub,
             dataType: "json",
-            //data: '{userName:"' + obj.userName + '",UserID:"' + obj.UserID + '",cotype:"' + obj.cotype + '"}',
-            data:JSON.stringify(obj),
+            data: obj,
             contentType: "application/json;utf-8",
             timeout: 10000,
             error: function () {
-                PL.closeAll();
-                PL.msg("请求错误")
+                PL.msg("请求错误");
                
             },
             success: function (data) {
@@ -83,8 +88,10 @@ function getDouble12(obj,callback) {
             }
         });    
 }
-//获取抢代金券剩余数量
-function CouponNumberState(callback) {
+
+
+//获取最新滚动信息
+function newDataInfo(callback) {
     var radNub = randomWord(false, 18);
      $.ajax({
             type: "POST",
@@ -103,81 +110,59 @@ function CouponNumberState(callback) {
         });    
 }
 
+//滚动消息
+function getScrollData(call) {
+    /* json 数据的 请求 url 地址 */
+    var dataJsonUrl = "./data/data.json";
 
-var moCoReact = [{"CouponType":50,"state":-1},{"CouponType":200,"state":-1},{"CouponType":300,"state":0},{"CouponType":0,"state":0}];
+    /* 获取json 数据 */
+    $.getJSON(dataJsonUrl, function (data) {
+        call(data);       
+    });
+}
 
-//代金券数量响应
-function CouponReact(obj){    
-    for(var i = 0;i< obj.length;i++){
-       var  _type = obj[i].CouponType,
-            _state = obj[i].state;        
-       if(_state != 0){
-            $("#coupon-type-"+_type).removeClass("red-packet-btn").addClass("on red-packet-btn-no").attr("no-click", 4);
-       }      
-    }   
+function htmlScroll(data,call){   
     
+    var _html = '';     
+    for(var i= 0;i<data.length;i++){
+        var name = data[i].Name,
+            proName = data[i].ProductName,
+            url = data[i].Url;
+         _html +=  '<li><span class="name">'+ name +': </span>'+
+                       '<a href="'+ url +'" target="_blank" class="pro-name">'+
+                        '' + proName + '</a></li>';
+                      
+                    
+        
+    }    
+    $("#scroll-main-u1").html(_html);
+    call();
+    return _html;
 }
 
-//验证数字
-function isNumber(num){
-    // var reg = new RegExp("^[0-9]*$");
-    // 
-    // if(!reg.test(num)){  
-    // }
-    // if(!/^[0-9]*$/.test(num)){   
-    // }
-    
-    var reg=/^\d+(\.\d+)?$/;
-   
-    if(reg.test(num)==false){
-        return false;
-    }
-    
-    return num;
-    
+//滚动动画
+function scrollAnmi(e) {
+    $(e).ZScroll({ line: 2, speed: 1000, timer: 3000, up: "but_up", down: "but_down" });
 }
 
-
-function ReturnLayer(num){
-   if(!isNumber(num)){
-       PL.msg("返回错误");
-       return;
-   } 
-    
-  var icon = 5;
-  var num = Number(num);
-  num == 1 ? icon = 6 : "";
-  var text = [
-    "恭喜您成功抢到代金券",
-    "每个人只能领两张券哦",
-    "这张券已经抢过了哦",
-    "啊喔, 这张券已经被大家抢光了呢"
-  ];  
-  
-  var btn = [
-    "确定",
-    "我知道了",
-    "好吧",
-    "好吧"
-  ];   
-  PL.alert(text[num-1],btn[num-1],{icon: icon});
-}
-
-// v  
-function appV(){
-  return "0.0.1";
-}
-// 是否为空
-function isOfNull(stc) {  
-    if (!stc && typeof(stc)!="undefined" && stc!=0){
-       return false;
-    }
-    return stc;
-}
-
-function ZScrollStar() {
-    $("div.scroll-main").PLScroll({ line: 2, speed: 1000, timer: 3000, up: "but_up", down: "but_down" });
-}
-
-
-
+function enTimeF(endTime,nowTime){
+		var TimeJson = PLCountdown(endTime,nowTime),
+			d = TimeJson.d,
+			h = TimeJson.h,
+			m = TimeJson.m,
+			s = TimeJson.s;
+			
+			if( parseInt(d) == 0){
+				
+				$('.banner7').hide();
+				$('.banner8').fadeIn("slow");
+			}
+		$(".time-day").text(d);
+		$(".time-hour").text(h);
+		$(".time-minute").text(m);
+		$(".time-second").text(s);
+		
+		setTimeout(function(){
+			enTimeF(endTime-1000,nowTime)
+		},1000)
+	}

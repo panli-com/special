@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>新闻列表单行滚动js效果，者多行滚动js效果</title>
+<style>
+a{display:block;line-height:18px;text-decoration:none;color:#f00;font-family:Arial;font-size:12px;}
+a:hover{text-decoration:underline;}
+.shell{width:500px; }
+#div1{height:72px;overflow:hidden;}
+</style>
+</head>
+<body>
+<div class="shell">
+	<div id="div1">
+	  <a href="">1jQuery的图片滚动切换插件</a>
+	  <a href="">2Mootools slider 滚动条拖动取值的实现 </a>
+	  <a href="">3VB开发的Eclipse编程软件完整版</a>
+	  <a href="">4VC++生成随机数并快速排序的算法</a>
+	  <a href="">5VB语音报数计算器源程序</a>
+	  <a href="">6jQuery的图片滚动切换插件</a>
+	  <a href="">7Mootools slider 滚动条拖动取值的实现 </a>
+	  <a href="">8VB开发的Eclipse编程软件完整版</a>
+	  <a href="">9VC++生成随机数并快速排序的算法</a>
+	</div>
+<div>
+<p>修改说明：#div1里的高度（72px）即是你需要显示的行数<br/>
+js里的18即是要滚动的行高；1500即是每次滚动所需要的时间，越大则速度越慢！
+
+</body>
+<script>
+var c,_=Function;
+with(o=document.getElementById("div1")){ innerHTML+=innerHTML; onmouseover=_("c=1"); onmouseout=_("c=0");}
+(F=_("if(#%18||!c)#++,#%=o.scrollHeight>>1;setTimeout(F,#%18?10:1500);".replace(/#/g,"o.scrollTop")))();
+</script>
+</html>

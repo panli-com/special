@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.m-auto{
+  margin: 0 auto;
+}
+.red{
+  color: #ff2828;
+}
+.font20{
+  font-size: 20px;
+}
+.font30{
+  font-size: 30px;
+}
+.del-link{
+  text-decoration:line-through;
+}
+
+*:focus {outline: none;}
+
+.textarea-wrap-pla{
+  position: relative;
+  .text-placeholder{
+    position: absolute;
+    z-index: 0;
+    left: 5px;
+    top: 10px;
+    color: #999;
+  }
+  textarea{
+    z-index: 10;
+  }
+}

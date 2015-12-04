@@ -1,0 +1,25 @@
+.banner{
+	background:#ff473e url(../images/banner-bg2.png);
+	text-align: center;
+	img{
+		max-width: 100%;
+		display: block;
+		
+	}
+	.banner-title{
+		padding: 15px 40px;
+		text-align: center;
+		
+	}
+	.banner-2{
+		padding: 0 10px;
+	}
+	.banner-time{
+		height: 60px;
+		background: #ff473e;
+	}
+	.yello-bg{
+		height: 18px;
+		background: url(../images/yello-top.png);
+	}
+}

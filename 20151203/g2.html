@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style type="text/css">
+#up_zan3{border:1px solid #ccc;width:170px;height:82px;line-height:20px;overflow:hidden;}
+#up_zan3 #up_li{list-style-type:none;margin:0;padding:0;margin-left:6px;}
+#up_zan3 #up_li a{font-size:12px; line-height:16px;}
+</style>
+</head>
+<body>
+<div id="up_zan3">
+<div id="marqueebox">
+<div id="up_li"><a href="http://www.zan3.net/" target="_blank"><span style="color:#FF0000">滚动文字一号</span></a> <a href="http://www.zan3.net/" target="_blank"><span style="color:#FF0000">滚动文字二号</span></a></div>
+<div id="up_li"><a href="http://www.zan3.net/" target="_blank"><span style="color:#3333FF">滚动文字三号</span></a> <a href="http://www.zan3.net/" target="_blank"><span style="color:#3333FF">滚动文字四号</span></a></div>
+<div id="up_li"><a href="http://www.zan3.net/" target="_blank"><span style="color:#3333FF">滚动文字五号</span></a> <a href="http://www.zan3.net/" target="_blank"><span style="color:#3333FF">滚动文字六号</span></a></div>
+<div id="up_li"><a href="http://www.zan3.net/" target="_blank"><span style="color:#3333FF">滚动文字七号</span></a> <a href="http://www.zan3.net/" target="_blank"><span style="color:#3333FF">滚动文字八号</span></a></div>
+</div>
+<script language="javascript">
+function startmarquee(lh,speed,delay) {
+var p=false;
+var t;
+var o=document.getElementById("marqueebox");
+o.innerHTML+=o.innerHTML;
+o.style.marginTop=0;
+o.onmouseover=function(){p=true;}
+o.onmouseout=function(){p=false;}
+
+function start(){
+t=setInterval(scrolling,speed);
+if(!p) o.style.marginTop=parseInt(o.style.marginTop)-1+"px";
+}
+
+function scrolling(){
+if(parseInt(o.style.marginTop)%lh!=0){
+o.style.marginTop=parseInt(o.style.marginTop)-1+"px";
+if(Math.abs(parseInt(o.style.marginTop))>=o.scrollHeight/2) o.style.marginTop=0;
+}else{
+clearInterval(t);
+setTimeout(start,delay);
+}
+}
+setTimeout(start,delay);
+}
+startmarquee(20,20,1500);
+</script>	
+</body>
+</html>

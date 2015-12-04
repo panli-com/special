@@ -41,7 +41,7 @@ function randomWord(randomFlag, min, max){
 // 宝贝收藏接口
 function addFavorite(obj,callback){
     var radNub = randomWord(false, 18);
-    console.log(obj);   
+     
     $.ajax({
             type: "POST",
             url: "/App_Services/wsFavorite.asmx/AddFavorite?time="+radNub,
@@ -189,7 +189,78 @@ var winW = $(window).width(),
 
 
 
+function  colorList(data,nu) {
+    
+    var mlc = nu,fl1 = [],fl2 = [],fl3 = [],fl4 = [],fl5 = [],fl6 = [],fl0 = [];
+         
+          for(var i=0;i<mlc;i++){
+              fl0.push(data[i]);
+          }
+          for(var i=mlc;i<mlc*2;i++){
+              fl1.push(data[i]);
+          }
+          for(var i=mlc*2;i<mlc*3;i++){
+              fl2.push(data[i]);
+          }
+          for(var i=mlc*3;i<mlc*4;i++){
+              fl3.push(data[i]);
+          }
+          for(var i=mlc*4;i<mlc*5;i++){
+              fl4.push(data[i]);
+          }
+          for(var i=mlc*5;i<mlc*6;i++){
+              fl5.push(data[i]);
+          }
+          for(var i=mlc*6;i<mlc*7;i++){
+              fl6.push(data[i]);
+          }
 
+        
+          FloorDataAll(fl0,'NZ',1);
+          FloorDataAll(fl1,'nn',2);
+          FloorDataAll(fl2,'xx',3);
+          FloorDataAll(fl3,'xb',4);
+          FloorDataAll(fl4,'mz',5);
+          FloorDataAll(fl5,'PS',6);
+          FloorDataAll(fl6,'jj',7);
+}
+
+
+
+ function FloorDataAll(data,imgHead,id){
+            var str = '';
+            for(var i=0;i<data.length;i++){
+               
+                var name = data[i]['Name'],
+                    price = data[i].pirceTb,
+                    price2 = data[i].pircePl,
+                    imgUrl = data[i].imgSrc,
+                    proUrl = data[i].taobaoUrl,
+                    shopName = data[i].taobaoUrl,
+                    shopHref = data[i].shopHref,
+                    siteName = data[i].siteName,
+                    gouUrl = 'http://www.panli.com/Crawler.aspx?purl='+proUrl;
+                str += '<li><div class="thumb">'+
+                        '<a href="'+ gouUrl +'" target="_blank"><img src="'+ imgUrl +'" alt=""></a>'+
+                        '</div>'+
+                        '<div class="p-footer">'+
+                            '   <a href="'+ gouUrl +'" class="title-a" target="_blank"><h6 class="name">'+ name +'</h6></a>'+
+                            '  <p class="p1 del-link">专柜价：￥<span class="price-tao">'+ price +'</span></p>'+
+                            ' <p class="p2"><span class="icon-do12-2">双12价 <i class="triangle"></i></span> ￥<span class="price">'+ price2 +' </span></p>'+
+                            '<a href="javascript:void(0);" class="btn1 add-favorite"  data-href="'+ proUrl +'"  data-shopName="'+ shopName +'"  data-shopHref="'+ shopHref +'" data-siteName="'+ siteName +'" >点击收藏 <span class="jian"></span>'+
+                                '   <span class="line line_top"></span>'+
+                                '  <span class="line line_right"></span>'+
+                                ' <span class="line line_bottom"></span>'+
+                                '<span class="line line_left"></span>'+
+                            '</a>'+
+                            '<a href="'+ gouUrl +'" target="_blank" class="btn2">立即购买</a>'+
+                        '</div></li>';
+                        
+                
+            };
+           
+            $("#floor-"+id).find("ul").html(str);
+ }
 
 //快速登陆面板
 window.Panli.LoginPanel = {
