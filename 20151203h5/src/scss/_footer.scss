@@ -1,19 +1,20 @@
 .rules-title{
-	height: 16px;
-	//background: url(../images/title.png) no-repeat center center;
-	background-size: 61px 17px;
-}
-.activity-rules{
-	// background: url(../images/bg.png) no-repeat center center;
-	background-size: 100% 100%;
+	width: 92px;
+	height: 28px;
 	color: #FFF;
-	padding: 5px 0;
-	padding-right: 1px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 22px;
+	background: url(../images/activity-title-bg.png) no-repeat;
+	background-size: 92px 28px;
+}
+.activity-rules{	
+	color: #FFF;	
 	position: relative;
 	top: -1px;
 	ol{
 		color: #FFF;
-		margin-left: -10px;
+		margin-left: -20px;
 		li{
 			font-size: 11px;
 			color:#FFF;

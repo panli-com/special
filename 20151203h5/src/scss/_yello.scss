@@ -4,7 +4,30 @@
 	padding-top: 15px;
 }
 .yello-lis-wrap{
-	height: 200px;
+	height: 170px;
 	background: url(../images/list-bg.png) no-repeat center center;
 	background-size: 100% 100%;
+	padding-top: 20px;
+}
+.scroll-main{
+	height: 132px;
+	overflow: hidden;
+	padding: 0 26px;
+	//background: darkgreen;
+}
+.scroll-main-u{
+	.name{
+		color: #fe7462;
+	}
+	.pro-name{
+		color: #494847;
+		text-decoration: none;
+	}
+	li{	
+		height: 26px;
+		line-height: 26px;
+		white-space: nowrap;				
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
 }

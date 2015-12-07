@@ -11,15 +11,61 @@
 		text-align: center;
 		
 	}
+	.head-img-box{
+		position: relative;
+	}
+	.banner-shadow{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: url(../images/shadow.png) no-repeat center center;
+		background-size: cover;
+		z-index: 0;
+	}
+	.z2{
+		position: relative;
+		z-index: 2;
+	}
 	.banner-2{
 		padding: 0 10px;
 	}
 	.banner-time{
-		height: 60px;
-		background: #ff473e;
+		position: relative;
+		top: -3px;
+		height: 72px;
+		
 	}
 	.yello-bg{
 		height: 18px;
 		background: url(../images/yello-top.png);
+	}
+	.time-title{
+		padding-bottom: 3px;
+		font-size: 14px;
+	}
+	.time-wrap{
+		.s1,.s2{
+			display: inline-block;			
+			height: 29px;
+			line-height: 29px;
+			text-align: center;
+		}
+		.s1{
+			display: inline-block;
+			width: 27px;
+			height: 29px;
+			line-height: 29px;
+			background: url(../images/time-bg.png) no-repeat;
+			background-size: cover;
+			font-size: 20px;
+			
+		}
+		.s2{			
+			position: relative;
+			top: -3px;
+			color: #FFF;
+		}
 	}
 }

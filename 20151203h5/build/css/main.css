@@ -397,6 +397,10 @@ a {
   .app img {
     max-width: 100%; }
 
+.mg-lf-rem-25 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem; }
+
 .mg-lf-rem-05 {
   margin-left: 0.5rem;
   margin-right: 0.5rem; }
@@ -432,14 +436,49 @@ a {
   .banner .banner-title {
     padding: 15px 40px;
     text-align: center; }
+  .banner .head-img-box {
+    position: relative; }
+  .banner .banner-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../images/shadow.png) no-repeat center center;
+    background-size: cover;
+    z-index: 0; }
+  .banner .z2 {
+    position: relative;
+    z-index: 2; }
   .banner .banner-2 {
     padding: 0 10px; }
   .banner .banner-time {
-    height: 60px;
-    background: #ff473e; }
+    position: relative;
+    top: -3px;
+    height: 72px; }
   .banner .yello-bg {
     height: 18px;
     background: url(../images/yello-top.png); }
+  .banner .time-title {
+    padding-bottom: 3px;
+    font-size: 14px; }
+  .banner .time-wrap .s1, .banner .time-wrap .s2 {
+    display: inline-block;
+    height: 29px;
+    line-height: 29px;
+    text-align: center; }
+  .banner .time-wrap .s1 {
+    display: inline-block;
+    width: 27px;
+    height: 29px;
+    line-height: 29px;
+    background: url(../images/time-bg.png) no-repeat;
+    background-size: cover;
+    font-size: 20px; }
+  .banner .time-wrap .s2 {
+    position: relative;
+    top: -3px;
+    color: #FFF; }
 
 .yello-wrap {
   min-height: 300px;
@@ -447,24 +486,137 @@ a {
   padding-top: 15px; }
 
 .yello-lis-wrap {
-  height: 200px;
+  height: 170px;
   background: url(../images/list-bg.png) no-repeat center center;
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  padding-top: 20px; }
+
+.scroll-main {
+  height: 132px;
+  overflow: hidden;
+  padding: 0 26px; }
+
+.scroll-main-u .name {
+  color: #fe7462; }
+
+.scroll-main-u .pro-name {
+  color: #494847;
+  text-decoration: none; }
+
+.scroll-main-u li {
+  height: 26px;
+  line-height: 26px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.hello-wrap {
+  padding-top: 20px; }
+  .hello-wrap .hellp-title {
+    padding: 0 10px;
+    text-align: center; }
+  .hello-wrap .hellp-desc {
+    color: #FFF;
+    padding: 10px 0; }
+  .hello-wrap .hellp-text-wrap {
+    background-color: #fff7ec;
+    padding: 5px; }
+    .hello-wrap .hellp-text-wrap .hellp-boder {
+      position: relative;
+      padding: 10px;
+      height: 70px;
+      border: 1px solid #ffecd3; }
+    .hello-wrap .hellp-text-wrap p {
+      position: relative;
+      z-index: 1;
+      line-height: 22px; }
+      .hello-wrap .hellp-text-wrap p.p2 {
+        text-indent: 24px; }
+    .hello-wrap .hellp-text-wrap .coin {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      z-index: 0;
+      width: 32px;
+      height: 31px;
+      background: url(../images/coin.png) no-repeat center center;
+      background-size: cover; }
+
+.ranking-wrap {
+  padding: 20px 0;
+  position: relative; }
+  .ranking-wrap .ranking-top-line {
+    height: 5px;
+    background: #4a4b8e;
+    border: 2px solid #595aac; }
+  .ranking-wrap .ranking-mark {
+    color: #FFF; }
+  .ranking-wrap .bolang {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 26px;
+    background: url(../images/bolang.png) no-repeat; }
+
+.ranking-list-wrap, .ranking-mark {
+  padding: 0 5px; }
+
+.ranking-list-main {
+  position: relative;
+  top: -5px;
+  min-height: 250px;
+  margin-bottom: 16px;
+  background-image: linear-gradient(#f9e3ce 0%, #fef9f3 10%, #fff7ec 100%);
+  padding: 15px; }
+  .ranking-list-main .ranking-list-title {
+    background: #fd4530;
+    color: #FFF;
+    border-radius: 20px;
+    padding: 3px 0;
+    font-size: 14px; }
+  .ranking-list-main .s1, .ranking-list-main .s2 {
+    display: inline-block;
+    width: 49%; }
+  .ranking-list-main .s1 {
+    text-indent: 40px; }
+  .ranking-list-main .s2 {
+    text-align: center; }
+
+.ranking-list-u {
+  padding-top: 10px; }
+  .ranking-list-u li {
+    height: 26px;
+    line-height: 26px;
+    border-top: 1px dotted #cccccc;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #333333; }
+    .ranking-list-u li.l1 {
+      border-top: none;
+      color: #fd4530;
+      font-size: 18px;
+      background: url(../images/ranking-1.png) no-repeat 10px 0;
+      background-size: 20px 25px; }
 
 .rules-title {
-  height: 16px;
-  background-size: 61px 17px; }
+  width: 92px;
+  height: 28px;
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  background: url(../images/activity-title-bg.png) no-repeat;
+  background-size: 92px 28px; }
 
 .activity-rules {
-  background-size: 100% 100%;
   color: #FFF;
-  padding: 5px 0;
-  padding-right: 1px;
   position: relative;
   top: -1px; }
   .activity-rules ol {
     color: #FFF;
-    margin-left: -10px; }
+    margin-left: -20px; }
     .activity-rules ol li {
       font-size: 11px;
       color: #FFF;

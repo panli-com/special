@@ -1,57 +1,116 @@
-.packet-wrap{
-	padding-top: 10px;
-	padding-left: 0.5rem;
-	padding-right:0.25rem;
-	ul{
-		
-		li{
-			float: left;
-			width: 50%;
-			a{	
-				position: relative;
-				display: block;
-				padding: 0.2rem 0.2rem 0 0;
-				.thumb{
-					position: relative;
-				}
-				span{
-					position: absolute;							
-				}
-				img{
-					margin-bottom: 0;
-					padding: 0;
-					display: block;
-				}
-				&.on{
-					span{
-						left: 0;
-						top: 0;
-						right: 0;
-						bottom: 0;
-						max-width: 280px;		
-						//background: url(../images/finish.png) no-repeat center center;
-						background-size: 100% 100%;
-					}
-				}				
+.hello-wrap{
+	padding-top: 20px;
+	.hellp-title{
+		padding: 0 10px;
+		text-align: center;
+	}
+	.hellp-desc{
+		color: #FFF;
+		padding: 10px 0;
+	}
+	.hellp-text-wrap{
+		background-color: #fff7ec;
+		padding: 5px;
+		.hellp-boder{
+			position: relative;
+			padding: 10px;
+			height: 70px;
+			border:1px solid #ffecd3;
+		}
+		p{
+			position: relative;
+			z-index: 1;
+			line-height: 22px;
+			&.p2{
+				text-indent: 24px;
 			}
+		}
+		.coin{
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			z-index: 0;
+			width: 32px;
+			height: 31px;
+			background: url(../images/coin.png) no-repeat center center;
+			background-size: cover;
 		}
 	}
 }
 
-.btn-a-wrap{
-	padding: 0.25rem 0;
-	margin-bottom: 0.2rem;
-	a{
-		display: block;
-		background-color: #fff32b;
-		text-decoration: none;
-		color: #f4394a;
-		padding: 5px 0;
-		margin-left: 0.25rem;
-		margin-right: 0.25rem;
-		border-radius: 5px;
-		&.on{
-			background-color: #ffe400;			
+
+.ranking-wrap{
+	padding: 20px 0;
+	position: relative;
+	.ranking-top-line{
+		height: 5px;
+		background: #4a4b8e;
+		border: 2px solid #595aac;
+	}
+	.ranking-mark{
+		color: #FFF;
+	}
+	.bolang{
+		position: absolute;
+		bottom: -8px;
+		left: 0;
+		right: 0;
+		height: 26px;
+		background: url(../images/bolang.png) no-repeat;
+	}
+}
+.ranking-list-wrap,.ranking-mark{
+	padding: 0 5px;
+}
+.ranking-list-main{
+	position: relative;
+	top: -5px;
+	min-height: 250px;
+	margin-bottom: 16px;
+	background-image: linear-gradient(rgb(249,227,206) 0%, rgb(254,249,243) 10%, rgb(255,247,236) 100%);
+	// background-image: -moz-linear-gradient(rgb(255,247,236) 0%, rgb(254,249,243) 94%, rgb(249,227,206) 100%);
+	// background-image: -webkit-linear-gradient(rgb(255,247,236) 0%, rgb(254,249,243) 94%, rgb(249,227,206) 100%);
+	// background-image: -ms-linear-gradient( rgb(255,247,236) 0%, rgb(254,249,243) 94%, rgb(249,227,206) 100%);
+	padding: 15px;
+	.ranking-list-title{
+		background: #fd4530;
+		color: #FFF;
+		border-radius: 20px;
+		padding: 3px 0;
+		font-size: 14px;
+	}
+	.s1,.s2{
+		display: inline-block;
+		width: 49%;
+	}
+	.s1{
+		text-indent: 40px;
+	}
+	.s2{
+		text-align: center;
+	}
+}
+
+
+.ranking-list-u{
+	padding-top: 10px;
+	li{
+		height: 26px;
+		line-height: 26px;
+		border-top: 1px dotted #cccccc;
+		white-space: nowrap;				
+		text-overflow: ellipsis;
+		overflow: hidden;
+		color: #333333;
+		&.l1{
+			border-top: none;
+			color: #fd4530;
+			font-size: 18px;
+			background: url(../images/ranking-1.png) no-repeat 10px 0;
+			background-size: 20px 25px;
 		}
 	}
 }
+
+
+

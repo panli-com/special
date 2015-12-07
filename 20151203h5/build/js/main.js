@@ -512,6 +512,64 @@ function loadjscssfile(filename,filetype){
 * 2015年9月14日15:29:04
 * */
 
+(function($){
+$.fn.extend({
+        ZScroll:function(opt,callback){
+                //参数初始化
+                if(!opt) var opt={};
+                var _btnUp = $("#"+ opt.up);//Shawphy:向上按钮
+                var _btnDown = $("#"+ opt.down);//Shawphy:向下按钮
+                var timerID;
+                var _this=this.eq(0).find("ul:first");
+                var     lineH= 26, //获取行高
+                        line=opt.line?parseInt(opt.line,10):parseInt(this.height()/lineH,10), //每次滚动的行数，默认为一屏，即父容器高度
+                        speed=opt.speed?parseInt(opt.speed,10):500; //卷动速度，数值越大，速度越慢（毫秒）
+                        timer=opt.timer //?parseInt(opt.timer,10):3000; //滚动的时间间隔（毫秒）
+                if(line==0) line=1;
+                var upHeight=0-line*lineH;
+                //滚动函数 
+                var scrollUp=function(){
+                        _btnUp.unbind("click",scrollUp); //Shawphy:取消向上按钮的函数绑定
+                        _this.animate({
+                                marginTop:upHeight
+                        },speed,function(){
+                                for(i=1;i<=line;i++){
+                                        _this.find("li:first").appendTo(_this);
+                                }
+                                _this.css({marginTop:0});
+                                _btnUp.bind("click",scrollUp); //Shawphy:绑定向上按钮的点击事件
+                        });
+
+                }
+                //Shawphy:向下翻页函数
+                var scrollDown=function(){
+                        _btnDown.unbind("click",scrollDown);
+                        for(i=1;i<=line;i++){
+                                _this.find("li:last").show().prependTo(_this);
+                        }
+                        _this.css({marginTop:upHeight});
+                        _this.animate({
+                                marginTop:0
+                        },speed,function(){
+                                _btnDown.bind("click",scrollDown);
+                        });
+                }
+               //Shawphy:自动播放
+                var autoPlay = function(){
+                        if(timer)timerID = window.setInterval(scrollUp,timer);
+                };
+                var autoStop = function(){
+                        if(timer)window.clearInterval(timerID);
+                };
+                 //鼠标事件绑定
+                _this.hover(autoStop,autoPlay).mouseout();
+                _btnUp.css("cursor","pointer").click( scrollUp ).hover(autoStop,autoPlay);//Shawphy:向上向下鼠标事件绑定
+                _btnDown.css("cursor","pointer").click( scrollDown ).hover(autoStop,autoPlay);
+
+        }
+})
+})(jQuery);
+
 ;(function(){
     var console=console||{log:function(){}}; 
     
@@ -639,8 +697,251 @@ function ReturnLayer(num){
 
 // v  
 function appV(){
-  return "0.0.4";
+  return "0.0.1";
 }
+
+//获取服务端数据 
+function getSeverData(url,obj,callback) {
+    var radNub = randomWord(false, 18);
+     $.ajax({
+            type: "POST",
+            url: url+"?time="+radNub,
+            dataType: "json",
+            data: obj,
+            contentType: "application/json;utf-8",
+            timeout: 10000,
+            error: function () {
+                PL.msg("请求错误");
+               
+            },
+            success: function (data) {
+                callback(data);
+            }
+        });    
+}
+
+
+// 这里是一些常用的函数
+// 2015年9月25日 11:38:51
+
+/*
+* 判断是否是pc
+* */
+
+function is_pc(){
+    var os = new Array("Android","iPhone","Windows Phone","iPod","BlackBerry","MeeGo","SymbianOS");  // 其他类型的移动操作系统类型，自行添加
+    var info = navigator.userAgent;
+    var len = os.length;
+    for (var i = 0; i < len; i++) {
+        if (info.indexOf(os[i]) > 0){
+            return false;
+        }
+    }
+    return true;
+};
+
+// 获取服务器时间
+function getServerTime(callback){
+  $.ajax({
+       type: "POST",
+       cache: false,
+       async: false,
+       url: "/App_Services/wsDefault.asmx/GetDateTime",
+       dataType: "json",
+       contentType: "application/json;utf-8",
+       timeout: 10000,
+       error: function () {
+       },
+       success: function (data) {
+           if(data){
+             callback(parseInt(data.d));
+           }
+       }
+    });
+}
+// 获取服务器时间 
+function getServerTimeStamp(callback){
+  $.ajax({
+       type: "POST",
+       cache: false,
+       async: false,
+       url: "/App_Services/wsDefault.asmx/GetDateTimeStamp",
+       dataType: "json",
+       contentType: "application/json;utf-8",
+       timeout: 10000,
+       error: function () {
+       },
+       success: function (data) {
+           if(data){
+             callback(parseInt(data.d * 1000));
+           }
+       }
+    });
+}
+
+function get_Cookie(name)
+{
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+    if(arr=document.cookie.match(reg))
+        return unescape(arr[2]);
+    else
+        return null;
+};
+function del_Cookie(name)
+{
+    var exp = new Date();
+    exp.setTime(exp.getTime() - 1);
+    var cval=get_Cookie(name);
+    if(cval!=null)
+        document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+};
+
+function set_Cookie(name,value,time,path)
+{
+
+    var exp = new Date();
+    exp.setTime(time);
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString()+"; path=" + path;
+};
+function getsec(str)
+{
+
+    var str1=str.substring(1,str.length)*1;
+    var str2=str.substring(0,1);
+    if (str2=="s")
+    {
+        return str1*1000;
+    }
+    else if (str2=="h")
+    {
+        return str1*60*60*1000;
+    }
+    else if (str2=="d")
+    {
+        return str1*24*60*60*1000;
+    }
+};
+// 今日 结束时间
+function getDateEnd(date) {
+    var _date = new Date(date);
+    var year = _date.getFullYear(),
+       month = _date.getMonth(),
+       day = _date.getDate();
+    return new Date(year, month, day, 23, 59, 59);
+}
+//这是有设定过期时间的使用示例：
+//s20是代表20秒
+//s20是代表20秒
+//h是指小时，如12小时则是：h12
+//d是天数，30天则：d30
+
+
+
+//倒计时 PLCountdown(1451404800000)
+function PLCountdown(end,sta,i){
+   function p(s) {
+            return s < 10 ? '0' + s : s;
+   } 
+    
+  if(!i){
+    i = 1
+  }
+  if(!sta){
+    sta = new Date().getTime();
+  }
+  var t = parseInt(end) - parseInt(sta),
+   d=Math.floor(t/1000/60/60/24),
+   h=Math.floor(t/1000/60/60%24),
+   m=Math.floor(t/1000/60%60),
+   s=Math.floor(t/1000%60),
+   index = i+1;
+  if(t < 0){
+    d = h = m = s = '00';
+  }
+
+  var time = {
+    d:p(d),
+    h:p(h),
+    m:p(m),
+    s:p(s),
+    i:p(index),
+    end:p(end),
+    sta:p(sta)
+  };
+  return time;
+}
+
+
+function removeEle(removeObj) {
+    removeObj.parentNode.removeChild(removeObj);
+};
+
+
+// JavaScript Document
+function loadjscssfile(filename,filetype){
+
+    if(filetype == "js"){
+        var fileref = document.createElement('script');
+        fileref.setAttribute("type","text/javascript");
+        fileref.setAttribute("src",filename);
+    }else if(filetype == "css"){
+    
+        var fileref = document.createElement('link');
+        fileref.setAttribute("rel","stylesheet");
+        fileref.setAttribute("type","text/css");
+        fileref.setAttribute("href",filename);
+    }
+   if(typeof fileref != "undefined"){
+        document.getElementsByTagName("head")[0].appendChild(fileref);
+    }
+    
+}
+
+function htmlScroll(data,call){   
+    
+    var _html = '';     
+    for(var i= 0;i<data.length;i++){
+        var name = data[i].Name,
+            proName = data[i].ProductName,
+            url = data[i].Url;
+         _html +=  '<li><span class="name">'+ name +': </span>'+
+                       '<a href="'+ url +'" target="_blank" class="pro-name">'+
+                        '' + proName + '</a></li>';
+                      
+                    
+        
+    }    
+    $("#scroll-main-u1").html(_html);
+    call();
+    return _html;
+}
+
+//滚动动画
+function scrollAnmi(e) {
+    $(e).ZScroll({ line: 2, speed: 1000, timer: 3000, up: "but_up", down: "but_down" });
+}
+
+function enTimeF(endTime,nowTime){
+		var TimeJson = PLCountdown(endTime,nowTime),
+			d = TimeJson.d,
+			h = TimeJson.h,
+			m = TimeJson.m,
+			s = TimeJson.s;
+			
+			if( parseInt(d) == 0){
+				
+				$('.banner7').hide();
+				$('.banner8').fadeIn("slow");
+			}
+		$(".time-day").text(d);
+		$(".time-hour").text(h);
+		$(".time-minute").text(m);
+		$(".time-second").text(s);
+		
+		setTimeout(function(){
+			enTimeF(endTime-1000,nowTime)
+		},1000)
+	}
 ;(function(){
   
   

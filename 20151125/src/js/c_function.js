@@ -165,7 +165,7 @@ function ReturnLayer(num){
 
 // v  
 function appV(){
-  return "0.0.5";
+  return "0.0.7";
 }
 // 是否为空
 function isOfNull(stc) {  
@@ -216,12 +216,12 @@ function  colorList(data,nu) {
           }
 
         
-          FloorDataAll(fl0,'NZ',1);
-          FloorDataAll(fl1,'nn',2);
+          FloorDataAll(fl0,'nz',1);
+          FloorDataAll(fl1,'nr',2);
           FloorDataAll(fl2,'xx',3);
           FloorDataAll(fl3,'xb',4);
           FloorDataAll(fl4,'mz',5);
-          FloorDataAll(fl5,'PS',6);
+          FloorDataAll(fl5,'ps',6);
           FloorDataAll(fl6,'jj',7);
 }
 
@@ -234,9 +234,9 @@ function  colorList(data,nu) {
                 var name = data[i]['Name'],
                     price = data[i].pirceTb,
                     price2 = data[i].pircePl,
-                    imgUrl = data[i].imgSrc,
+                    imgUrl = 'http://sf.panli.com/Ued/Special/20151126/build/images/product/'+imgHead+(i+1)+'.jpg',
                     proUrl = data[i].taobaoUrl,
-                    shopName = data[i].taobaoUrl,
+                    shopName = data[i].shopName,
                     shopHref = data[i].shopHref,
                     siteName = data[i].siteName,
                     gouUrl = 'http://www.panli.com/Crawler.aspx?purl='+proUrl;
