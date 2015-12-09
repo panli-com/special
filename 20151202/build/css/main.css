@@ -60,7 +60,7 @@
 
 .floor-main .floor-title {
   height: 84px;
-  background: url(../images/floor-title-bg.png) no-repeat;
+  background: url(./images/floor-title-bg.png) no-repeat;
   position: relative;
   text-align: center; }
 
@@ -68,31 +68,31 @@
   display: inline-block;
   height: 34px;
   width: 139px;
-  background: url(../images/floor-title-1.png) no-repeat; }
+  background: url(./images/floor-title-1.png) no-repeat; }
 
 .floor-main .floor-2 .title-bg {
   display: inline-block;
   height: 34px;
   width: 170px;
-  background: url(../images/floor-title-2.png) no-repeat; }
+  background: url(./images/floor-title-2.png) no-repeat; }
 
 .floor-main .floor-3 .title-bg {
   display: inline-block;
   height: 34px;
   width: 170px;
-  background: url(../images/floor-title-3.png) no-repeat; }
+  background: url(./images/floor-title-3.png) no-repeat; }
 
 .floor-main .floor-4 .title-bg {
   display: inline-block;
   height: 34px;
   width: 139px;
-  background: url(../images/floor-title-4.png) no-repeat; }
+  background: url(./images/floor-title-4.png) no-repeat; }
 
 .floor-main .floor-5 .title-bg {
   display: inline-block;
   height: 34px;
   width: 206px;
-  background: url(../images/floor-title-5.png) no-repeat; }
+  background: url(./images/floor-title-5.png) no-repeat; }
 
 .floor-main .z-more {
   position: absolute;
@@ -101,7 +101,7 @@
   width: 68px;
   height: 18px;
   display: block;
-  background: url(../images/more.png) no-repeat;
+  background: url(./images/more.png) no-repeat;
   transition: width 0.2s;
   -moz-transition: width 0.2s;
   -webkit-transition: width 0.2s;

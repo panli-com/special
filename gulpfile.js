@@ -39,7 +39,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./'+ day +'/build/css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
-        .pipe(gulp.dest('./'+ day +'/build/css/'))
+        .pipe(gulp.dest('./'+ day +'/build'))
         .pipe(reload({stream: true}))
         .pipe(notify({ message: 'Styles  task complete' }));
 });
@@ -114,6 +114,30 @@ gulp.task('zip', function () {
         .pipe(notify({ message: 'zip task complete' }));
 });
 
+
+gulp.task('frame', function () {
+    // return gulp.src(['./'+ day +'/build/*/*','./'+ day +'/edm/*'])
+    //     .pipe(zip('special'+ day +'.zip'))
+    //     .pipe(gulp.dest(''+ day +''))
+    //     .pipe(notify({ message: 'zip task complete' }));
+    
+    browserSync.init({
+        server: './'+day+'/'
+    });
+    // 看守 edm.scss 档
+    gulp.watch('./'+ day +'/edm/*.scss', ['edm']);
+    // 看守.scss 档
+    gulp.watch('./'+ day +'/src/scss/*.scss', ['sass']);
+    gulp.watch('./home/scss/*.scss', ['home']);
+    // 看守所有.js档
+    gulp.watch('./'+ day +'/*.js', ['scripts']);
+    gulp.watch('./'+ day +'/src/js/*.js', ['html','scripts']);
+
+    // 看守所有.html
+    gulp.watch('./'+ day +'/*.html').on('change', reload);
+    gulp.watch('./*.html').on('change', reload);
+    
+});
 
 
 // 静态服务器 + 监听 scss/html 文件
