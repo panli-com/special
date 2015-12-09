@@ -2344,7 +2344,8 @@
     animation-name: shake; }
 
 .floor-main .floor-box {
-  position: relative; }
+  position: relative;
+  padding-bottom: 20px; }
   .floor-main .floor-box .floor-title {
     z-index: 2; }
 
