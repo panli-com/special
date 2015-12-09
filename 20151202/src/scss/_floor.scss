@@ -56,6 +56,15 @@
 		height: 18px;
 		display: block;
 		background: url(../images/more.png) no-repeat;
+		transition: width .2s;
+		-moz-transition: width .2s;	
+		-webkit-transition: width .2s;	
+		-o-transition: width .2s;
+		&:hover{
+			width: 70px;
+			  -webkit-animation-name: shake;
+          			  animation-name: shake;
+		}
 	}
 	.floor-box{
 		position: relative;
@@ -116,3 +125,7 @@
 	}
 	
 }
+
+
+
+
