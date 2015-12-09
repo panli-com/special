@@ -45,7 +45,7 @@ function getDouble12(obj,callback) {
     console.log(obj);
      $.ajax({
             type: "POST",
-            url: "/App_Services/wsSpecial.asmx/getDouble12?time="+radNub,
+            url: "/App_Services/wsSpecial.asmx/getDouble12_H5?time="+radNub,
             dataType: "json",
             data: '{userName:"' + obj.userName + '",UserID:"' + obj.UserID + '",cotype:"' + obj.cotype + '"}',
             contentType: "application/json;utf-8",

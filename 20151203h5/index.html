@@ -242,7 +242,15 @@ LG相机打印机等你领回家~~</p>
 </body>
 <script charset="utf-8">
 $(function(){
-	enTimeF(1449964800000,1449199241906);
+	
+	
+	 var en = new Date("2015/12/12 23:59:59"),
+                enT = en.getTime();           
+          
+enTimeF(enT,new Date().getTime());
+console.log(enT)
+	
+	
 });
 </script>
 </html>

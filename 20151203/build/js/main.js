@@ -115,7 +115,7 @@ function isNumber(num){
 
 // v  
 function appV(){
-  return "0.0.6";
+  return "0.0.8";
 }
 // 是否为空
 function isOfNull(stc) {  
@@ -204,26 +204,31 @@ function scrollAnmi(e) {
 }
 
 function enTimeF(endTime,nowTime){
+    function p(s) {
+            return s < 10 ? '0' + s : s;
+     } 
+    
+    
 		var TimeJson = PLCountdown(endTime,nowTime),
 			d = TimeJson.d,
 			h = TimeJson.h,
 			m = TimeJson.m,
-			s = TimeJson.s;
+			s = TimeJson.s; 
 			
 			if( parseInt(d) == 0){
 				
 				$('.banner7').hide();
 				$('.banner8').fadeIn("slow");
 			}
-		$(".time-day").text(d);
-		$(".time-hour").text(h);
-		$(".time-minute").text(m);
-		$(".time-second").text(s);
+		$(".time-day").text(Number(p(d))+1);
+		$(".time-hour").text(p(h));
+		$(".time-minute").text(p(m));
+		$(".time-second").text(p(s));
 		
 		setTimeout(function(){
 			enTimeF(endTime-1000,nowTime)
 		},1000)
-	}
+}
 
 //快速登陆面板
 window.Panli.LoginPanel = { 

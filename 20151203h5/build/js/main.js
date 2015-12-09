@@ -571,7 +571,7 @@ $.fn.extend({
 })(jQuery);
 
 ;(function(){
-    var console=console||{log:function(){}}; 
+    
     
 })();
 
@@ -697,7 +697,7 @@ function ReturnLayer(num){
 
 // v  
 function appV(){
-  return "0.0.1";
+  return "0.0.2";
 }
 
 //获取服务端数据 
@@ -709,9 +709,12 @@ function getSeverData(url,obj,callback) {
             dataType: "json",
             data: obj,
             contentType: "application/json;utf-8",
-            timeout: 10000,
+            timeout: 20000,
             error: function () {
-                PL.msg("请求错误");
+                PL.open({
+                    content: '请求错误，请再试',
+                    time: 2
+                });
                
             },
             success: function (data) {
@@ -903,7 +906,10 @@ function htmlScroll(data,call){
     for(var i= 0;i<data.length;i++){
         var name = data[i].Name,
             proName = data[i].ProductName,
-            url = data[i].Url;
+            url = 'javascript:void(0);';
+            if(data[i].Url){
+              url = data[i].Url;
+            }
          _html +=  '<li><span class="name">'+ name +': </span>'+
                        '<a href="'+ url +'" target="_blank" class="pro-name">'+
                         '' + proName + '</a></li>';
@@ -912,13 +918,13 @@ function htmlScroll(data,call){
         
     }    
     $("#scroll-main-u1").html(_html);
-    call();
+    call(); 
     return _html;
 }
 
 //滚动动画
 function scrollAnmi(e) {
-    $(e).ZScroll({ line: 2, speed: 1000, timer: 3000, up: "but_up", down: "but_down" });
+    $(e).ZScroll({ line: 1, speed: 1000, timer: 3000, up: "but_up", down: "but_down" });
 }
 
 function enTimeF(endTime,nowTime){

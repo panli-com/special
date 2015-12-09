@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 
-var day = '20151203h5';
+var day = '20151202';
 
 // 引入组件
 var sass = require('gulp-sass'),
@@ -40,6 +40,19 @@ gulp.task('sass', function() {
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
         .pipe(gulp.dest('./'+ day +'/build/css/'))
+        .pipe(reload({stream: true}))
+        .pipe(notify({ message: 'Styles  task complete' }));
+});
+
+
+gulp.task('edm', function() {
+    return gulp.src('./'+ day +'/edm//edm.scss')
+        .pipe(sass({ style: 'expanded' }))
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        .pipe(gulp.dest('./'+ day +'/edm/'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(minifycss())
+        .pipe(gulp.dest('./'+ day +'/edm/'))
         .pipe(reload({stream: true}))
         .pipe(notify({ message: 'Styles  task complete' }));
 });
@@ -109,7 +122,8 @@ gulp.task('dev', ['sass'], function() {
     browserSync.init({
         server: './'+day+'/'
     });
-
+    // 看守 edm.scss 档
+    gulp.watch('./'+ day +'/edm/*.scss', ['edm']);
     // 看守.scss 档
     gulp.watch('./'+ day +'/src/scss/*.scss', ['sass']);
     gulp.watch('./home/scss/*.scss', ['home']);
