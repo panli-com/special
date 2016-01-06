@@ -59,6 +59,16 @@
 		display: block;
 		max-width: 100%;
 	}
+	.online-url-sp{
+		position: absolute;
+		display: block;
+		width: 200px;
+		height: 30px;
+		bottom: 46px;
+		left: 255px;
+		text-decoration: none;
+		cursor: pointer;
+	}
 }
 
 .layer-html-2-main{
@@ -77,5 +87,27 @@
 	img{
 		display: block;
 		max-width: 100%;
+	}
+	.online-url-sp{
+		position: absolute;
+		display: block;
+		width: 200px;
+		height: 30px;
+		bottom: 76px;
+		left: 255px;
+		text-decoration: none;
+		cursor: pointer;
+		
+	}
+	.my-panpi-url-sp{
+		position: absolute;
+		display: block;
+		width: 200px;
+		height: 30px;
+		bottom: 172px;
+		left: 425px;
+		text-decoration: none;
+		cursor: pointer;
+		
 	}
 }

@@ -63,6 +63,15 @@
   .layer-html-1-main img {
     display: block;
     max-width: 100%; }
+  .layer-html-1-main .online-url-sp {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 30px;
+    bottom: 46px;
+    left: 255px;
+    text-decoration: none;
+    cursor: pointer; }
 
 .layer-html-2-main {
   width: 982px;
@@ -78,6 +87,24 @@
   .layer-html-2-main img {
     display: block;
     max-width: 100%; }
+  .layer-html-2-main .online-url-sp {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 30px;
+    bottom: 76px;
+    left: 255px;
+    text-decoration: none;
+    cursor: pointer; }
+  .layer-html-2-main .my-panpi-url-sp {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 30px;
+    bottom: 172px;
+    left: 425px;
+    text-decoration: none;
+    cursor: pointer; }
 
 .floot-title {
   height: 76px;
