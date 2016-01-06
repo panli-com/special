@@ -11,6 +11,31 @@ function floorNnav(){
 }
 
 
+function isXie8(){
+	 var browser=navigator.appName 
+      var b_version=navigator.appVersion 
+      var version=b_version.split(";"); 
+      var trim_Version=version[1].replace(/[ ]/g,""); 
+      if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0") 
+      { 
+        return 8;
+      } 
+      else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
+      { 
+      return 8; 
+      } 
+      else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") 
+      { 
+      return 8;
+      } 
+      else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE9.0") 
+      { 
+      	return 8;
+      }else{
+		  return 100;
+	  }
+}
+
 (function($){
 	
 	$.fn.snowText = function(options){	
@@ -169,16 +194,19 @@ var snow2 = {
       })
         
       
-      snow2.down();
+     
+     
+     alert(isXie8());
       
-      // $.fn.snowText({ 
-      //   minSize: 5,		//雪花的最小尺寸
-      //   maxSize: 50, 	//雪花的最大尺寸
-      //   newOn: 300		//雪花出现的频率 这个数值越小雪花越多
-		  // });
-
-      
-      
+      if(isXie8() <= 9){
+         $.fn.snowText({ 
+          minSize: 5,		//雪花的最小尺寸
+          maxSize: 50, 	//雪花的最大尺寸
+          newOn: 300		//雪花出现的频率 这个数值越小雪花越多
+        });
+      }else{
+         snow2.down();
+      }
       floorNnav();
     
   });

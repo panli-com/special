@@ -56,16 +56,19 @@
       })
         
       
-      snow2.down();
+     
+     
+     alert(isXie8());
       
-      // $.fn.snowText({ 
-      //   minSize: 5,		//雪花的最小尺寸
-      //   maxSize: 50, 	//雪花的最大尺寸
-      //   newOn: 300		//雪花出现的频率 这个数值越小雪花越多
-		  // });
-
-      
-      
+      if(isXie8() <= 9){
+         $.fn.snowText({ 
+          minSize: 5,		//雪花的最小尺寸
+          maxSize: 50, 	//雪花的最大尺寸
+          newOn: 300		//雪花出现的频率 这个数值越小雪花越多
+        });
+      }else{
+         snow2.down();
+      }
       floorNnav();
     
   });

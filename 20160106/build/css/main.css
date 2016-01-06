@@ -1,5 +1,13 @@
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400; }
+
 .pw1000 {
   width: 1000px; }
+
+.m-auto {
+  margin: 0 auto; }
 
 .app-main {
   width: 100%;
@@ -322,6 +330,8 @@
       opacity: 0.5; }
       .floor-nav-wrap .floor-nav-u li.li2 {
         height: 35px; }
+      .floor-nav-wrap .floor-nav-u li a {
+        height: 34px; }
   .floor-nav-wrap .floor-nav-footer {
     padding-top: 6px; }
     .floor-nav-wrap .floor-nav-footer a {
