@@ -3,6 +3,12 @@
 }
 .app-main{
 	width: 100%;
+	min-width: 1200px;
 	background: #cf1918 url(./images/banner-all.jpg) no-repeat top center;
 	min-height: 900px;
+	padding-bottom: 48px;
+	
+}
+.footer {
+	margin-top: 0;
 }

@@ -3,8 +3,13 @@
 
 .app-main {
   width: 100%;
+  min-width: 1200px;
   background: #cf1918 url(./images/banner-all.jpg) no-repeat top center;
-  min-height: 900px; }
+  min-height: 900px;
+  padding-bottom: 48px; }
+
+.footer {
+  margin-top: 0; }
 
 .banner-sp {
   height: 797px; }
@@ -14,6 +19,65 @@
   height: 312px;
   background: url(./images/time.png) no-repeat;
   margin-bottom: 20px; }
+  .time-sp .sign-up-btn, .time-sp .sign-up-more-btn, .time-sp .registered-btn {
+    position: absolute;
+    text-decoration: none;
+    opacity: 0.5; }
+  .time-sp .registered-btn {
+    width: 200px;
+    height: 80px;
+    right: 81px;
+    top: 45px; }
+  .time-sp .sign-up-btn {
+    width: 120px;
+    height: 28px;
+    left: 528px;
+    top: 160px; }
+  .time-sp .sign-up-more-btn {
+    width: 120px;
+    height: 30px;
+    left: 269px;
+    top: 232px; }
+
+.layui-layer-setwin .layui-layer-close2 {
+  top: -16px;
+  right: -3px;
+  background: #FFF;
+  width: 44px;
+  height: 44px; }
+
+.layui-Pan-nobg {
+  background-color: transparent; }
+
+.layer-html-1-main {
+  width: 961px;
+  height: 749px;
+  position: relative; }
+  .layer-html-1-main .close-layer {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    opacity: 0;
+    right: 11px; }
+  .layer-html-1-main img {
+    display: block;
+    max-width: 100%; }
+
+.layer-html-2-main {
+  width: 982px;
+  height: 769px;
+  position: relative; }
+  .layer-html-2-main .close-layer {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    opacity: 0;
+    right: 21px; }
+  .layer-html-2-main img {
+    display: block;
+    max-width: 100%; }
 
 .floot-title {
   height: 76px;
@@ -86,7 +150,9 @@
 .floor-main {
   position: relative;
   padding-top: 20px;
-  padding-bottom: 46px; }
+  padding-bottom: 12px; }
+  .floor-main a {
+    text-decoration: none; }
   .floor-main .floor-u {
     overflow: hidden; }
     .floor-main .floor-u li {
@@ -114,21 +180,45 @@
           height: 245px;
           max-width: 100%; }
       .floor-main .floor-u li .p-title {
-        font-style: 14px;
-        color: #555555; }
+        font-size: 14px;
+        color: #555555;
+        height: 26px;
+        line-height: 26px;
+        overflow: hidden; }
       .floor-main .floor-u li .p1 {
         font-size: 24px;
-        color: #ff263e; }
+        color: #ff263e;
+        padding-top: 2px; }
         .floor-main .floor-u li .p1 .symbol {
           font-size: 14px; }
       .floor-main .floor-u li .buy-btn {
         position: absolute;
-        bottom: 10px;
-        right: 10px;
+        bottom: 15px;
+        right: 15px;
         width: 102px;
         height: 39px;
         display: block;
         background: url(./images/buy-btn.png) no-repeat; }
+  .floor-main .more-wrap {
+    height: 30px;
+    padding: 0 10px;
+    position: relative;
+    margin-bottom: 16px; }
+    .floor-main .more-wrap .link-dashed {
+      padding-top: 10px;
+      border-bottom: 1px dashed #f36362; }
+    .floor-main .more-wrap a {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #FFF;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-block;
+      padding: 0 10px;
+      background: #CF1918; }
+      .floor-main .more-wrap a:hover {
+        text-decoration: underline; }
 
 .shop-sp {
   position: relative;
@@ -169,7 +259,8 @@
     position: relative; }
     .shop-wrap .vip-text a {
       display: block;
-      height: 21px; }
+      height: 21px;
+      text-decoration: none; }
   .shop-wrap .shop-ul {
     overflow: hidden;
     padding-top: 20px;
@@ -183,3 +274,30 @@
       overflow: hidden; }
       .shop-wrap .shop-ul li img {
         display: block; }
+
+.floor-nav-wrap {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 9999;
+  width: 150px;
+  height: 402px;
+  background: url(./images/floor-nav.png) no-repeat center top; }
+  .floor-nav-wrap a {
+    text-decoration: none;
+    display: block; }
+  .floor-nav-wrap .floor-nav-u {
+    padding-top: 64px; }
+    .floor-nav-wrap .floor-nav-u li {
+      height: 34px;
+      margin-bottom: 1px;
+      display: block;
+      opacity: 0.5; }
+      .floor-nav-wrap .floor-nav-u li.li2 {
+        height: 35px; }
+  .floor-nav-wrap .floor-nav-footer {
+    padding-top: 6px; }
+    .floor-nav-wrap .floor-nav-footer a {
+      display: block;
+      height: 40px;
+      opacity: 0.5; }

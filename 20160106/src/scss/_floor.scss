@@ -82,7 +82,10 @@
 .floor-main{
 	position: relative;
 	padding-top: 20px;
-	padding-bottom: 46px;
+	padding-bottom: 12px;
+	a{
+		text-decoration: none;
+	}
 	.floor-u{
 		overflow: hidden;
 		li{
@@ -114,24 +117,53 @@
 				}
 			}			
 			.p-title{
-				font-style: 14px;
+				font-size: 14px;
 				color: #555555;
+				height: 26px;
+				line-height: 26px;				
+				overflow: hidden;
 			}
 			.p1{
 				font-size: 24px;
 				color: #ff263e;
+				padding-top: 2px;
 				.symbol{
 					font-size: 14px;
 				}
 			}
 			.buy-btn{
 				position: absolute;
-				bottom: 10px;
-				right: 10px;
+				bottom: 15px;
+				right: 15px;
 				width: 102px;
 				height: 39px;
 				display: block;
 				background: url(./images/buy-btn.png) no-repeat;
+			}
+		}
+	}
+	
+	.more-wrap{
+		height: 30px;
+		padding: 0 10px;
+		position: relative;
+		margin-bottom: 16px;
+		.link-dashed{
+			padding-top: 10px;
+			border-bottom: 1px dashed #f36362;
+		}
+		a{
+			position: absolute;
+			right: 0;
+			top: 0;
+			color: #FFF;
+			text-decoration: none;
+			font-size: 14px;
+			display: inline-block;
+			padding: 0 10px;
+			background: #CF1918;
+			&:hover{
+				text-decoration: underline;
 			}
 		}
 	}

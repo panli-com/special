@@ -3,4 +3,79 @@
 	height: 312px;
 	background: url(./images/time.png) no-repeat;
 	margin-bottom: 20px;
+	.sign-up-btn,.sign-up-more-btn,.registered-btn{
+		position: absolute;
+		
+		text-decoration: none;
+		opacity: 0.5;
+	}
+	.registered-btn{
+		width: 200px;
+		height: 80px;
+	    right: 81px;
+		top: 45px;
+	}
+	.sign-up-btn{		
+		width: 120px;
+		height: 28px;
+	    left: 528px;
+		top: 160px;
+	}
+	.sign-up-more-btn{
+		width: 120px;
+		height: 30px;
+	    left: 269px;
+		top: 232px;
+	}
+}
+.layui-layer-setwin{
+	.layui-layer-close2{
+		top: -16px;
+		right: -3px;
+		background: #FFF;
+		
+		width: 44px;
+		height: 44px;
+	}
+}
+
+.layui-Pan-nobg{
+	background-color: transparent;
+}
+.layer-html-1-main{
+	width: 961px;
+	height: 749px;
+	position: relative;
+	.close-layer{
+		position: absolute;
+		width: 44px;
+		height: 44px;
+		cursor: pointer;
+		
+		opacity: 0;
+		right:11px;
+	}
+	img{
+		display: block;
+		max-width: 100%;
+	}
+}
+
+.layer-html-2-main{
+	width: 982px;
+	height: 769px;
+	position: relative;
+	.close-layer{
+		position: absolute;
+		width: 44px;
+		height: 44px;
+		cursor: pointer;
+		
+		opacity: 0;
+		right:21px;
+	}
+	img{
+		display: block;
+		max-width: 100%;
+	}
 }
