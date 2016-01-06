@@ -57,7 +57,7 @@ function isNumber(num){
 
 // v  
 function appV(){
-  return "0.0.8";
+  return "0.0.9";
 }
 // 是否为空
 function isOfNull(stc) {  
@@ -162,7 +162,7 @@ function enTimeF(endTime,nowTime){
 				$('.banner7').hide();
 				$('.banner8').fadeIn("slow");
 			}
-		$(".time-day").text(Number(p(d))+1);
+		$(".time-day").text(p(d));
 		$(".time-hour").text(p(h));
 		$(".time-minute").text(p(m));
 		$(".time-second").text(p(s));
