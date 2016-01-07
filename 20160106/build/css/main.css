@@ -312,12 +312,14 @@ h6 {
 
 .floor-nav-wrap {
   position: fixed;
-  right: 10px;
-  bottom: 10px;
+  left: 10px;
+  margin-top: -201px;
+  top: 50%;
   z-index: 9999;
   width: 150px;
   height: 402px;
-  background: url(./images/floor-nav.png) no-repeat center top; }
+  background: url(./images/floor-nav.png) no-repeat center top;
+  display: none; }
   .floor-nav-wrap a {
     text-decoration: none;
     display: block; }

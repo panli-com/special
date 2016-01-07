@@ -60,23 +60,33 @@
      
     
       
-      if(isXie8() < 9){
-         $.fn.snowText({ 
-          minSize: 5,		//雪花的最小尺寸
-          maxSize: 50, 	//雪花的最大尺寸
-          newOn: 300		//雪花出现的频率 这个数值越小雪花越多
-        });
-      }else{
-         snow2.down();
-      }
+      // if(isXie8() < 9){
+      //    $.fn.snowText({ 
+      //     minSize: 5,		//雪花的最小尺寸
+      //     maxSize: 50, 	//雪花的最大尺寸
+      //     newOn: 300		//雪花出现的频率 这个数值越小雪花越多
+      //   });
+      // }else{
+      //    snow2.down();
+      // }
+      
+      
       floorNnav();
-    
+      
+       snow2.down();
   });
     
  
  $(window).resize(function(){
     floorNnav();
   })
+ 
+ 
+ $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    $('.floor-nav-wrap')[scrollTop > 400 ? 'show' : 'hide']();
+    
+});
  
  
 })();

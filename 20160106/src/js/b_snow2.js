@@ -2,7 +2,7 @@ var snow2 = {
 	info : {
 		top : 0,
 		left : 0,
-		zIndex : 500,
+		zIndex : 999999,
 		number : 70
 	},
 	down : function(){
