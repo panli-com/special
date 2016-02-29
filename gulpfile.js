@@ -1,8 +1,10 @@
 var gulp = require('gulp');
 
-var day = '20151111h5';
+var day = '20160229';
 
 var cssName = 'main';
+
+var jsName = 'main';
 
 // 引入组件
 var sass = require('gulp-sass'),
@@ -30,10 +32,10 @@ gulp.task('sass', function() {
     return gulp.src('./'+ day +'/src/scss/'+ cssName +'.scss')
         .pipe(sass({ style: 'expanded' }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-        .pipe(gulp.dest('./'+ day +'/build/css'))
-        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('./'+ day +'/tmp/css'))
+        .pipe(rename(cssName+'.css'))
         .pipe(minifycss())
-        .pipe(gulp.dest('./'+ day +'/build'))
+        .pipe(gulp.dest('./'+ day +'/build/css/'))
         .pipe(reload({stream: true}))
         .pipe(notify({ message: 'Styles  task complete' }));
 });
@@ -89,11 +91,11 @@ gulp.task('homeHtml',function(){
 
 gulp.task('scripts',function(){
     return gulp.src('./'+ day +'/src/js/*.js')
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest('./'+ day +'/build/js'))
-        .pipe(rename({suffix: '.min'}))
+        .pipe(concat(jsName+'tmp.js'))
+        .pipe(gulp.dest('./'+ day +'/tmp/js'))
+        .pipe(rename(jsName+'.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./'+ day +'/build/js/'))
+        .pipe(gulp.dest('./'+ day +'/build/css/'))
         .pipe(reload({stream: true}))
         .pipe(notify({ message: 'Scripts task complete' }));
 
