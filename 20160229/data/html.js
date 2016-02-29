@@ -4,16 +4,16 @@ function FloorList(data){
           for(var i=0;i<mlc;i++){
               fl0.push(data[i]);
           }
-          for(var i=mlc+4;i<mlc*2+4;i++){
+          for(var i=mlc;i<mlc*2+4;i++){
               fl1.push(data[i]);
           }
-          for(var i=mlc*2+4;i<mlc*3+4;i++){
+          for(var i=mlc*2+4;i<mlc*3+8;i++){
               fl2.push(data[i]);
           }
-          for(var i=mlc*3+4;i<mlc*4+4;i++){
+          for(var i=mlc*3+8;i<mlc*4+12;i++){
               fl3.push(data[i]);
           }
-          for(var i=mlc*4+4;i<mlc*5+4;i++){
+          for(var i=mlc*4+12;i<mlc*5+16;i++){
               fl4.push(data[i]);
               console.log(data[i])
           }

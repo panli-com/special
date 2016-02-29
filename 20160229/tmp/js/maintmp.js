@@ -51,6 +51,23 @@ function PLCountdown2(e, t, n) {
     };
     return u
 }
+
+
+function getServerTimeStamp2(e) {
+    PD.ajax({
+        type: "POST",
+        cache: !1,
+        async: !1,
+        url: "http://www.panli.com/App_Services/wsDefault.asmx/GetDateTimeStamp",
+        dataType: "json",
+        contentType: "application/json;utf-8",
+        timeout: 1e4,
+        error: function() {},
+        success: function(t) {
+            t && e(parseInt(1e3 * t.d))
+        }
+    })
+}
 ;(function(){
   
   

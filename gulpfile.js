@@ -2,9 +2,9 @@ var gulp = require('gulp');
 
 var day = '20160229';
 
-var cssName = 'main';
+var cssName = '457';
 
-var jsName = 'main';
+var jsName = '457';
 
 // 引入组件
 var sass = require('gulp-sass'),
