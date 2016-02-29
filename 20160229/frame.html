@@ -842,6 +842,36 @@ PD(function(){
                 enT = en.getTime();           
           
     enTimeF(enT,new Date().getTime());
+    
+    
+    
+    
+    
+    PD(".floor-nav-u a").on("click",function(){
+                var _t = PD(this),
+                    _tf = _t.attr("floor");
+                var _afloTop = PD("#floor-"+_tf).offset().top;
+                 PD('body,html').animate({ scrollTop: _afloTop-110 }, 300);
+      });
+      PD(".back-top").on("click",function(){              
+                 PD('body,html').animate({ scrollTop: 0 }, 300);
+      });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 });
 </script>
 </html>

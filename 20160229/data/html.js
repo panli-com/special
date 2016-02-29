@@ -13,6 +13,10 @@ function FloorList(data){
           for(var i=mlc*3+4;i<mlc*4+4;i++){
               fl3.push(data[i]);
           }
+          for(var i=mlc*4+4;i<mlc*5+4;i++){
+              fl4.push(data[i]);
+              console.log(data[i])
+          }
          
          
         
@@ -20,6 +24,7 @@ function FloorList(data){
           FloorAll(fl1,'pants',2);
           FloorAll(fl2,'shoes',3);
           FloorAll(fl3,'hats',4);
+          FloorAll(fl4,'hats',5);
      
         
 }
